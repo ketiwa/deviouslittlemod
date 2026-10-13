@@ -1,0 +1,25 @@
+namespace = flavor_hes
+
+#The Renovation of Frankfurt
+country_event = {
+	id = flavor_hes.1
+	title = "flavor_hes.1.t"
+	desc = "flavor_hes.1.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		1876 = {
+			add_province_modifier = {
+				name = hes_frankfurt_renovations
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = "flavor_hes.1.a"
+	}
+}

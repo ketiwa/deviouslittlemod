@@ -259,3 +259,8 @@
  HAB_OWN_FERRARA_AND_MANTUA:0 "§YFerrara§! and §YMantua§! are held by us or by our non-tributary subjects."
  HAB_BOHEMIA_UNION_OR_PRAGUE:0 "§YBohemia§! is our junior partner in a personal union, or we own §YPrague§!."
  HAB_OWN_ALL_IMPERIAL_ASCENDANCY_CLAIMS:0 "Every province claimed by §YImperial Ascendancy§! is held by us or by our non-tributary subjects."
+ hes_renovate_frankfurt_title:0 "Renovate Frankfurt"
+ hes_renovate_frankfurt_desc:0 "Frankfurt am Main is the beating heart of our realm. Let us turn it into a city worthy of our ambitions, investing in its buildings and development so that it may stand as a jewel of the Rhineland."
+ flavor_hes.1.t:0 "The Renovation of Frankfurt"
+ flavor_hes.1.d:0 "The work is complete. Frankfurt has been rebuilt and beautified, its markets bustling and its streets lined with fine new buildings. Our capital shines as a beacon of prosperity for all our subjects to admire."
+ flavor_hes.1.a:0 "A city befitting our ambitions."

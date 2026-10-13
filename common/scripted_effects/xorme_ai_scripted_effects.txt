@@ -342,6 +342,7 @@ xorme_ai_alliance_initialization_effect = {
 			}
 		}
 	}
+	xorme_ai_enforce_ally_limit_effect = yes
 }
 
 #BUILD FORT

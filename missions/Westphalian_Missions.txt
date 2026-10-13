@@ -287,7 +287,7 @@ westfalian_group_1 = {
 					add_province_modifier = {
 						name = hes_palace_of_frankfurt_modifier
 						duration = -1
-						desc = until_its_sieged_desc
+						desc = until_frankfurt_sieged_desc
 					}
 				}
 			}

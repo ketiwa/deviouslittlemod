@@ -1,0 +1,25 @@
+namespace = flavor_swi_konstanz
+
+#The Renovation of Konstanz
+country_event = {
+	id = flavor_swi_konstanz.1
+	title = "flavor_swi_konstanz.1.t"
+	desc = "flavor_swi_konstanz.1.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		4712 = {
+			add_province_modifier = {
+				name = swi_konstanz_renovations
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = "flavor_swi_konstanz.1.a"
+	}
+}

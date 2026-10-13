@@ -1,0 +1,10 @@
+swi_konstanz_renovations = {
+	local_tax_modifier = -0.2
+	local_build_cost = -0.1
+	local_development_cost = -0.15
+}
+
+swi_palace_of_konstanz_modifier = {
+	country_admin_power = 1
+	monthly_splendor = 2
+}

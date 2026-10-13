@@ -106,95 +106,29 @@ WoC_austria_1_holy_roman_empire = {
 			not_in_mission_preview_mode = { key = HAB }
 			is_emperor = yes
 			custom_trigger_tooltip = {
-				tooltip = no_hre_province_owned_by_non_hre_member_or_overlord_trigger
-				europe = {
-					type = all
-					OR = {
-						is_part_of_hre = no
-						AND = {
-							is_part_of_hre = yes
-							owner = {
-								OR = {
-									AND = {
-										is_part_of_hre = yes
-										OR = {
-											is_subject = no
-											AND = {
-												is_subject = yes
-												overlord = { is_part_of_hre = yes }
-											}
-										}
-									}
-									AND = {
-										is_part_of_hre = no
-										is_subject = yes
-										overlord = { is_part_of_hre = yes }
-									}
-								}
-							}
-						}
-					}
-				}
+				tooltip = emperor_trying_to_avert_shadow_kingdom_tt
+				has_global_flag = emperor_trying_to_avert_shadow_kingdom
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAB_OWN_ALL_IMPERIAL_ASCENDANCY_CLAIMS
+				64 = { country_or_non_sovereign_subject_holds = ROOT }
+				65 = { country_or_non_sovereign_subject_holds = ROOT }
+				76 = { country_or_non_sovereign_subject_holds = ROOT }
+				1757 = { country_or_non_sovereign_subject_holds = ROOT }
+				2955 = { country_or_non_sovereign_subject_holds = ROOT }
+				2956 = { country_or_non_sovereign_subject_holds = ROOT }
+				2957 = { country_or_non_sovereign_subject_holds = ROOT }
+				4707 = { country_or_non_sovereign_subject_holds = ROOT }
+				4708 = { country_or_non_sovereign_subject_holds = ROOT }
+				4709 = { country_or_non_sovereign_subject_holds = ROOT }
+				4760 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 		effect = {
-			add_imperial_influence = 15
-			if = {
-				limit = {
-					has_dlc = "The Cossacks"
-				}
-				add_dip_power = 100
-				custom_tooltip = emp_hab_imperial_border_effect_tooltip
-				custom_tooltip = SEPERATOR_TOOLTIP
-				hidden_effect = {
-					every_country = {
-						limit = {
-							is_part_of_hre = yes
-							NOT = { is_rival = root }
-							NOT = { root = { is_rival = prev } }
-						}
-						add_trust = {
-							who = root
-							value = 10
-						}
-					}
-				}
-			}
-			else = { add_dip_power = 200 }
-
-			custom_tooltip = HAB_EVERY_IMPERIAL_CAPITAL_GAINS_FOLLOWING_MODIFIER
-			tooltip = {
-				capital_scope = {
-					add_province_modifier = {
-						name = hab_capitals_of_the_empire
-						duration = 7300
-					}
-				}
-			}
-			hidden_effect = {
-				every_known_country = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					capital_scope = {
-						add_province_modifier = {
-							name = hab_capitals_of_the_empire
-							duration = 7300
-						}
-					}
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					capital_scope = {
-						add_province_modifier = {
-							name = hab_capitals_of_the_empire
-							duration = 7300
-						}
-					}
-				}
-			}
+			give_claims = { area = venetia_area }
+			give_claims = { area = carinthia_area }
+			give_claims = { province = 113 }
+			give_claims = { province = 109 }
 		}
 	}
 
@@ -230,85 +164,46 @@ WoC_austria_1_holy_roman_empire = {
 		}
 		trigger = {
 			not_in_mission_preview_mode = { key = HAB }
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				is_emperor = yes
-				num_of_owned_provinces_with = {
-					value = 5
-					development = 25
-					num_of_buildings_in_province = 3
-					is_part_of_hre = yes
+			custom_trigger_tooltip = {
+				tooltip = has_reined_in_all_italians_early
+				NOT = {
+					any_country = {
+						will_leave_for_shadow_kingdom_trigger = yes
+						is_shadow_kingdom_eligible_trigger = yes
+						OR = {
+							is_subject = no
+							AND = {
+								is_subject = yes
+								overlord = {
+									NOT = { is_part_of_hre = yes }
+									capital_scope = { region = italy_region }
+								}
+							}
+						}
+					}
 				}
 			}
-			else = {
-				num_of_owned_provinces_with = {
-					value = 5
-					development = 25
-					num_of_buildings_in_province = 3
+			custom_trigger_tooltip = {
+				tooltip = HAB_OWN_ALL_VENETIA
+				venetia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_imperial_influence = 25
 			add_country_modifier = {
-				name = hab_flourishing_in_empire
+				name = improved_dip_reputation
 				duration = 7300
 			}
-			custom_tooltip = HAB_5_RANDOM_PROVINCES_THAT_MEET_REQUIREMENT_GAIN
-			tooltip = {
-				add_province_modifier = {
-					name = hab_imperial_cities
-					duration = -1
-				}
-			}
+			custom_tooltip = HAB_ALL_HRE_NATIONS_GAIN_50_MANA
 			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					for = {
-						amount = 5
-						effect = "
-							random_owned_province = {
-								limit = {
-									is_part_of_hre = yes
-									development = 25
-									num_of_buildings_in_province = 3
-									NOT = {
-										has_province_modifier = hab_imperial_cities
-									}
-								}
-								add_province_modifier = {
-									name = hab_imperial_cities
-									duration = -1
-								}
-								add_or_upgrade_production_building = yes
-							}
-						"
-					}
-				}
-				else = {
-					for = {
-						amount = 5
-						effect = "
-							random_owned_province = {
-								limit = {
-									development = 25
-									num_of_buildings_in_province = 3
-									NOT = {
-										has_province_modifier = hab_imperial_cities
-									}
-								}
-								add_province_modifier = {
-									name = hab_imperial_cities
-									duration = -1
-								}
-								add_or_upgrade_production_building = yes
-							}
-						"
-					}
+				every_known_country = {
+					limit = { is_part_of_hre = yes }
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
 				}
 			}
 		}
@@ -2191,78 +2086,51 @@ WoC_austria_3_holy_roman_empire = {
 	hab_imperial_ascendancy = {
 		icon = imperial_ascendancy
 		position = 2
-		required_missions = { hab_secure_electors } 
+		required_missions = { hab_secure_electors }
 		provinces_to_highlight = {
-			owner = {
-				NOT = { tag = root }
-				NOT = { is_subject_of = ROOT }
-				OR = {
-					AND = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 10
-							continent = europe
-						}
-						is_part_of_hre = yes
-					}
-					is_emperor = yes
-				}
+			OR = {
+				province_id = 64
+				province_id = 65
+				province_id = 76
+				province_id = 1757
+				province_id = 2955
+				province_id = 2956
+				province_id = 2957
+				province_id = 4707
+				province_id = 4708
+				province_id = 4709
+				province_id = 4760
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			not_in_mission_preview_mode = { key = HAB }
-			is_emperor = yes
-			OR = {
-				hre_reform_passed = emperor_privilegia_de_non_appelando
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = HAB_CONTAIN_IMPERIAL_PRINCES_TT
-						NOT = {
-							any_country = {
-								NOT = { tag = root }
-								NOT = { is_subject_of = ROOT }
-								is_part_of_hre = yes
-								NOT = {
-									has_opinion = {
-										who = ROOT
-										value = 100
-									}
-								}
-								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-									value = 10
-									is_part_of_hre = yes
-								}
-							}
-						}
-					}
-					calc_true_if = {
-						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
-						amount = 10
-						all_country = {
-							has_reform = free_city
-						}
-					}
+			custom_trigger_tooltip = {
+				tooltip = HAB_BOHEMIA_UNION_OR_PRAGUE
+				OR = {
+					BOH = { junior_union_with = ROOT }
+					266 = { owned_by = ROOT }
 				}
 			}
 		}
 		effect = {
-			add_dip_power = 50
-			add_country_modifier = {
-				name = hab_ascendancy_in_empire
-				duration = 7300
-			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			custom_tooltip = HAB_ALL_HRE_NATIONS_GAIN_50_MANA
-			hidden_effect = {
-				every_known_country = {
-					limit = {
-						is_part_of_hre = yes
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 64
+						province_id = 65
+						province_id = 76
+						province_id = 1757
+						province_id = 2955
+						province_id = 2956
+						province_id = 2957
+						province_id = 4707
+						province_id = 4708
+						province_id = 4709
+						province_id = 4760
 					}
-					add_dip_power = 50
-					add_mil_power = 50
-					add_adm_power = 50
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

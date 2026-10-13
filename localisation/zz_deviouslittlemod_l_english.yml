@@ -252,3 +252,10 @@
  mesopotamia:0 "Mesopotamia"
 # ---- Mission renames ----
  fra_burg_succession_title:0 "Annex Burgundy"
+# ---- Imperial mission requirement tooltips (Shadow Kingdom rework) ----
+ WOC_secure_the_imperial_crown.tooltip:0 "At least §Y3§! §YElectors§! are:\nBacking §Y[Root.GetName]§! to become Emperor."
+ HAB_OWN_ALL_VENETIA_AND_CARNIOLA:0 "Every province in §YVenetia§! and §YCarniola§! is held by us or by our non-tributary subjects."
+ HAB_OWN_ALL_VENETIA:0 "Every province in §YVenetia§! is held by us or by our non-tributary subjects."
+ HAB_OWN_FERRARA_AND_MANTUA:0 "§YFerrara§! and §YMantua§! are held by us or by our non-tributary subjects."
+ HAB_BOHEMIA_UNION_OR_PRAGUE:0 "§YBohemia§! is our junior partner in a personal union, or we own §YPrague§!."
+ HAB_OWN_ALL_IMPERIAL_ASCENDANCY_CLAIMS:0 "Every province claimed by §YImperial Ascendancy§! is held by us or by our non-tributary subjects."

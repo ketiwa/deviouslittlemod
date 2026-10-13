@@ -1,0 +1,34 @@
+edict_religion_enforced = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip =edict_religion_enforced_tooltip
+			has_country_flag = religion_enforced_edict
+		}
+		custom_trigger_tooltip = {
+			tooltip = sea_remove_state_edicts_flag_tt
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
+		}
+		current_age = age_of_reformation
+	}
+	
+	modifier = {
+		local_religious_conversion_resistance = 1.0
+	}
+	
+	color = {  116 198 240  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

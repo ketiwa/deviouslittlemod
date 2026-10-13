@@ -1,0 +1,23 @@
+country_decisions = {
+	sea_state_edicts_decision = {
+		major = yes
+		provinces_to_highlight = {
+			has_state_edict_enabled = yes
+			owned_by = ROOT
+		}
+		potential = {
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = sea_state_edicts_flag
+			country_event = { id = sealand_events.28 }
+			custom_tooltip = sea_state_edicts_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

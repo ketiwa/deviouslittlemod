@@ -1,0 +1,3 @@
+# Mod: Morocco's starting vassals (TFL / SOS / MRK) have been integrated into Morocco.
+# The vanilla vassal blocks that made them subjects of Morocco (1444-1472) were removed,
+# and all of their provinces were handed to MOR in history/provinces.

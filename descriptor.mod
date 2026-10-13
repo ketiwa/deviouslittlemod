@@ -1,0 +1,9 @@
+version="1.0"
+tags={
+	"Balance"
+}
+name="deviouslittlemod"
+picture="thumbnail.png"
+supported_version="v1.37.5.0"
+path="C:/Users/htxjc/OneDrive/Documents/Paradox Interactive/Europa Universalis IV/mod/1234"
+remote_file_id="3368226630"

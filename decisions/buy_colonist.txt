@@ -1,0 +1,26 @@
+country_decisions = {
+    buy_colonist = {
+        # Visible on all nations; becomes takeable at Administrative tech 5.
+        potential = {
+            NOT = { has_country_modifier = bought_colonist }
+        }
+
+        allow = {
+            adm_tech = 5
+            treasury = 500
+        }
+
+        effect = {
+            add_treasury = -500
+            add_country_modifier = {
+                name = bought_colonist
+                duration = -1
+            }
+        }
+
+        # The AI never wants to take this decision.
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

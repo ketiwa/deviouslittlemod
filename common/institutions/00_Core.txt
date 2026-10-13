@@ -628,6 +628,8 @@ new_world_i = {
 	can_start = {
 		is_year = 1500
 		owner = { 
+			#country must have its capital in Europe
+			capital_scope = { continent = europe }
 			#at least one province colonised or colonising, or have a subject colony
 			OR = {
 				any_owned_province = {

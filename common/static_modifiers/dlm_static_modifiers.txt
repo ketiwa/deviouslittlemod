@@ -1,0 +1,4 @@
+self_governing_colony_subject = {
+	colonists = 1
+	liberty_desire = 10
+}

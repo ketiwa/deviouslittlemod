@@ -251,9 +251,40 @@ westfalian_group_1 = {
 		}
 	}
 
+}
+
+# Moved out of slot 1 so the Westphalian column is not oversized.
+# generic = yes so it does not override the vanilla generic column (slot 2).
+westfalian_renovate = {
+	slot = 2
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = hannoverian
+			primary_culture = hessian
+		}
+		OR = {
+			tag = RVA
+			tag = OSN
+			tag = OLD
+			tag = LPP
+			tag = MUN
+			tag = HES
+			tag = BRG
+			tag = NSA
+			tag = KLE
+			tag = FRN
+			tag = AAC
+			tag = WES
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	hes_renovate_frankfurt = {
 		icon = renovate_berlin
-		position = 5
+		position = 6
 		required_missions = { }
 
 		provinces_to_highlight = {
@@ -295,9 +326,10 @@ westfalian_group_1 = {
 	}
 }
 	
-westfalian_group_2 = {
-	slot = 1
-	generic = no
+# Moved out of slot 1 into the generic diplomatic column (slot 3).
+westfalian_peace = {
+	slot = 3
+	generic = yes
 	ai = yes
 	potential = {
 		OR = {
@@ -324,7 +356,7 @@ westfalian_group_2 = {
 	
 	wes_hre_peace = {
 		icon = mission_noble_council
-		position = 5
+		position = 6
 		
 		trigger = {
 			tag = WES
@@ -416,7 +448,7 @@ westfalian_group_3 = {
 	
 	wes_rheinland_start = {
 		icon = mission_high_income
-		position = 6
+		position = 5
 		
 		trigger = {
 			1876 = {
@@ -439,6 +471,7 @@ westfalian_group_3 = {
 	
 	wes_rheinland_mid = {
 		icon = mission_hanseatic_city
+		position = 6
 		required_missions = { wes_rheinland_start }
 		
 		trigger = {
@@ -498,6 +531,7 @@ westfalian_group_3 = {
 	
 	wes_rheinland_end = {
 		icon = mission_conquer_50_development
+		position = 7
 		required_missions = { wes_rheinland_mid }
 		
 		provinces_to_highlight = {

@@ -48,6 +48,20 @@ xorme_ai_enforce_ally_limit_effect = {
 				}
 			}
 		}
-		remove_variable = xorme_ai_allies_allowed
+	}
+}
+
+xorme_ai_enforce_ally_opinion_gate_effect = {
+	if = {
+		limit = {
+			ai = yes
+			num_of_allies = 2
+		}
+		every_ally = {
+			limit = {
+				ROOT = { NOT = { has_opinion = { who = PREV value = 25 } } }
+			}
+			break_alliance = ROOT
+		}
 	}
 }

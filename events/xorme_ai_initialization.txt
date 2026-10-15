@@ -152,3 +152,21 @@ country_event = {
 		name = "OK"
 	}
 }
+
+country_event = {
+	id = xorme_ai_initialization.5
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		xorme_ai_enforce_ally_limit_effect = yes
+		xorme_ai_enforce_ally_opinion_gate_effect = yes
+	}
+
+	option = {
+		name = "OK"
+	}
+}

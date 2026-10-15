@@ -2050,6 +2050,10 @@ on_yearly_pulse = {
 	events = {
 		flavor_mos.3 #Yearly Tatar Yoke Tribute
 	}
+	if = {
+		limit = { ai = yes }
+		xorme_ai_enforce_ally_limit_effect = yes
+	}
 }
 on_yearly_pulse_2 = {
 }
@@ -6543,17 +6547,13 @@ on_royal_marriage_broken = { #ROOT - Original marriage creator, FROM - Marriage 
 }
 
 on_alliance_created = { #ROOT - Alliance sender, FROM - Alliance accepter
-	# AI-ONLY ALLIANCE OPINION GATE (threshold = +25)
-	# Only the SENDER (ROOT) needs relations: an AI sender may only ally a country it
-	# has at least +25 opinion of. The accepter's opinion is irrelevant.
-	# If the sender is AI and its opinion of FROM is below +25, the alliance is dissolved.
-	# Retune by changing the "value = 25" number below.
 	if = {
-		limit = {
-			ROOT = { ai = yes }
-			NOT = { ROOT = { has_opinion = { who = FROM value = 25 } } }
-		}
-		break_alliance = FROM
+		limit = { ROOT = { ai = yes } }
+		country_event = { id = xorme_ai_initialization.5 days = 1 }
+	}
+	if = {
+		limit = { FROM = { ai = yes } }
+		FROM = { country_event = { id = xorme_ai_initialization.5 days = 1 } }
 	}
 }
 

@@ -253,8 +253,6 @@ westfalian_group_1 = {
 
 }
 
-# Moved out of slot 1 so the Westphalian column is not oversized.
-# generic = yes so it does not override the vanilla generic column (slot 2).
 westfalian_renovate = {
 	slot = 2
 	generic = yes
@@ -326,7 +324,6 @@ westfalian_renovate = {
 	}
 }
 	
-# Moved out of slot 1 into the generic diplomatic column (slot 3).
 westfalian_peace = {
 	slot = 3
 	generic = yes

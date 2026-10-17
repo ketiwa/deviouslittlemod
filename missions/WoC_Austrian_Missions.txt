@@ -73,35 +73,21 @@ WoC_austria_1_holy_roman_empire = {
 		position = 2
 		required_missions = { hab_secure_electors } 
 		provinces_to_highlight = {
-            OR = {
-                AND = {
-                    owner = { is_emperor = yes }
-                    root = { is_emperor = no }
-                }
-                AND = {
-                    is_part_of_hre = yes
-                    owner = {
-						if = {
-							limit = {
-								is_part_of_hre = yes
-								is_subject = yes
-                                overlord = { is_part_of_hre = no }
-							}
-							is_part_of_hre = yes
-						}
-						else_if = {
-							limit = {
-								is_subject = no
-							}
-							is_part_of_hre = no
-						}
-						else = {
-							overlord = { is_part_of_hre = no }
-						}
-                    }
-                }
-            }
-        }
+			OR = {
+				province_id = 64
+				province_id = 65
+				province_id = 76
+				province_id = 1757
+				province_id = 2955
+				province_id = 2956
+				province_id = 2957
+				province_id = 4707
+				province_id = 4708
+				province_id = 4709
+				province_id = 4760
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
 			not_in_mission_preview_mode = { key = HAB }
 			is_emperor = yes
@@ -111,17 +97,20 @@ WoC_austria_1_holy_roman_empire = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = HAB_OWN_ALL_IMPERIAL_ASCENDANCY_CLAIMS
-				64 = { country_or_non_sovereign_subject_holds = ROOT }
-				65 = { country_or_non_sovereign_subject_holds = ROOT }
-				76 = { country_or_non_sovereign_subject_holds = ROOT }
-				1757 = { country_or_non_sovereign_subject_holds = ROOT }
-				2955 = { country_or_non_sovereign_subject_holds = ROOT }
-				2956 = { country_or_non_sovereign_subject_holds = ROOT }
-				2957 = { country_or_non_sovereign_subject_holds = ROOT }
-				4707 = { country_or_non_sovereign_subject_holds = ROOT }
-				4708 = { country_or_non_sovereign_subject_holds = ROOT }
-				4709 = { country_or_non_sovereign_subject_holds = ROOT }
-				4760 = { country_or_non_sovereign_subject_holds = ROOT }
+				calc_true_if = {
+					amount = 8
+					64 = { country_or_non_sovereign_subject_holds = ROOT }
+					65 = { country_or_non_sovereign_subject_holds = ROOT }
+					76 = { country_or_non_sovereign_subject_holds = ROOT }
+					1757 = { country_or_non_sovereign_subject_holds = ROOT }
+					2955 = { country_or_non_sovereign_subject_holds = ROOT }
+					2956 = { country_or_non_sovereign_subject_holds = ROOT }
+					2957 = { country_or_non_sovereign_subject_holds = ROOT }
+					4707 = { country_or_non_sovereign_subject_holds = ROOT }
+					4708 = { country_or_non_sovereign_subject_holds = ROOT }
+					4709 = { country_or_non_sovereign_subject_holds = ROOT }
+					4760 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 			}
 		}
 		effect = {
@@ -2114,24 +2103,27 @@ WoC_austria_3_holy_roman_empire = {
 			}
 		}
 		effect = {
-			every_province = {
-				limit = {
-					OR = {
-						province_id = 64
-						province_id = 65
-						province_id = 76
-						province_id = 1757
-						province_id = 2955
-						province_id = 2956
-						province_id = 2957
-						province_id = 4707
-						province_id = 4708
-						province_id = 4709
-						province_id = 4760
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 64
+							province_id = 65
+							province_id = 76
+							province_id = 1757
+							province_id = 2955
+							province_id = 2956
+							province_id = 2957
+							province_id = 4707
+							province_id = 4708
+							province_id = 4709
+							province_id = 4760
+						}
 					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
+			custom_tooltip = HAB_IMPERIAL_ASCENDANCY_CLAIMS_REWARD
 		}
 	}
 

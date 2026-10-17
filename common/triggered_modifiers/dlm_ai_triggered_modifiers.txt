@@ -1,0 +1,18 @@
+#AI -50% defensiveness. Uses potential (not a flag) so it follows live AI/human state:
+#applies whenever the country is AI, and is removed automatically if it becomes human again.
+dlm_ai_defensiveness_penalty = {
+	potential = {
+		ai = yes
+		# Never apply to a subject whose overlord is a human player (PUs, vassals, etc.)
+		NOT = {
+			AND = {
+				is_subject = yes
+				overlord = { ai = no }
+			}
+		}
+	}
+	trigger = {
+		always = yes
+	}
+	defensiveness = -0.5
+}

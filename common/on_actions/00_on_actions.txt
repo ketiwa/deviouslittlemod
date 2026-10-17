@@ -2050,10 +2050,6 @@ on_yearly_pulse = {
 	events = {
 		flavor_mos.3 #Yearly Tatar Yoke Tribute
 	}
-	if = {
-		limit = { ai = yes }
-		xorme_ai_enforce_ally_limit_effect = yes
-	}
 }
 on_yearly_pulse_2 = {
 }
@@ -6547,14 +6543,6 @@ on_royal_marriage_broken = { #ROOT - Original marriage creator, FROM - Marriage 
 }
 
 on_alliance_created = { #ROOT - Alliance sender, FROM - Alliance accepter
-	if = {
-		limit = { ROOT = { ai = yes } }
-		country_event = { id = xorme_ai_initialization.5 days = 1 }
-	}
-	if = {
-		limit = { FROM = { ai = yes } }
-		FROM = { country_event = { id = xorme_ai_initialization.5 days = 1 } }
-	}
 }
 
 on_royal_marriage = { #ROOT - Marraige sender, FROM - marriage accepter

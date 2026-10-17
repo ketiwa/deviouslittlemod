@@ -307,7 +307,7 @@ modern_firearm_techniques = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 100.0		
+		factor = 1.2		
 		modifier = {
 			factor = 1.5
 			infantry_fraction = 0.28
@@ -365,7 +365,7 @@ military_zeal_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 25.0
+		factor = 1
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -392,7 +392,7 @@ field_priests = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 25.0
+		factor = 1.2
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -458,6 +458,8 @@ local_army_organisation = {
 	global_regiment_cost = -0.1
 	recover_army_morale_speed = 0.15
 
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 	}
@@ -886,7 +888,7 @@ weapon_quality_standards = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1000.0
+		factor = 2
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1185,7 +1187,7 @@ the_best_defense_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1212,7 +1214,7 @@ omne_datum_optimum_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1238,7 +1240,7 @@ wielders_of_the_flaming_sword_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1265,7 +1267,7 @@ the_three_sisters_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1292,7 +1294,7 @@ by_the_people_for_the_people_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1319,7 +1321,7 @@ war_on_our_terms_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1000.0
+		factor = 1.0
 		modifier = {
 			factor = 2.5
 			is_at_war = yes
@@ -1346,7 +1348,7 @@ fear_tactics_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1373,7 +1375,7 @@ psychological_warfare_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1400,7 +1402,7 @@ kharash_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1427,7 +1429,7 @@ my_word_is_my_bond_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1454,7 +1456,7 @@ render_unto_caesar_policy = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1483,7 +1485,7 @@ mobile_siege_engines_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1506,7 +1508,7 @@ bolstered_defence_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1529,7 +1531,7 @@ handpicked_recruits_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1553,7 +1555,7 @@ mass_conscription_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1576,7 +1578,7 @@ naval_armament_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1598,7 +1600,7 @@ mercenary_tactical_movement_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1621,7 +1623,7 @@ universal_serfdom_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1644,7 +1646,7 @@ gentle_conquest_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1667,7 +1669,7 @@ sharp_wits_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1691,7 +1693,7 @@ sturdy_argument_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1714,7 +1716,7 @@ special_forces_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1737,7 +1739,7 @@ plentiful_materials_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1760,7 +1762,7 @@ naval_competence_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1783,7 +1785,7 @@ dutiful_mercenaries_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }
 
@@ -1806,6 +1808,6 @@ hired_expeditions_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1
 	}
 }

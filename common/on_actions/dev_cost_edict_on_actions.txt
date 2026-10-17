@@ -7,11 +7,11 @@ on_startup = {
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}
@@ -22,11 +22,11 @@ on_country_creation = {		#does not seem to work, might as well keep it
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}
@@ -37,11 +37,11 @@ on_country_released = {		#does not seem to work, might as well keep it
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}
@@ -52,11 +52,11 @@ on_create_vassal = {		#works
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}
@@ -67,11 +67,11 @@ on_create_client_state = {
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}
@@ -82,11 +82,11 @@ on_new_monarch = {		#guarantees that released countries from stability window ga
 	if = {
 		limit = {
 			NOT = {
-				has_country_modifier = decisive_battles_mod_modifier
+				has_country_modifier = dev_cost_edict_modifier
 			}
 		}
 		add_country_modifier = {
-			name = "decisive_battles_mod_modifier"
+			name = "dev_cost_edict_modifier"
 			duration = -1
 			hidden = yes
 		}

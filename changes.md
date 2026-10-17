@@ -35,7 +35,7 @@
 ## On Actions
 
 - Burgundian Inheritance removed.
-- Added on-actions for Decisive Battles and the Development Counter.
+- Added on-actions for the Dev Cost Edict and the Development Counter.
 
 ## Defines
 
@@ -116,7 +116,7 @@
 - Added mod defines.
 - Added the player gift notification action.
 - Added event modifiers.
-- Added on-actions for Decisive Battles and the Development Counter.
+- Added on-actions for the Dev Cost Edict and the Development Counter.
 - Added static and triggered modifiers.
 - Added five decision files.
 - Added six event files.

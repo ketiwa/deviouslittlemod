@@ -1,0 +1,4 @@
+# Dev Cost Edict: applied globally to every country.
+dev_cost_edict_modifier = {
+	development_cost = -0.1
+}

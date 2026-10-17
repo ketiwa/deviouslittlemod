@@ -7,8 +7,6 @@
 # ROOT = country picking the idea
 # groups set to colonial=yes will be higher prioritized by the AI when spending power
 
-#ideas in the group can have effect = {} and removed_effect = {}
-
 aristocracy_ideas = {
 	category = MIL
 
@@ -21,6 +19,7 @@ aristocracy_ideas = {
 
 	trigger = {
 		has_government_attribute = enables_aristocratic_idea_group
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
 	}
 	
 	noble_knights = {
@@ -52,40 +51,34 @@ aristocracy_ideas = {
 		yearly_absolutism = 0.5
 	}
 	
-
 	ai_will_do = {
-		factor = 3.75
-		
+		factor = 6.0
 		modifier = {
-			factor = 1.25
-			has_global_modifier_value = {
-				which = cavalry_power 
-				value = 0.25
-			}
+			factor = 2.0
+			xorme_ai_valid_nation = yes
 		}
 		modifier = {
-			factor = 1.25
-			cavalry_fraction = 0.3
+			factor = 2.0
+			cavalry_fraction = 0.4
 		}
 		modifier = {
-			factor = 0.5
-			NOT = { monthly_mil = 7 }
+			factor = 2.0
+			has_idea_group = humanist_ideas
 		}
 		modifier = {
-			factor = 1.1
-			personality = ai_militarist 
+			factor = 2.0
+			has_idea_group = economic_ideas
 		}
 		modifier = {
-			factor = 0.5
-			is_subject = yes
+			factor = 3.5
+			xorme_aristocracy_idea_group_priority_trigger = yes
 		}
-		modifier = { 
-			factor = 1.25
-			has_idea_group = spy_ideas 
+		modifier = {
+			factor = 5.0
+			religion = catholic
 		}
 	}
 }
-
 
 plutocracy_ideas = {
 	category = MIL
@@ -97,7 +90,11 @@ plutocracy_ideas = {
 	}
 
 	trigger = {
-		has_government_attribute = enables_plutocratic_idea_group
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+		OR = {
+			has_government_attribute = enables_plutocratic_idea_group
+			uses_republican_tradition = yes
+		}
 	}
 
 	tradition_of_payment = {
@@ -126,27 +123,7 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.75
-		
-		modifier = {
-			factor = 1.25
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.25
-			production_income_percentage = 0.35
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { monthly_mil = 7 }
-		}
-		modifier = {
-			factor = 1.1
-			OR = {
-				personality = ai_capitalist
-				personality = ai_militarist 
-			}
-		}
+		factor = 1000.0
 	}
 }
 
@@ -159,7 +136,11 @@ horde_gov_ideas = {
 	}
 	
 	trigger = {
-		has_government_attribute = enables_horde_idea_group
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+		OR = {
+			has_government_attribute = enables_horde_idea_group
+			uses_horde_unity = yes
+		}
 	}
 	
 	horse_lords = {
@@ -187,11 +168,7 @@ horde_gov_ideas = {
 	}
 	
 	ai_will_do = {
-		factor = 8
-		modifier = {
-			factor = 1.5
-			personality = ai_militarist 
-		}
+		factor = 1000.0
 	}
 }
 
@@ -206,7 +183,14 @@ theocracy_gov_ideas = {
 	}
 	
 	trigger = {
-		has_government_attribute = enables_divine_idea_group
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+		OR = {
+			government = theocracy
+			has_government_attribute = enables_divine_idea_group
+			uses_devotion = yes
+			has_government_mechanic = feudal_theocracy_mechanic
+			religion_group = christian
+		}
 	}
 	servants_of_god = {
 		land_morale = 0.1
@@ -233,30 +217,10 @@ theocracy_gov_ideas = {
 		prestige_from_land = 0.5
 	}
 	ai_will_do = {
-		factor = 3.75
+		factor = 1000.0
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
-		}
-		modifier = {
-			factor = 1.25
-			any_neighbor_country = { 
-				NOT = { religion = ROOT }
-			}
-		}
-		modifier = {
-			factor = 1.25
-			any_neighbor_country = { 
-				NOT = { religion = ROOT }
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { monthly_mil = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			personality = ai_militarist 
 		}
 	}
 }
@@ -269,6 +233,7 @@ indigenous_ideas = {
 	}
 
 	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
 		has_government_attribute = enables_natives_idea_group
 	}
 
@@ -296,12 +261,20 @@ indigenous_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 1000.0
 	}
 }
 
 innovativeness_ideas = {
 	category = ADM
+
+	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+		if = {
+			limit = { ai = yes }
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		advisor_cost = -0.2
@@ -332,53 +305,39 @@ innovativeness_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.55
+		factor = 10.1
 		modifier = {
-			factor = 1.25
-			has_reform = steppe_horde
+			factor = 2.0
+			in_golden_age = yes
 		}
 		modifier = {
-			factor = 0.5
-			NOT = { monthly_adm = 8 }
+			factor = 3.0
+			has_idea_group = quality_ideas
 		}
 		modifier = {
-			factor = 1.25
-			innovativeness = 40
-			NOT = { is_year = 1650 }
+			factor = 3.0
+			has_idea_group = offensive_ideas
 		}
 		modifier = {
-			factor = 1.25
-			OR = { 
-				ruler_has_personality = scholar_personality 
-				ruler_has_personality = free_thinker_personality
-				in_golden_age = yes 	
-			}
-		}
-		modifier = {
-			factor = 1.1
-			personality = ai_capitalist
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_idea_group = economic_ideas 
-				has_idea_group = offensive_ideas 
-				has_idea_group = naval_ideas
-			}
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				is_year = 1700 
-				innovativeness = 80
-			}
+			factor = 1000.0
+			xorme_innovative_idea_group_priority_trigger = yes
 		}
 	}
 }
 
-
 religious_ideas = {
 	category = ADM
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+			NOT = { religion = confucianism }
+		}
+	}
 
 	bonus = {
 		culture_conversion_cost = -0.25
@@ -419,48 +378,65 @@ religious_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 4.25
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
 		}
 		modifier = {
-			factor = 1.25
-			NOT = { religious_unity = 0.5 }
+			factor = 0
+			xorme_nation_with_tolerance_trigger = yes
 		}
 		modifier = {
-			factor = 0.75
-			personality = ai_diplomat
-		}
-		modifier = {
-			factor = 1.1
-			religion = catholic
-			any_neighbor_country = {
-				is_crusade_target = yes 
-			}
+			factor = 1.5
+			is_part_of_hre = yes
 		}
 		modifier = {
 			factor = 0.25
-			religious_unity = 0.95 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = {
-				any_neighbor_country = {
-					religion = ROOT 
-				}
+			OR = {
+				religion = buddhism
+				religion = confucianism
 			}
 		}
 		modifier = {
-			factor = 0.5
-			NOT = { monthly_adm = 7 }
+			factor = 1.5
+			NOT = { religious_unity = 90 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 75 }
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
 		}
 	}
 }
 
-
 spy_ideas = {
 	category = DIP
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		rebel_support_efficiency = 1
@@ -499,29 +475,47 @@ spy_ideas = {
 	blackmailing = {
 		monthly_favor_modifier = 0.33
 		accept_vassalization_reasons = 15
-		num_of_pronoiars = 1
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5.0
 		modifier = {
-			factor = 1.1
-			personality = ai_militarist 
+			factor = 4.5
+			is_part_of_hre = yes
 		}
 		modifier = {
-			factor = 0.45
-			NOT = { monthly_dip = 7 }
+			factor = 4.5
+			is_subject = yes
 		}
 		modifier = {
-			factor = 1.25
-			has_idea_group = aristocracy_ideas
+			factor = 5.0
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 10.0
+			has_idea_group = theocracy_gov_ideas
+			has_idea_group = diplomatic_ideas
 		}
 	}
 }
 
-
 diplomatic_ideas = {
 	category = DIP
+	
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
+
 	bonus = {
 		reduced_stab_impacts = yes
 	}
@@ -550,26 +544,36 @@ diplomatic_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
-
+		factor = 1.0
 		modifier = {
-			factor = 2
+			factor = 1.5
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 2.5
+			has_idea_group = spy_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 10.0
+			tag = PAP
+		}
+		modifier = {
+			factor = 1000
 			is_emperor = yes
-		}
-		modifier = { 	
-			factor = 0.75 
-			NOT = { monthly_dip = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			personality = ai_diplomat 
 		}
 	}
 }
 
-
 offensive_ideas = {
 	category = MIL
+
+	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+	}
 
 	bonus = {
 		recover_army_morale_speed = 0.1
@@ -600,79 +604,49 @@ offensive_ideas = {
 		discipline = 0.05
 	}
 
-	#shock_tactics = {
-	#	morale_damage = 0.1
-	#}
-	#
-	#melee_combat_training = {
-	#	shock_damage = 0.1
-	#}
-	#
-	#volley_fire = {
-	#	fire_damage = 0.1
-	#}
-	#
-	#fort_breaker = {
-	#	assault_fort_ability = 0.1
-	#	assault_fort_cost_modifier = -1
-	#}
-	#
-	#glory_on_the_battlefield = {
-	#	artillery_barrage_cost = -0.25
-	#	warscore_from_battles_modifier = 0.15
-	#}
-
 	ai_will_do = {
-		factor = 3.51
+		factor = 5.0
 		modifier = {
-			factor = 1.1
-			has_global_modifier_value = {
-				which = discipline 
-				value = 0.1
-			}
+			factor = 0.1
+			NOT = { mil_tech = 7 }
 		}
 		modifier = {
-			factor = 1.25
-			monthly_mil = 7 
+			factor = 2.0
+			mil_tech = 7
 		}
 		modifier = {
-			factor = 1.05
-			is_great_power = yes 
+			factor = 3.0
+			has_idea_group = innovativeness_ideas
 		}
 		modifier = {
-			factor = 1.25 
-			personality = ai_militarist
+			factor = 3.0
+			has_idea_group = economic_ideas
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				num_of_artillery = 30
-				num_of_galley = 50
-				num_of_heavy_ship = 20
-			}
+			factor = 3.5
+			has_idea_group = aristocracy_ideas
 		}
 		modifier = {
-			factor = 1.1 
-			national_focus = MIL 
+			factor = 3.5
+			mil_tech = 13
 		}
 		modifier = {
-			factor = 1.15
-			OR = {
-				has_idea_group = economic_ideas 
-				has_idea_group = innovativeness_ideas 
-				has_idea_group = infrastructure_ideas
-			}
+			factor = 10.0
+			mil_tech = 16
 		}
 		modifier = {
-			factor = 1.25
-			is_march = yes
+			factor = 10.0
+			xorme_quantity_idea_group_priority_trigger = yes
 		}
 	}
 }
 
-
 defensive_ideas = {
 	category = MIL
+
+	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+	}
 
 	bonus = {
 		hostile_attrition = 1
@@ -732,83 +706,65 @@ defensive_ideas = {
 		}
 	}
 
-	#until_the_last_man = {
-	#	morale_damage_received = -0.1
-	#}
-	#
-	#improved_body_armor = {
-	#	shock_damage_received = -0.1
-	#}
-	#
-	#terrain_defence = {
-	#	fire_damage_received = -0.1
-	#}
-	#
-	#homeland_specialization = {
-	#	attack_bonus_in_capital_terrain = yes
-	#}
-	#
-	#guerilla_warfare_defense = {
-	#	global_defender_dice_roll_bonus = 1
-	#}
-	#
-	#relentless_charge = {
-	#	global_attacker_dice_roll_bonus = 1
-	#}
-	#
-	#ditch_defense = {
-	#	garrison_damage = 0.5
-	#	garrison_size = 0.25
-	#}
-	
 	ai_will_do = {
-		factor = 2.5
+		factor = 5.25
 		modifier = {
-			factor = 1.1
-			has_global_modifier_value = {
-				which = land_morale  
-				value = 0.2
+			factor = 1.5
+			NOT = { is_year = 1500 }
+		}
+		modifier = {
+			factor = 0.8
+			capital_scope = {
+				continent = asia
 			}
 		}
 		modifier = {
-			factor = 1.1
-			has_global_modifier_value = {
-				which = defensiveness  
-				value = 0.2
+			factor = 1.5
+			capital_scope = {
+				continent = europe
 			}
 		}
 		modifier = {
-			factor = 1.25
-			monthly_mil = 7 
-		}
-		modifier = {
-			factor = 1.1 
-			personality = ai_militarist
-		}
-		modifier = {
-			factor = 1.25
-			current_age = age_of_discovery
-			num_of_owned_provinces_with = {
-				has_terrain = mountain
-				value = 5
+			factor = 2.0
+			capital_scope = {
+				region = japan_region
 			}
 		}
 		modifier = {
-			factor = 1.05 
-			any_rival_country = {
-				army_size = ROOT 
-			}
+			factor = 2.0
+			xorme_ai_valid_nation = yes
 		}
 		modifier = {
-			factor = 1.25
-			is_march = yes
+			factor = 2.0
+			NOT = { total_development = 100 }
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 32.0
+			xorme_defensive_idea_group_priority_trigger = yes
 		}
 	}
 }
 
-
 trade_ideas = {
 	category = DIP
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		merchants = 1
@@ -841,45 +797,78 @@ trade_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.4
+		factor = 1.0
 		modifier = {
-			factor = 0
-			NOT = { num_of_cities = 6 }
-			NOT = { has_government_attribute = is_merchant_republic }
+			factor = 2.0
+			government_rank = 3
 		}
 		modifier = {
-			factor = 2
+			factor = 2.0
+			num_of_cities = 20
+		}
+		modifier = {
+			factor = 2.0
+			num_of_cities = 40
+		}
+		modifier = {
+			factor = 2.0
+			xorme_wealthy_region_trigger = yes
+		}
+		modifier = {
+			factor = 2.5
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.5
+			has_idea_group = plutocracy_ideas
+		}
+		modifier = {
+			factor = 4.0
+			government = republic
+		}
+		modifier = {
+			factor = 4.5
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 5.0
 			has_government_attribute = is_merchant_republic
 		}
 		modifier = {
-			factor = 1.25
-			personality = ai_capitalist 
-			trade_income_percentage = 0.35
-		}
-		modifier = {
-			factor = 1.25
-			home_trade_node = {
-				trade_share = {
-					country = ROOT 
-					share = 0.4
-				}
+			factor = 7.5
+			is_great_power = yes
+			OR = {
+				xorme_can_select_third_idea_group_trigger = yes
+				xorme_can_select_fourth_idea_group_trigger = yes
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1000.0
+			xorme_nation_with_strong_navy_trade_potential_trigger = yes
 			OR = {
-				has_idea_group = infrastructure_ideas
-				has_idea_group = economic_ideas
+				xorme_can_select_third_idea_group_trigger = yes
+				xorme_can_select_fourth_idea_group_trigger = yes
 			}
 		}
 	}
 }
 
-
-
-
 economic_ideas = {
 	category = ADM
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -909,46 +898,50 @@ economic_ideas = {
  	}	
 
 	ai_will_do = {
-		factor = 0.35
+		factor = 1.1
 		modifier = {
-			factor = 2
-			inflation = 5
+			factor = 2.0
+			has_idea_group = offensive_ideas
 		}
 		modifier = {
-			factor = 1.25
-			inflation = 10
-		}
-		modifier = {
-			factor = 1.5
-			has_reform = steppe_horde
-		}
-		modifier = {
-			factor = 1.1
+			factor = 2.0
 			num_of_cities = 20
 		}
 		modifier = {
-			factor = 1.1
-			num_of_cities = 50
+			factor = 2.0
+			num_of_cities = 40
 		}
 		modifier = {
-			factor = 1.2
-			personality = ai_capitalist 
-		}
-		modifier = { 
-			factor = 0.8
-			NOT = { monthly_adm = 7 } 
+			factor = 2.5
+			has_idea_group = quality_ideas
 		}
 		modifier = {
-			factor = 1.1
-			national_focus = ADM 
+			factor = 4.0
+			has_idea_group = quantity_ideas
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = quality_ideas
-				has_idea_group = trade_ideas
-				has_idea_group = offensive_ideas 
-			}
+			factor = 1.5
+			total_development = 100
+		}
+		modifier = {
+			factor = 3.0
+			total_development = 300
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 600
+		}
+		modifier = {
+			factor = 4.0
+			total_development = 900
+		}
+		modifier = {
+			factor = 7.5
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 10.0
+			is_colonial_nation = yes
 		}
 	}
 }
@@ -969,6 +962,7 @@ exploration_ideas = {
 		may_explore = yes
 		naval_attrition = -0.1
 	}
+
 	colonial_ventures = {
 		colonists = 1
 		effect = { remove_temporary_colonist = yes }
@@ -992,155 +986,86 @@ exploration_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 6.0
 		modifier = {
 			factor = 0
-			is_colonial_nation = yes
-		}
-		modifier = {
-			factor = 0
-			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			is_subject = yes
-		}		
-		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			current_age = age_of_revolutions #too late
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_province = {
-					has_port = yes
-					sea_zone = {
-						NOT = { area = eastern_mediterrenean_area }
-					}
-				}
-			}
-			NOT = { 
-				any_owned_province = { 
-					is_in_capital_area = yes
-					has_empty_adjacent_province = yes
-				} 
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				any_owned_province = {
-					has_port = yes
-					sea_zone = {
-						OR = {
-							NOT = { region = mediterrenean_region }
-							province_id = 1293 #Gibraltar
-							province_id = 1294 #Almeria
-						}
-						NOT = { area = red_sea_area }
-						NOT = { area = baltic_area }
-					}
-				}
-			}
-			NOT = { 
-				any_owned_province = { 
-					is_in_capital_area = yes
-					has_empty_adjacent_province = yes
-				} 
-			}
-		}
-		modifier = {
-			factor = 0.1
 			NOT = { num_of_ports = 3 }
-			NOT = { 
-				any_owned_province = { 
-					is_in_capital_area = yes
-					has_empty_adjacent_province = yes
-				}
-			}
 		}
 		modifier = {
-			factor = 0.1
-			NOT = { has_institution = renaissance }
-			NOT = { tag = POR }
-			NOT = { tag = CAS }
-		}
-		modifier = {
-			factor = 0.1
-			capital_scope = {
-				NOT = {
-					region = france_region
-					region = iberia_region
-					region = british_isles_region
-					region = low_countries_region
-				}
-			}
-			NOT = { technology_group = high_american }
-		}
-		modifier = {
-			factor = 0.5
-			tag = ARA
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { is_year = 1490 }
-			capital_scope = {
-				NOT = {
-					region = iberia_region
-				}
-			}
-		}
-		modifier = {
-			factor = 10
-			technology_group = high_american
+			factor = 1.5
+			num_of_ports = 3
 		}
 		modifier = {
 			factor = 2.0
-			num_of_ports = 5
+			num_of_ports = 6
 		}
 		modifier = {
-			factor = 2.0
-			num_of_ports = 10
+			factor = 2.5
+			num_of_ports = 12
 		}
 		modifier = {
-			factor = 2.0
-			num_of_ports = 15
-		}
-		modifier = {
-			factor = 2.0
+			factor = 3.0
 			num_of_ports = 20
 		}
 		modifier = {
-			factor = 1000
+			factor = 6.0
+			capital_scope = {
+				region = iberia_region
+			}
+		}
+		modifier = {
+			factor = 2.0
+			tag = FRA
+		}
+		modifier = {
+			factor = 5.0
+			OR = {
+				tag = GBR
+				tag = ENG
+				tag = NOR
+			}
+		}
+		modifier = {
+			factor = 100.0
+			xorme_can_select_fourth_idea_group_trigger = yes
+			OR = {
+				tag = KUR
+				tag = ASU
+				tag = ADU
+				tag = LON
+				tag = MAJ
+				tag = NOR
+				tag = HOL
+			}
+		}
+		modifier = {
+			factor = 1000.0
+			xorme_can_select_second_idea_group_trigger = yes
+			xorme_exploration_idea_group_priority_trigger = yes
+		}
+		modifier = {
+			factor = 1000.0
 			OR = {
 				tag = POR
 				tag = CAS
 				tag = SPA
 			}
 		}
-		modifier = {
-			factor = 2
-			OR = {
-				tag = GBR
-				tag = NED
-				tag = ENG
-				tag = FRA
-				tag = KUR
-			}
-		}
 	}
 }
-
 
 maritime_ideas = {
 	category = DIP
 
 	trigger = {
 		primitives = no
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
 	}
 
 	bonus = {
@@ -1177,18 +1102,15 @@ maritime_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.55
+		factor = 1.0
 		modifier = {
 			factor = 0
 			is_tribal = yes
 		}
 		modifier = {
 			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
 			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
 		}
 		modifier = {
 			factor = 0.25
@@ -1238,9 +1160,12 @@ maritime_ideas = {
 	}
 }
 
-
 quality_ideas = {
 	category = MIL
+
+	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+	}
 
 	bonus = {
 		discipline = 0.05
@@ -1272,70 +1197,49 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 5.0
 		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
-		modifier = { 
-			factor = 0.75
-			NOT = { monthly_mil = 8 }
-		}
-		modifier = { 
-			factor = 1.05
-			is_great_power = yes 
-		}
-		modifier = { 
-			factor = 1.05
-			national_focus = MIL 
-		}
-		modifier = { 
-			factor = 1.1
-			personality = ai_militarist  
+			factor = 2.0
+			xorme_ai_valid_nation = yes
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = infrastructure_ideas
-				has_idea_group = economic_ideas
-			}
+			factor = 2.0
+			num_of_ports = 3
 		}
-		modifier = { 
-			factor = 1.25
-			OR = { 
-				has_global_modifier_value = { 
-					which = infantry_power 
-					value = 0.2
-				}
-				has_global_modifier_value = { 
-					which = cavalry_power 
-					value = 0.25
-				}
-				has_global_modifier_value = { 
-					which = artillery_power 
-					value = 0.1
-				}
-				has_global_modifier_value = { 
-					which = heavy_ship_power 
-					value = 0.1
-				}
-				has_global_modifier_value = { 
-					which = galley_power 
-					value = 0.15
-				}
-				has_global_modifier_value = { 
-					which = army_tradition
-					value = 0.01
-				}
-			}
-			
+		modifier = {
+			factor = 2.5
+			total_development = 100
+		}
+		modifier = {
+			factor = 3.0
+			NOT = { government_rank = 3 }
+			government_rank = 2
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = economic_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = expansion_ideas
+		}
+		modifier = {
+			factor = 25.0
+			xorme_quality_idea_group_priority_trigger = yes
 		}
 	}
 }
 
-
 quantity_ideas = {
 	category = MIL
+
+	trigger = {
+		NOT = { is_subject_of_type = xorme_moh_administrative_district }
+	}
 
 	bonus = {
 		land_forcelimit_modifier  = 0.33
@@ -1365,54 +1269,53 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 10.0
 		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
-		modifier = { 
-			factor = 0.75
-			NOT = { monthly_mil = 8 }
-		}
-		modifier = { 
-			factor = 1.05
-			is_great_power = yes 
-		}
-		modifier = { 
-			factor = 1.05
-			national_focus = MIL 
-		}
-		modifier = { 
-			factor = 1.1
-			personality = ai_militarist  
-		}
-		modifier = { 
-			factor = 1.25
-			OR = { 
-				has_global_modifier_value = { 
-					which = global_manpower_modifier 
-					value = 0.2
-				}
-				has_global_modifier_value = { 
-					which = land_forcelimit_modifier 
-					value = 0.15
-				}
-			}
+			factor = 2.0
+			xorme_ai_valid_nation = yes
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = trade_ideas
-				has_idea_group = economic_ideas
-			}
+			factor = 3.0
+			total_development = 300
+		}
+		modifier = {
+			factor = 3.0
+			total_development = 600
+		}
+		modifier = {
+			factor = 3.0
+			total_development = 900
+		}
+		modifier = {
+			factor = 3.0
+			government_rank = 3
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = economic_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = trade_ideas
+		}
+		modifier = {
+			factor = 15.0
+			xorme_quantity_idea_group_priority_trigger = yes
 		}
 	}
 }
 
-
 expansion_ideas = {
 	category = ADM
 	important = yes
+
+	trigger = {
+		always = no
+	}
 
 	bonus = {
  		min_autonomy_in_territories = -0.1
@@ -1446,24 +1349,38 @@ expansion_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 4.5
 		modifier = {
-			factor = 10
-			OR = {
-				has_idea_group = exploration_ideas
-				is_colonial_nation = yes
-			}
+			factor = 0.5
+			NOT = { has_idea_group = exploration_ideas }
 		}
 		modifier = {
-			factor = 5
+			factor = 6.0
 			OR = {
-				tag = CAS
 				tag = POR
+				tag = CAS
 				tag = SPA
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 30.0
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 1000.0
+			xorme_late_expansion_idea_group_priority_trigger = yes
+			OR = {
+				xorme_can_select_fourth_idea_group_trigger = yes
+				xorme_can_select_fifth_idea_group_trigger = yes
+				xorme_can_select_sixth_idea_group_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 1000.0
 			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
 			tag = RUS
 			num_of_cities = 20
@@ -1492,9 +1409,18 @@ expansion_ideas = {
 	}
 }
 
-
 administrative_ideas = {
 	category = ADM
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		governing_capacity_modifier = 0.2
@@ -1525,40 +1451,54 @@ administrative_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.65
+		factor = 1.0
 		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
+			factor = 1.5
+			has_idea_group = quantity_ideas
 		}
-		modifier = { 
-			factor = 0.75
-			NOT = { monthly_adm = 8 }
+		modifier = {
+			factor = 1.5
+			total_development = 500
 		}
-		modifier = { 
-			factor = 1.05
-			is_great_power = yes 
+		modifier = {
+			factor = 2.0
+			total_development = 1000
 		}
-		modifier = { 
-			factor = 1.05
-			national_focus = ADM 
+		modifier = {
+			factor = 2.0
+			has_reform = steppe_horde
 		}
-		modifier = { 
-			factor = 1.1
-			personality = ai_militarist  
+		modifier = {
+			factor = 2.5
+			governing_capacity_percentage = 0.8
 		}
-		modifier = { 
-			factor = 1.25
-			OR = { 
-				has_global_modifier_value = { 
-					which = core_creation 
-					value = 0.15
-				}
-				has_reform = livonian_military_monarchy
-				has_reform = prussian_theocratic_reform
-				has_reform = prussian_republic_reform
-				has_reform = prussian_monarchy
-				has_reform = prussian_monarchy_base
-				governing_capacity_percentage = 0.9
+		modifier = {
+			factor = 2.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 3.0
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 3.5
+			xorme_administrative_idea_group_priority_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			has_idea_group = horde_gov_ideas
+		}
+		modifier = {
+			factor = 10.0
+			is_great_power = yes
+			is_year = 1675
+		}
+		modifier = {
+			factor = 100.0
+			xorme_can_select_second_idea_group_trigger = yes
+			OR = {
+				tag = TUR
+				tag = SWI	
 			}
 		}
 	}
@@ -1566,6 +1506,16 @@ administrative_ideas = {
 
 humanist_ideas = {
 	category = ADM
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		idea_cost = -0.1
@@ -1600,42 +1550,79 @@ humanist_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.55
+		factor = 7.5
 		modifier = {
 			factor = 0
 			has_idea_group = religious_ideas
 		}
 		modifier = {
-			factor = 0.5
-			any_rival_country = {
-				NOT = { religion = ROOT } 
+			factor = 0
+			xorme_nation_with_tolerance_trigger = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {
+				OR = {
+					religion = buddhism
+					religion = confucianism
+				}
 			}
 		}
 		modifier = {
-			factor = 1.25
-			personality = ai_militarist
+			factor = 1.2
+			is_part_of_hre = yes
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { monthly_adm = 8 }
+			factor = 1.5
+			government = republic
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
+			NOT = { religious_unity = 90 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 75 }
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.0
+			has_idea_group = plutocracy_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 3.5
 			religion = confucianism
 		}
 		modifier = {
-			factor = 1.1 
-			national_focus = ADM 
+			factor = 4.0
+			religion = buddhism
 		}
 		modifier = {
-			factor = 1.25
-			has_idea_group = offensive_ideas 
+			factor = 25.0
+			is_emperor_of_china = yes
 		}
 	}
 }
 
 influence_ideas = {
 	category = DIP
+
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		unjustified_demands = -0.5
@@ -1668,22 +1655,43 @@ influence_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 1.2
 		modifier = {
 			factor = 1.5
 			is_emperor = yes
 		}
 		modifier = {
 			factor = 1.5
+			num_of_subjects = 1
+		}
+		modifier = {
+			factor = 1.75
 			num_of_subjects = 2
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2.0
 			num_of_subjects = 3
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { monthly_dip = 8 }
+			factor = 3.0
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 3.5
+			has_reform = shogunate_legacy
+		}
+		modifier = {
+			factor = 4.5
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 10.0
+			OR = {
+				has_subject_of_type = colony
+				has_subject_of_type = crown_colony
+				has_subject_of_type = private_enterprise
+				has_subject_of_type = self_governing_colony
+			}
 		}
 	}
 }
@@ -1729,14 +1737,10 @@ naval_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.45
+		factor = 1.0
 		modifier = {
 			factor = 0
 			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			primitives = yes
 		}
 		modifier = {
 			factor = 0
@@ -1744,17 +1748,13 @@ naval_ideas = {
 			NOT = { is_colonial_nation = yes }
 		}
 		modifier = {
-			factor = 0.31
-			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.31
-			num_of_cities = 50
-		}
-
-		modifier = {
-			factor = 10
-			has_government_attribute = is_pirate_republic_reform
+			factor = 50.0
+			OR = {
+				has_reform = pirate_republic_reform
+				has_reform = pirate_kingdom
+				has_reform = war_against_the_world_government
+				has_reform = black_market_consortium_government
+			}
 		}
 	}
 }
@@ -1762,6 +1762,15 @@ naval_ideas = {
 court_ideas = {
 	category = DIP
 
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		legitimacy = 0.5 
@@ -1825,6 +1834,16 @@ court_ideas = {
 mercenary_ideas = {
 	category = MIL 
 
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
+
 	bonus = {
 		mercenary_discipline = 0.05
 	}
@@ -1861,6 +1880,15 @@ mercenary_ideas = {
 infrastructure_ideas = {
 	category = ADM
 	
+	trigger = {
+		if = {
+			limit = { 
+				ai = yes
+				NOT = { is_subject_of_type = xorme_moh_administrative_district }
+			}
+			xorme_has_any_mil_idea_group_trigger = yes
+		}
+	}
 
 	bonus = {
 		development_cost = -0.1
@@ -1892,7 +1920,7 @@ infrastructure_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.7
+		factor = 2.7
 		modifier = {
 			factor = 1.1 
 			personality = ai_capitalist

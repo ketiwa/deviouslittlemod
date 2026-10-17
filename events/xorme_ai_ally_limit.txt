@@ -1,0 +1,33 @@
+namespace = xorme_ai_ally_limit
+
+# ---------------------------------------------------------------------
+# DISABLED - monthly AI alliance-breaking removed at user's request.
+# This monthly event enforced a cap of 2 AI allies by dissolving any
+# further AI alliances, which made AI countries break alliances every
+# month. Left commented out so it can be restored later if desired.
+# ---------------------------------------------------------------------
+#country_event = {
+#	id = xorme_ai_ally_limit.1
+#	title = "NONE"
+#	desc = "NONE"
+#	picture = "NONE"
+#	hidden = yes
+#	is_triggered_only = no
+#
+#	trigger = {
+#		ai = yes
+#		num_of_allies = 3
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#
+#	immediate = {
+#		xorme_ai_enforce_ally_limit_effect = yes
+#	}
+#
+#	option = {
+#		name = "OK"
+#	}
+#}

@@ -74,6 +74,10 @@
 - Maximum warscore from battles increased from 40 to 50.
 - Piety manpower bonus reduced from 2.0 to 1.5.
 
+## Technology
+
+- Diplo tech 7 colonial range increased from +115 to +215, making the cumulative total 375 instead of 275.
+
 ## Decisions
 
 - Austria-Hungary formation now requires administrative tech 12 instead of 18.

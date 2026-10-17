@@ -47,6 +47,9 @@ NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 10
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
 
+-- Backrow morale damage taken (vanilla 0.4; set to 0.0 to match Gecko Monday Fork).
+NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
+
 -- ==================== Mysticism piety action ====================
 -- "Call on Religious Followers" (available at -75 piety) manpower reward.
 NDefines.NReligion.PIETY_MANPOWER = 1.5

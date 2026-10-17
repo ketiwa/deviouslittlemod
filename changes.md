@@ -73,6 +73,7 @@
 - Supply limit base multiplier increased from 6 to 10.
 - Maximum wargoal warscore bonus increased from 25 to 50.
 - Maximum warscore from battles increased from 40 to 50.
+- Cannons no longer retreat from battles (back-row morale damage taken set to 0).
 - Piety manpower bonus reduced from 2.0 to 1.5.
 
 ## Technology

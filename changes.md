@@ -30,6 +30,7 @@
 
 - Eyalet subject type now uses a diplomatic slot.
 - Trade companies removed.
+- Downstream trade power nuked.
 - Trade node changes for balance and war reasons.
 
 ## On Actions

@@ -1,0 +1,28 @@
+giftaction = {
+	effect = {
+		# ROOT = sender, FROM = recipient.
+		# Only notify when a human player sends a gift to another human player.
+		if = {
+			limit = {
+				ROOT = { ai = no }
+				FROM = { ai = no }
+			}
+
+			save_global_event_target_as = dlm_gift_sender
+			FROM = {
+				save_global_event_target_as = dlm_gift_recipient
+			}
+
+			every_country = {
+				limit = {
+					ai = no
+					has_country_flag = dlm_gift_notifications
+				}
+				country_event = {
+					id = dlm_gift.1
+					days = 0
+				}
+			}
+		}
+	}
+}

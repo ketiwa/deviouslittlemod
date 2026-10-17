@@ -1,0 +1,39 @@
+country_decisions = {
+	dlm_enable_gift_notifications = {
+		potential = {
+			ai = no
+			NOT = { has_country_flag = dlm_gift_notifications }
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			set_country_flag = dlm_gift_notifications
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dlm_disable_gift_notifications = {
+		potential = {
+			ai = no
+			has_country_flag = dlm_gift_notifications
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			clr_country_flag = dlm_gift_notifications
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

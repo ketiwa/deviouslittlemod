@@ -1,0 +1,14 @@
+namespace = dlm_gift
+
+country_event = {
+	id = dlm_gift.1
+	title = dlm_gift.1.t
+	desc = dlm_gift.1.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = dlm_gift.1.a
+	}
+}

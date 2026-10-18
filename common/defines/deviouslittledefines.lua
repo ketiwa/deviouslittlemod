@@ -65,4 +65,5 @@ NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.01                       -- vanilla 0.0
 NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 60                     -- vanilla 50
 NDefines.NDiplomacy.IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 3      -- vanilla 1
 NDefines.NCountry.MAX_PROVINCES_FOR_FREE_CITY = 8                 -- vanilla 1
+NDefines.NDiplomacy.MAX_FREE_CITIES = 0                           -- vanilla 12; disables Grant Free City Status
 

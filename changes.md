@@ -4,12 +4,25 @@
 
 - Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.
 
-## HRE Reforms
 
-- Replaced vanilla HRE imperial reforms with the Gecko Sunday Fork version (`common/imperial_reforms/00_hre_emperor.txt`, Workshop 3799211447).
-- Emperor now receives flat manpower and force limit at nearly every reform; the mainline reforms total +65 manpower and +65 force limit.
-- Branch bonuses: Expand Gemeiner Pfennig gives the emperor +15 manpower (electors +5); Reichskrieg gives +25% local manpower in HRE provinces; Erbkaisertum gives the emperor +20% manpower recovery speed.
-- Member-state effects retained from the source mod, including imperial tax, mercenary cost, and stability cost bonuses.
+## HRE Mechanic Changes
+
+- No free cities exist
+- HRE Reforms rebalanced.
+- Increased IA growth, requires 60 IA per reform.
+- Emp gets manpower through reforms not per memberstate in hre.
+- All italy added to hre.
+
+
+## Holy Roman Empire
+
+- All Italy-region provinces start in the HRE except the eight Venice-owned provinces (Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso, Padova) and Rome.
+- Brescia and Bergamo, the only two Venice-owned provinces that were imperial in vanilla, are removed from the HRE.
+- The Papal States starts outside the HRE. The Pope owns only Rome and is not a Shadow Kingdom prince.
+- Holstein and Ditmarschen are removed from the HRE; the Schleswig/Holstein area contains no imperial provinces.
+- Every Italian province not owned by Venice is scripted to leave the HRE on 1495.1.1, so the Shadow Kingdom removes all of Italy.
+- Per-prince HRE bonuses reduced: each prince now gives the emperor 0.1 manpower and 0.1 land force limit (was 0.5 / 0.5).
+- Per-free-city bonuses changed: each free city gives the emperor 5 tax, 1.25 manpower and 0.5 land force limit (was 2 / 1 / 0.5).
 
 ## Ideas
 
@@ -82,6 +95,10 @@
 - Maximum warscore from battles increased from 40 to 50.
 - Cannons no longer retreat from battles (back-row morale damage taken set to 0).
 - Piety manpower bonus reduced from 2.0 to 1.5.
+- HRE: imperial authority per prince 0.07 (vanilla 0.075); prince authority threshold 10 (25); heretic penalty 0 (was -0.01); foreign control penalty -0.006 (was -0.005); imperial city authority 0.01 (0.005).
+- HRE: imperial reform cost 60 (was 50); imperial reform authority acceptance 3 (was 1).
+- Free city cap set to 0 (was 12), which disables the Grant Free City Status imperial action.
+- Free cities may have up to 8 provinces (vanilla 1).
 
 ## Technology
 
@@ -115,6 +132,14 @@
 - Lowlands no longer PUs.
 - Lowlands no longer in HRE.
 
+## Province Changes
+
+- Avignon (202): owned and controlled by Provence instead of the Papal States. The Papal core is removed; the AVI core and the 1417 Papal ownership block are gone. The 1670 French core and 1791 French annexation remain.
+- Spoleto (SPL) is released from the Papal States and owns Spoleto (4731), Ancona (119) and Terracina (4732), with Spoleto cores and no Papal cores. The 1814 restoration now returns these provinces to Spoleto instead of the Papal States.
+- The Papal States starts with only Rome (118). It has no core on Spoleto, Ancona, Terracina or Avignon, and Rome is outside the HRE.
+- Venice keeps Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso and Padova, but Brescia and Bergamo are no longer imperial provinces.
+- Holstein (1775) and Ditmarschen (4141) are no longer imperial provinces; Slesvig (13) was already outside the HRE.
+
 ## Events
 
 - Hungarian always choses austrian heir.
@@ -123,6 +148,9 @@
 ## New Files
 
 - Added mod defines.
+- Added a static modifier override file for HRE prince and free city bonuses.
+- Added country history overrides for the 12 former free cities.
+- Added province history overrides for the Italian HRE setup, Spoleto, Avignon, Rome and Schleswig.
 - Added the player gift notification action.
 - Added event modifiers.
 - Added on-actions for the Dev Cost Edict and the Development Counter.

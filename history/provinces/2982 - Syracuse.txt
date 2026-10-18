@@ -1,10 +1,11 @@
 # - Syracusa
+# Modified: removed from the HRE (Aragonese province).
 
 owner = SIC
 controller = SIC
 culture = sicilian
 religion = catholic
-hre = yes
+hre = no
 base_tax = 4
 base_production = 4
 trade_goods = wine

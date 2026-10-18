@@ -1,10 +1,11 @@
 #124 - Messina
+# Modified: removed from the HRE (Aragonese province).
 
 owner = SIC
 controller = SIC
 culture = sicilian
 religion = catholic
-hre = yes
+hre = no
 base_tax = 6
 base_production = 6
 trade_goods = fish

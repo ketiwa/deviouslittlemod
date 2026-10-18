@@ -1,10 +1,11 @@
 # - Girgenti
+# Modified: removed from the HRE (Aragonese province).
 
 owner = SIC
 controller = SIC
 culture = sicilian
 religion = catholic
-hre = yes
+hre = no
 base_tax = 3
 base_production = 3
 trade_goods = grain

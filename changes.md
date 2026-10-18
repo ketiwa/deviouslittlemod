@@ -138,6 +138,7 @@
 - Spoleto (SPL) is released from the Papal States and owns Spoleto (4731), Ancona (119) and Terracina (4732), with Spoleto cores and no Papal cores. The 1814 restoration now returns these provinces to Spoleto instead of the Papal States.
 - The Papal States starts with only Rome (118). It has no core on Spoleto, Ancona, Terracina or Avignon, and Rome is outside the HRE.
 - Venice keeps Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso and Padova, but Brescia and Bergamo are no longer imperial provinces.
+- Aragon's Italian provinces are no longer imperial provinces: Messina (124), Palermo (125), Malta (126), Sassari (127), Syracuse (2982), Cagliari (2986), Arborea (4735), Trapani (4736) and Girgenti (4737).
 - Holstein (1775) and Ditmarschen (4141) are no longer imperial provinces; Slesvig (13) was already outside the HRE.
 
 ## Events

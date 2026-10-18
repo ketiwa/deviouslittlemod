@@ -1,4 +1,5 @@
 # 2986 - Cagliari
+# Modified: removed from the HRE (Aragonese province).
 
 latent_trade_goods = {
 	coal
@@ -8,7 +9,7 @@ owner = SAR
 controller = SAR
 culture = sardinian
 religion = catholic
-hre = yes
+hre = no
 base_tax = 3
 base_production = 3
 trade_goods = copper

@@ -1,0 +1,14 @@
+# HRE per-prince and per-free-city bonuses
+# Ported from Gecko Sunday Fork (00_static_modifiers.txt).
+# Vanilla values noted in comments.
+
+states_in_hre = {
+	land_forcelimit = 0.1		# vanilla 0.5 per HRE prince (non-free city)
+	global_manpower = 0.1		# vanilla 0.5 per HRE prince (non-free city)
+}
+
+free_cities_in_hre = {
+	global_tax_income = 5		# vanilla 2
+	global_manpower = 1.25		# vanilla 1
+	land_forcelimit = 0.5		# vanilla 0.5
+}

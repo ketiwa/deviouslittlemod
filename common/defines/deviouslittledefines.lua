@@ -54,3 +54,15 @@ NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 -- "Call on Religious Followers" (available at -75 piety) manpower reward.
 NDefines.NReligion.PIETY_MANPOWER = 1.5
 
+-- ==================== HRE / Imperial Authority ====================
+-- Ported from Gecko Sunday Fork (echo_defines.lua).
+-- Vanilla values noted in comments.
+NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.07        -- vanilla 0.075
+NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 10           -- vanilla 25
+NDefines.NDiplomacy.HRE_HERETIC_PENALTY = 0                       -- vanilla -0.01
+NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.006          -- vanilla -0.005
+NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.01                       -- vanilla 0.005
+NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 60                     -- vanilla 50
+NDefines.NDiplomacy.IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 3      -- vanilla 1
+NDefines.NCountry.MAX_PROVINCES_FOR_FREE_CITY = 8                 -- vanilla 1
+

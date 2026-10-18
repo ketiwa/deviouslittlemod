@@ -4,6 +4,13 @@
 
 - Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.
 
+## HRE Reforms
+
+- Replaced vanilla HRE imperial reforms with the Gecko Sunday Fork version (`common/imperial_reforms/00_hre_emperor.txt`, Workshop 3799211447).
+- Emperor now receives flat manpower and force limit at nearly every reform; the mainline reforms total +65 manpower and +65 force limit.
+- Branch bonuses: Expand Gemeiner Pfennig gives the emperor +15 manpower (electors +5); Reichskrieg gives +25% local manpower in HRE provinces; Erbkaisertum gives the emperor +20% manpower recovery speed.
+- Member-state effects retained from the source mod, including imperial tax, mercenary cost, and stability cost bonuses.
+
 ## Ideas
 
 - Basic ideas: Exploration, Expansion, and Naval idea group removed.

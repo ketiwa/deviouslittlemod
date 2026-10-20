@@ -67,3 +67,7 @@ NDefines.NDiplomacy.IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 3      -- vanilla 1
 NDefines.NCountry.MAX_PROVINCES_FOR_FREE_CITY = 8                 -- vanilla 1
 NDefines.NDiplomacy.MAX_FREE_CITIES = 0                           -- vanilla 12; disables Grant Free City Status
 
+-- ==================== Government Reforms ====================
+-- Cost in reform progress points to swap an already chosen reform.
+NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 10  -- vanilla 50
+

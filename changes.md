@@ -3,6 +3,7 @@
 ## Government Reforms
 
 - Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.
+- Swapping an already chosen government reform costs 10 reform progress (vanilla 50).
 
 
 ## HRE Mechanic Changes

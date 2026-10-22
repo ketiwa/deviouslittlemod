@@ -108,6 +108,7 @@
 ## Decisions
 
 - Austria-Hungary formation now requires administrative tech 12 instead of 18.
+- Scandinavia formation now requires administrative tech 12 instead of 18.
 - Added a decision to recruit colonists.
 - Added a decision to count development clicks.
 - Added decisions to enable and disable player gift notifications.

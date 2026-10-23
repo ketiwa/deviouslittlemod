@@ -119,7 +119,8 @@
 
 ## Starting Countries
 
-- Austria: Heir given 3-3-3, gained elector status.
+- Austria: Heir given 3-3-3, no longer an elector.
+- Milan: Granted the electorate (taken from Austria).
 - Hessen: Mission for forest expansion, gained elector status, granted extra provinces.
 - Holland: Granted extra province, no longer PU of burgandy. 
 - Mali: Modified mission gold and ivory, given feudalism.

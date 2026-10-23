@@ -2353,30 +2353,3 @@ mercenary_registration_act = {
 		factor = 0			
 	}
 }
-
-# Mod: moved from 00_mil.txt - now an administrative policy
-wielders_of_the_flaming_sword_policy = { 
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = religious_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = religious_ideas
-	}
-
-	development_cost_in_primary_culture = -0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.5
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}

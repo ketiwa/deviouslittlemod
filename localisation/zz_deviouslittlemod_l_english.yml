@@ -95,3 +95,13 @@
  dlm_gift.1.t:0 "A Gift Between Players"
  dlm_gift.1.d:0 "[dlm_gift_sender.GetName] sent a gift to [dlm_gift_recipient.GetName]."
  dlm_gift.1.a:0 "Noted."
+# ---- HRE reform scope names ----
+ emperor_reichstag_collegia_elector:0 "Reichstag Collegia"
+ emperor_expand_gemeiner_pfennig_emperor:0 "Gemeiner Pfennig"
+ emperor_expand_gemeiner_pfennig_elector:0 "Gemeiner Pfennig"
+ emperor_rechenschaft_elector:0 "Rechenschaft Measures"
+ emperor_renovatio_emperor:0 "Renovatio Imperii"
+# ---- HRE elector reform bonuses (triggered modifiers) ----
+ dlm_reichstag_collegia_elector:0 "Reichstag Collegia"
+ dlm_expand_gemeiner_pfennig_elector:0 "Gemeiner Pfennig"
+ dlm_rechenschaft_elector:0 "Rechenschaft Measures"

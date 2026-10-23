@@ -70,7 +70,8 @@
 
 ## Subjects and Trade
 
-- Sweden starts free of the Kalmar Union: all Danish-Swedish personal unions removed.
+- Sweden starts under Denmark in the Kalmar Union (1444-1448); the later Danish-Swedish unions stay removed.
+- Sweden starts with 10 galleys in Stockholm.
 - Eyalet subject type now uses a diplomatic slot.
 - Trade companies removed.
 - Downstream trade power nuked.

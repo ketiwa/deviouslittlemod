@@ -1,12 +1,12 @@
-# Mod: Sweden is free of the Kalmar Union - all Danish-Swedish personal unions removed.
+# Mod: Sweden starts the game under Denmark in the Kalmar Union (later unions stay removed).
 # Kalmar Union
-#union = {
-#	first = DAN
-#	second = SWE
-#	#start_date = 1397.6.17
-#	start_date = 1444.1.1
-#	end_date = 1448.6.20
-#}
+union = {
+	first = DAN
+	second = SWE
+	#start_date = 1397.6.17
+	start_date = 1444.1.1
+	end_date = 1448.6.20
+}
 
 # Kalmar Union
 #union = {

@@ -16414,7 +16414,7 @@ CLI_ideas = {
 
 WES_ideas = {
 	start = {
-		diplomats = 1
+		discipline = 0.05
 		land_forcelimit_modifier = 0.2
 	}
 	bonus = {

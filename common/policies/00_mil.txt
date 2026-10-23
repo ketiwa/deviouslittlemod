@@ -1464,7 +1464,7 @@ render_unto_caesar_policy = {
 
 #1.35 Additions#
 
-mobile_siege_engines_act = { 
+shock_and_awe = { 
 	monarch_power = MIL
 	
 	potential = {
@@ -1475,6 +1475,30 @@ mobile_siege_engines_act = {
 	allow = {
 		full_idea_group = infrastructure_ideas
 		full_idea_group = offensive_ideas 
+		NOT = { has_active_policy = burn_the_villages }
+	}
+	
+	artillery_shock = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0			
+	}
+}
+
+burn_the_villages = { 
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = infrastructure_ideas
+		has_idea_group = offensive_ideas 
+	}
+	
+	allow = {
+		full_idea_group = infrastructure_ideas
+		full_idea_group = offensive_ideas 
+		NOT = { has_active_policy = shock_and_awe }
 	}
 	
 	artillery_fire = 0.15

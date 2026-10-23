@@ -115,3 +115,8 @@
  recruit_additional_colonists_desc:0 "By funding another wave of settlement, we can attract a further body of willing colonists. This requires an investment of §Y1000§! ducats.\n\nRequires Administrative Technology level §Y7§!."
  recruited_additional_colonists:0 "Recruited Additional Colonists"
  desc_recruited_additional_colonists:0 "A second wave of state-sponsored settlers is ready to establish a new colony on our behalf."
+ # ---- Offensive + Infrastructure policies ----
+ shock_and_awe:0 "Shock and Awe"
+ desc_shock_and_awe:0 "Our artillery is trained to hammer the enemy line with relentless bombardments, breaking their formations before the infantry closes in."
+ burn_the_villages:0 "Burn the Villages"
+ desc_burn_the_villages:0 "Our gunners are ordered to set the enemy's settlements and supply stores alight, burning the countryside to deny them shelter and provisions."

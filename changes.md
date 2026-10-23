@@ -40,7 +40,7 @@
 ## Policies and State Edicts
 
 - Defensive-Economic policy (Public Welfare Act): development cost in primary culture reduced from -10% to -7.5%; stability cost -25% removed; +7.5% land morale added.
-- Religious-Divine policy (Wielders of the Flaming Sword): +10% land morale removed; -10% development cost in primary culture added.
+- Religious-Divine policy (Wielders of the Flaming Sword): +10% land morale removed; -10% development cost in primary culture added; now an ADM policy (was MIL).
 - Added prosperity edict added, dev edict auto applied to all provinces.
 
 ## Institutions and Naval Doctrines

@@ -50,6 +50,7 @@
 
 ## Subjects and Trade
 
+- Sweden starts free of the Kalmar Union: all Danish-Swedish personal unions removed.
 - Eyalet subject type now uses a diplomatic slot.
 - Trade companies removed.
 - Downstream trade power nuked.

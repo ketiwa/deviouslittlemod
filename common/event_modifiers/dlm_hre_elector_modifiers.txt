@@ -1,0 +1,17 @@
+# Actual effect of the elector bonuses of the decentralisation reforms.
+# The reforms show the bonus through a display-only elector = { } block and apply
+# these modifiers to every elector in on_effect (hidden_effect, so the tooltip only
+# shows the clean elector block). No triggered modifiers are involved.
+
+dlm_elector_reichstag_collegia = {
+	advisor_cost = -0.05
+}
+
+dlm_elector_expand_gemeiner_pfennig = {
+	global_manpower = 5
+	global_tax_income = 72
+}
+
+dlm_elector_rechenschaft = {
+	land_forcelimit = 5
+}

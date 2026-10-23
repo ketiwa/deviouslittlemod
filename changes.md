@@ -13,6 +13,7 @@
 - Increased IA growth, requires 60 IA per reform.
 - Emp gets manpower through reforms not per memberstate in hre.
 - All italy added to hre.
+- Elector bonuses of the decentralisation reforms (Reichstag Collegia: -5% advisor cost; Expanded Gemeiner Pfennig: +5 manpower, +72 tax; Rechenschaft: +5 force limit) are listed on the reform tooltips and handed to every elector when the reform is passed. An imperial reform cannot apply a flat elector bonus itself in 1.37, so the elector entry on the reform is display only and the real bonus is a hidden country modifier.
 
 
 ## Holy Roman Empire

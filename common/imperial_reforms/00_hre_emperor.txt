@@ -176,8 +176,28 @@ emperor_reichstag_collegia = {
 		build_cost = -0.05
 		global_tax_income = 96
 	}
+	# Display only: the parser never applies a flat elector = { } block, but it does
+	# render it in the reform tooltip. The real bonus is the hidden country modifier
+	# that on_effect adds to every elector, so the two can never stack.
 	elector = {
 		advisor_cost = -0.05
+	}
+	on_effect = {
+		hidden_effect = {
+			every_elector = {
+				add_country_modifier = {
+					name = dlm_elector_reichstag_collegia
+					duration = -1
+				}
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			every_elector = {
+				remove_country_modifier = dlm_elector_reichstag_collegia
+			}
+		}
 	}
 }
 
@@ -192,9 +212,27 @@ emperor_expand_gemeiner_pfennig = {
 	emperor = {
 		global_manpower = 15
 	}
+	# Display only - see the comment on emperor_reichstag_collegia.
 	elector = {
 		global_manpower = 5
 		global_tax_income = 72
+	}
+	on_effect = {
+		hidden_effect = {
+			every_elector = {
+				add_country_modifier = {
+					name = dlm_elector_expand_gemeiner_pfennig
+					duration = -1
+				}
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			every_elector = {
+				remove_country_modifier = dlm_elector_expand_gemeiner_pfennig
+			}
+		}
 	}
 }
 
@@ -209,8 +247,26 @@ emperor_rechenschaft = {
 	emperor = {
 		land_forcelimit = 15
 	}
+	# Display only - see the comment on emperor_reichstag_collegia.
 	elector = {
 		land_forcelimit = 5
+	}
+	on_effect = {
+		hidden_effect = {
+			every_elector = {
+				add_country_modifier = {
+					name = dlm_elector_rechenschaft
+					duration = -1
+				}
+			}
+		}
+	}
+	off_effect = {
+		hidden_effect = {
+			every_elector = {
+				remove_country_modifier = dlm_elector_rechenschaft
+			}
+		}
 	}
 	province = {
 		local_production_efficiency = 0.05

@@ -95,3 +95,10 @@
  dlm_gift.1.t:0 "A Gift Between Players"
  dlm_gift.1.d:0 "[dlm_gift_sender.GetName] sent a gift to [dlm_gift_recipient.GetName]."
  dlm_gift.1.a:0 "Noted."
+# ---- HRE elector bonuses from imperial reforms (elector = { } scope is broken) ----
+ dlm_elector_reichstag_collegia:0 "Reichstag Collegia: Elector Privileges"
+ dlm_elector_expand_gemeiner_pfennig:0 "Expanded Gemeiner Pfennig: Elector Privileges"
+ dlm_elector_rechenschaft:0 "Rechenschaft: Elector Privileges"
+ emperor_reichstag_collegia_elector:0 "Electors get:"
+ emperor_expand_gemeiner_pfennig_elector:0 "Electors get:"
+ emperor_rechenschaft_elector:0 "Electors get:"

@@ -5,5 +5,5 @@ tags={
 name="deviouslittlemod"
 picture="thumbnail.png"
 supported_version="v1.37.5.0"
-path="C:/Users/htxjc/OneDrive/Documents/Paradox Interactive/Europa Universalis IV/mod/1234"
+path="C:/Users/htxjc/OneDrive/Documents/Paradox Interactive/Europa Universalis IV/mod/deviouslittlemod"
 remote_file_id="3368226630"

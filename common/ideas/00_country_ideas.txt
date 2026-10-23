@@ -4146,12 +4146,12 @@ USA_ideas = {
 
 SWI_ideas = {
 	start = {
+		infantry_power = 0.2
 		merc_maintenance_modifier = -0.15
-		infantry_power = 0.1
 	}
 	
 	bonus = {
-		discipline = 0.05
+		leader_land_shock = 1
 	}
 	
 	trigger = {
@@ -4159,28 +4159,32 @@ SWI_ideas = {
 	}
 	free = yes  #will be triggered at load
 	
-	swiss_mercenaries = {
-		mercenary_discipline = 0.05
-		mercenary_manpower = 0.5
+	koenig_und_reichstag = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		possible_policy = 1
 	}
-	swiss_tolerance = {
-		tolerance_heretic = 2
+	schweizer_stahl = {
+		discipline = 0.05
 	}
-	the_swiss_confederation = {
+	hakkapeliten = {
+		cavalry_cost = -0.1
+	}
+	indelningswerk = {
+		manpower_recovery_speed = 0.2
+	}
+	schweizer_absolutismus = {
 		stability_cost_modifier = -0.1
+		yearly_absolutism = 1
 	}
-	alpine_defensiveness = {
-		fort_maintenance_modifier = -0.2
-		defensiveness = 0.25
+	produktplakat = {
+		global_trade_goods_size_modifier = 0.1
 	}
-	oasis_of_peace_and_prosperity = {
-		development_cost = -0.1
-	}
-	haven_for_refugees = {
-		prestige = 1
-	}
-	clockwork = {
-		production_efficiency = 0.1
+	vereinigungs_und_sicherheitsakte = {
+		global_manpower_modifier = 0.20
 	}
 }
 

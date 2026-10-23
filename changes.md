@@ -28,6 +28,7 @@
 ## Ideas
 
 - Basic ideas: Exploration, Expansion, and Naval idea group removed.
+- Basic ideas: Mercenary idea group hidden for all nations.
 - Basic ideas: Divine added for all christan nations.
 - Country ideas: Westphalian ideas buffed.
 - Country ideas: Dutch and Brabant given Burgandy ideas.

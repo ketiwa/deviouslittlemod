@@ -1786,6 +1786,9 @@ court_ideas = {
 mercenary_ideas = {
 	category = MIL 
 
+	trigger = {
+		always = no
+	}
 
 	bonus = {
 		mercenary_discipline = 0.05

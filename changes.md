@@ -6,6 +6,13 @@
 - Added a strait between Nyland (28) and Estland (36) across the Gulf of Finland sea province (1254).
 
 
+## Ages
+
+- Replaced the age view layout with the one from the Gecko Sunday Fork mod (interface/ages_view.gui) plus its two scripted buttons.
+- Added an ages menu option to spend 500 splendor for 50 government reform progress.
+- Added the Economic Golden Age option: 100 adm/dip/mil power and 200 splendor for the `urbanisation` modifier (50 years, -10% all power cost, +10% goods produced). Usable once per game; the regular (engine) Golden Age button is still there.
+
+
 ## Government Reforms
 
 - Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.

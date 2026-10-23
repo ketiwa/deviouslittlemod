@@ -1,0 +1,5 @@
+# Granted for 50 years by the Economic Golden Age button in the ages view.
+urbanisation = {
+	all_power_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+}

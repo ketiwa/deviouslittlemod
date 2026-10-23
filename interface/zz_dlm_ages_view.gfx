@@ -1,0 +1,7 @@
+spriteTypes = {
+	# Icon for the "spend splendor on government reform progress" button in the ages view
+	spriteType = {
+		name = "GFX_icon_splendor_button"
+		texturefile = "gfx/interface/ages/icon_splendor_button.dds"
+	}
+}

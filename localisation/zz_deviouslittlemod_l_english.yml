@@ -102,3 +102,11 @@
  emperor_reichstag_collegia_elector:0 "Electors get:"
  emperor_expand_gemeiner_pfennig_elector:0 "Electors get:"
  emperor_rechenschaft_elector:0 "Electors get:"
+ # ---- Age menu buttons (Gecko-style ages view) ----
+ START_ECONOMIC_GOLDEN_AGE:0 "£adm£Start Economic Golden Age"
+ economic_golden_age_title:0 "Spend §Y100§! Administrative, §Y100§! Diplomatic and §Y100§! Military Power plus §Y200§! Splendor to start a 50-year Economic Golden Age."
+ urbanisation:0 "Golden Age (Economic)"
+ urbanisation_title:0 "Golden Age (Economic)"
+ urbanisation_desc:0 "50 years of reduced all power cost and increased goods produced."
+ urbanisation_tt:0 "Requires §Y100§! Administrative Power, §Y100§! Diplomatic Power, §Y100§! Military Power and §Y200§! Splendor"
+ splendor_into_monarch_power_title:0 "Invest §Y500§! Splendor for §G50§! Government Reform Progress"

@@ -1,0 +1,53 @@
+# Scripted buttons used by interface/ages_view.gui.
+# ROOT and FROM are both the player country in the ages window.
+
+# Spend splendor on government reform progress
+custom_button = {
+    name = splendor_into_monarch_power
+    tooltip = splendor_into_monarch_power_title
+    potential = {
+        FROM = {
+            ai = no
+        }
+    }
+    trigger = {
+        FROM = {
+            splendor = 500
+        }
+    }
+    effect = {
+        FROM = {
+            add_splendor = -500
+            change_government_reform_progress = 50
+        }
+    }
+}
+
+# Economic Golden Age: 50 years of the urbanisation modifier
+custom_button = {
+    name = economic_golden_age
+    tooltip = economic_golden_age_title
+    potential = {
+        FROM = {
+            NOT = { has_country_flag = urbanisation_taken }
+        }
+    }
+    trigger = {
+        custom_trigger_tooltip = {
+            tooltip = urbanisation_tt
+            adm_power = 100
+            dip_power = 100
+            mil_power = 100
+            splendor = 200
+        }
+    }
+    effect = {
+        FROM = {
+            add_country_modifier = {
+                name = "urbanisation"
+                duration = 18250
+            }
+            set_country_flag = urbanisation_taken
+        }
+    }
+}

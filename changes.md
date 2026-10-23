@@ -35,7 +35,7 @@
 - Country ideas: Portugal ideas adjusted.
 - Country ideas: Dutch ideas adjusted.
 - Country ideas: Prussian ideas adjusted.
-- Country ideas: Swiss ideas replaced with the Swedish idea set, renamed with German idea names.
+- Country ideas: Italy ideas adjusted.
 
 ## Policies and State Edicts
 

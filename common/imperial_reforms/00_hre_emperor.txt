@@ -10,12 +10,12 @@ emperor_reichsreform = {
 	province = {
 		 local_autonomy = -0.05
 	}
-	on_effect = {
-		imperial_ban_allowed = yes
-	}
-	off_effect = {
-		imperial_ban_allowed = no
-	}
+	#on_effect = {
+	#	imperial_ban_allowed = yes
+	#}
+	#off_effect = {
+	#	imperial_ban_allowed = no
+	#}
 	gui_container = mainline
 }
 
@@ -54,9 +54,9 @@ emperor_reichsstabilitaet = {
 		local_monthly_devastation = -0.1
 		local_prosperity_growth = 0.1
 	}
-	on_effect = {
-		custom_tooltip = "EXPAND_EMPIRE_CB"
-	}
+	#on_effect = {
+	#	custom_tooltip = "EXPAND_EMPIRE_CB"
+	#}
 }
 
 emperor_gemeinerpfennig = {
@@ -160,19 +160,12 @@ emperor_landfriede = {
 	province = {
 		local_institution_spread = 0.1
 	}
-	on_effect = {
-		internal_hre_cb = no
-	}
-	off_effect = {
-		internal_hre_cb = yes
-	}
 	required_reform = emperor_landsknechtswesen
 	gui_container = mainline
 }
 
 emperor_reichstag_collegia = {
 	empire = hre
-	required_reform = emperor_perpetual_diet
 	disabled_by = emperor_hofgericht
 	gui_container = left_branch
 
@@ -228,14 +221,14 @@ emperor_geteilte_macht = {
 	empire = hre
 	required_reform = emperor_rechenschaft
 	gui_container = left_branch
-	disables_hre_badboy_points = yes
+	#disables_hre_badboy_points = yes
 
 	potential = {
 		has_dlc = "Emperor"
 	}
-	on_effect = {
-		custom_tooltip = GETEILTE_MACHT_EFFECT
-	}
+	#on_effect = {
+	#	custom_tooltip = GETEILTE_MACHT_EFFECT
+	#}
 	emperor = {
 		advisor_cost = -0.1
 	}
@@ -265,18 +258,10 @@ emperor_reichskrieg = {
 	province = {
 		local_manpower_modifier = 0.25
 	}
-	on_effect = {
-		enable_imperial_realm_war = yes
-		custom_tooltip = REICHSKRIEG_DEFENSE_OF_REALM_MODIFIER
-	}
-	off_effect = {
-		enable_imperial_realm_war = no
-	}
 }
 
 emperor_hofgericht = { 
 	empire = hre
-	required_reform = emperor_perpetual_diet
 	potential = {
 		has_dlc = "Emperor"
 	}
@@ -310,17 +295,10 @@ emperor_erbkaisertum = {
 		diplomatic_upkeep = 4
 	}
 	on_effect = {
-		if = {
-			limit = {
-				hre_religion_locked = no
-				hre_religion_treaty = no
-			}
-			set_hre_religion_treaty = yes
-		}
-		hre_inheritable = yes
+		#hre_inheritable = yes
 	}
 	off_effect = {
-		hre_inheritable = no
+		#hre_inheritable = no
 	}
 	required_reform = emperor_imperial_estates
 	gui_container = right_branch
@@ -340,22 +318,19 @@ emperor_privilegia_de_non_appelando = {
 	emperor = {
 		advisor_cost = -0.1
 	}
-	on_effect = {
-		emperor = {
-			country_event = { id = 9073 tooltip = vassalize_empire2 }
-		}
-		hidden_effect = {
-			every_country = {
-				limit = {
-					is_part_of_hre = yes
-					is_emperor = no
-					num_of_cities = 1
-					NOT = { vassal_of = ROOT }
-				}
-				country_event = { id = 9074 }
-			}
-		}
-	}
+	#on_effect = {
+	#	if = {
+	#		limit = {
+	#			hre_religion_locked = no
+	#			hre_religion_treaty = no
+	#		}
+	#		set_hre_religion_treaty = yes
+	#	}
+	#	hre_inheritable = yes
+	#}
+	#off_effect = {
+	#	hre_inheritable = no
+	#}
 	required_reform = emperor_erbkaisertum
 	gui_container = right_branch
 }
@@ -368,11 +343,11 @@ emperor_renovatio = {
 	emperor = {
 		land_morale = 0.1
 	}
-	on_effect = {
-		emperor = {
-			country_event = { id = 9075 tooltip = renovatio_effect }
-		}
-	}
+	#on_effect = {
+	#	emperor = {
+	#		country_event = { id = 9075 tooltip = renovatio_effect }
+	#	}
+	#}
 	required_reform = emperor_privilegia_de_non_appelando
 	gui_container = right_branch
 }

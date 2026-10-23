@@ -2047,6 +2047,7 @@ on_siberian_pulse = {
 on_monthly_pulse = {
 }
 on_yearly_pulse = {
+	dlm_hre_elector_reform_bonuses_effect = yes
 	events = {
 		flavor_mos.3 #Yearly Tatar Yoke Tribute
 	}

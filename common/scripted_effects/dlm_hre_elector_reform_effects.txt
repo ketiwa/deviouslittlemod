@@ -1,0 +1,94 @@
+# Keeps the elector bonuses of the decentralisation reforms in sync.
+#
+# The reforms hand out a permanent country modifier to every elector in on_effect,
+# but electorate status can change afterwards (Grant Electorate / Remove Electorate,
+# leaving the HRE, inheritance), and those actions fire no on_action.
+# This effect is called from on_yearly_pulse, so any mismatch is corrected within a year:
+#  - elector without the modifier whose reform is passed  -> modifier added
+#  - non-elector still holding the modifier              -> modifier removed
+#  - reform no longer passed                             -> modifier removed
+#
+# Hidden modifiers applied here never produce tooltip lines; the reform tooltip shows
+# the bonus through its display-only elector = { } block.
+
+dlm_hre_elector_reform_bonuses_effect = {
+	if = {
+		limit = {
+			OR = {
+				is_elector = yes
+				has_country_modifier = dlm_elector_reichstag_collegia
+				has_country_modifier = dlm_elector_expand_gemeiner_pfennig
+				has_country_modifier = dlm_elector_rechenschaft
+			}
+		}
+
+		# Establish the Reichstag Collegia - electors: -5% advisor cost
+		if = {
+			limit = {
+				has_country_modifier = dlm_elector_reichstag_collegia
+				OR = {
+					NOT = { is_elector = yes }
+					NOT = { hre_reform_passed = emperor_reichstag_collegia }
+				}
+			}
+			remove_country_modifier = dlm_elector_reichstag_collegia
+		}
+		else_if = {
+			limit = {
+				is_elector = yes
+				hre_reform_passed = emperor_reichstag_collegia
+				NOT = { has_country_modifier = dlm_elector_reichstag_collegia }
+			}
+			add_country_modifier = {
+				name = dlm_elector_reichstag_collegia
+				duration = -1
+			}
+		}
+
+		# Expand the Gemeiner Pfennig - electors: +5000 manpower, +72 yearly tax
+		if = {
+			limit = {
+				has_country_modifier = dlm_elector_expand_gemeiner_pfennig
+				OR = {
+					NOT = { is_elector = yes }
+					NOT = { hre_reform_passed = emperor_expand_gemeiner_pfennig }
+				}
+			}
+			remove_country_modifier = dlm_elector_expand_gemeiner_pfennig
+		}
+		else_if = {
+			limit = {
+				is_elector = yes
+				hre_reform_passed = emperor_expand_gemeiner_pfennig
+				NOT = { has_country_modifier = dlm_elector_expand_gemeiner_pfennig }
+			}
+			add_country_modifier = {
+				name = dlm_elector_expand_gemeiner_pfennig
+				duration = -1
+			}
+		}
+
+		# Embrace Rechenschaft Measures - electors: +5 land force limit
+		if = {
+			limit = {
+				has_country_modifier = dlm_elector_rechenschaft
+				OR = {
+					NOT = { is_elector = yes }
+					NOT = { hre_reform_passed = emperor_rechenschaft }
+				}
+			}
+			remove_country_modifier = dlm_elector_rechenschaft
+		}
+		else_if = {
+			limit = {
+				is_elector = yes
+				hre_reform_passed = emperor_rechenschaft
+				NOT = { has_country_modifier = dlm_elector_rechenschaft }
+			}
+			add_country_modifier = {
+				name = dlm_elector_rechenschaft
+				duration = -1
+			}
+		}
+	}
+}

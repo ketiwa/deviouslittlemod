@@ -48,6 +48,10 @@
 - Mali now starts with Feudalism.
 - Woodenwall now gives naval maintenance reduction and naval force limit instead of a coastal combat bonus.
 
+## Bankruptcy
+
+- Bankruptcy morale penalty reduced from -50% to -25% (land and naval). Other bankruptcy penalties unchanged.
+
 ## Subjects and Trade
 
 - Sweden starts free of the Kalmar Union: all Danish-Swedish personal unions removed.

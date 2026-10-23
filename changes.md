@@ -47,6 +47,7 @@
 ## Policies and State Edicts
 
 - Defensive-Economic policy (Public Welfare Act): development cost in primary culture reduced from -10% to -7.5%; stability cost -25% removed; +7.5% land morale added.
+- Offensive-Infrastructure policy (Mobile Siege Engines Act): +5% movement speed and +2 artillery levels vs forts replaced with +15% artillery fire.
 - Religious-Divine policy (Wielders of the Flaming Sword): +10% land morale removed; -10% development cost in primary culture added.
 - Added prosperity edict added, dev edict auto applied to all provinces.
 

@@ -37,6 +37,7 @@
 - Basic ideas: Exploration, Expansion, and Naval idea group removed.
 - Basic ideas: Mercenary idea group hidden for all nations.
 - Basic ideas: Divine added for all christan nations.
+- Basic ideas: Quantity bonus land force limit +33% -> +50%.
 - Country ideas: Westphalian traditions: +1 diplomat replaced with +5% discipline.
 - Country ideas: Dutch and Brabant given Burgandy ideas.
 - Country ideas: Portugal ideas adjusted.

@@ -3,6 +3,7 @@
 ## Map
 
 - Added a strait between Trapani (4736) and Tunis (341) across the Cape Bon sea province (1302).
+- Added a strait between Nyland (28) and Estland (36) across the Gulf of Finland sea province (1254).
 
 
 ## Government Reforms

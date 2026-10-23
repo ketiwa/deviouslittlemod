@@ -166,8 +166,7 @@
 - The Papal States starts with only Rome (118). It has no core on Spoleto, Ancona, Terracina or Avignon, and Rome is outside the HRE.
 - Venice keeps Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso and Padova, but Brescia and Bergamo are no longer imperial provinces.
 - Aragon's Italian provinces are no longer imperial provinces: Messina (124), Palermo (125), Malta (126), Sassari (127), Syracuse (2982), Cagliari (2986), Arborea (4735), Trapani (4736) and Girgenti (4737).
-- Holstein (1775) and Ditmarschen (4141) are no longer imperial provinces; Slesvig (13) was already outside the HRE.
-
+- Holstein (1775) and Ditmarschen (4141) are no longer imperial provinces; Slesvig (13) was already outside the HRE.- Baku Ateshgah great project (Shirvan, 421): usable by every religion. Discipline and fire damage removed. Tier 1: -5% culture conversion cost, -5% fire damage received. Tier 2: -10% culture conversion cost, -5% fire damage received, +5% goods produced (province). Tier 3: -20% culture conversion cost, -10% fire damage received, +10% goods produced (province).
 ## Events
 
 - Hungarian always choses austrian heir.

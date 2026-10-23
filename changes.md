@@ -1,5 +1,10 @@
 # Mod Changes vs Vanilla
 
+## Map
+
+- Added a strait between Trapani (4736) and Tunis (341) across the Cape Bon sea province (1302).
+
+
 ## Government Reforms
 
 - Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.

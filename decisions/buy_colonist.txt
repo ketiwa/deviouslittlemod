@@ -23,4 +23,29 @@ country_decisions = {
             factor = 0
         }
     }
+
+    recruit_additional_colonists = {
+        # Visible on all nations; becomes takeable at Administrative tech 7.
+        potential = {
+            NOT = { has_country_modifier = recruited_additional_colonists }
+        }
+
+        allow = {
+            adm_tech = 7
+            treasury = 1000
+        }
+
+        effect = {
+            add_treasury = -1000
+            add_country_modifier = {
+                name = recruited_additional_colonists
+                duration = -1
+            }
+        }
+
+        # The AI never wants to take this decision.
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }

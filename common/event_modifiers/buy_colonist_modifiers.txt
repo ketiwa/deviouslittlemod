@@ -2,3 +2,7 @@ bought_colonist = {
 	colonists = 1
 	may_explore = yes
 }
+recruited_additional_colonists = {
+        colonists = 1
+        may_explore = yes
+}

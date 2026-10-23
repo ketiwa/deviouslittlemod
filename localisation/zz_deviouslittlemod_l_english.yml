@@ -110,3 +110,8 @@
  urbanisation_desc:0 "50 years of reduced all power cost and increased goods produced."
  urbanisation_tt:0 "Requires §Y100§! Administrative Power, §Y100§! Diplomatic Power, §Y100§! Military Power and §Y200§! Splendor"
  splendor_into_monarch_power_title:0 "Invest §Y500§! Splendor for §G50§! Government Reform Progress"
+ # ---- recruit_additional_colonists decision ----
+ recruit_additional_colonists_title:0 "Recruit Additional Colonists"
+ recruit_additional_colonists_desc:0 "By funding another wave of settlement, we can attract a further body of willing colonists. This requires an investment of §Y1000§! ducats.\n\nRequires Administrative Technology level §Y7§!."
+ recruited_additional_colonists:0 "Recruited Additional Colonists"
+ desc_recruited_additional_colonists:0 "A second wave of state-sponsored settlers is ready to establish a new colony on our behalf."

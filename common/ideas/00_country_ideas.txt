@@ -16414,7 +16414,7 @@ WES_ideas = {
 		land_forcelimit_modifier = 0.2
 	}
 	bonus = {
-		discipline = 0.05
+		land_morale = 0.1
 	}
 	trigger = {
 		tag = WES

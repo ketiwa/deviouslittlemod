@@ -12,6 +12,10 @@
 
 - Mission for forest expansion, granted extra provinces.
 
+### Castile
+
+- Juan II starts with 3/3/3 skills instead of 1/1/2.
+
 ### Denmark and Sweden
 
 - Sweden starts with 10 galleys in Stockholm.
@@ -128,6 +132,9 @@
 ### Disasters
 
 - The Dutch Revolt disaster (`dutch_revolt_disaster`) is removed: it can never become possible or start, and any running instance ends on the next monthly tick. Its events, modifiers and the Dutch Revolt HRE incident are therefore unreachable.
+- Infantes of Aragon: siding with the king (`flavor_spa.18` option a) no longer costs 1 stability.
+- Infantes of Aragon: the disaster can now be ended without first meeting the `stability = 0` requirement, so it ends as soon as the rebels are beaten and the royalist/Infantes flag is set.
+- Castilian Civil War: the `stability = 1` requirement is removed from `can_end`, so it now ends once the `civil_war_in_castile` flag is set, no province is rebel-controlled and no pretender rebels are left.
 
 ### Trade and Subjects
 

@@ -960,7 +960,7 @@ eyalet = {
 
 	# Properties:
 	transfer_trade_power = yes
-	joins_overlords_wars = no
+	joins_overlords_wars = yes
 	can_be_annexed = no
 	has_power_projection = no
 	gets_help_with_rebels = yes

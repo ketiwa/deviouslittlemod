@@ -1,92 +1,147 @@
 # Mod Changes vs Vanilla
 
-## Map
+## Country by Country
+
+### Austria
+
+- Heir given 3-3-3, no longer an elector.
+- The electorate is given to Milan.
+- Austria-Hungary formation now requires administrative tech 12 instead of 18.
+
+### Brandenburg
+
+- Mission for forest expansion, granted extra provinces.
+
+### Denmark and Sweden
+
+- Sweden starts with 10 galleys in Stockholm.
+- Scandinavia formation now requires administrative tech 12 instead of 18.
+
+### Hessen
+
+- Mission for forest expansion, gained elector status, granted extra provinces.
+
+### Italy
+
+- Ideas: +20% defensiveness replaced with +5% discipline.
+
+### Mali
+
+- Starts with Feudalism.
+- Mission gold and ivory modified.
+
+### Milan
+
+- Gained elector status, granted extra provinces.
+
+### Morocco
+
+- Starting vassals Tafilalt, Sous and Marrakesh were integrated into Morocco.
+- Revolt not required for first mission.
+
+### Naples
+
+- Free of its starting personal union.
+- Starts in the HRE
+
+### Netherlands and the Lowlands
+
+- Holland: granted an extra province.
+- All lowlands are independent.
+- Lowlands no longer in HRE.
+- Holland and Brabant given Burgundian ideas.
+- Dutch ideas: +15% fire damage (was +10%).
+
+### Portugal
+
+- Ruler skills increased from 3/2/2 to 5/3/4.
+- Ideas: +20% tariffs replaced with +10% heavy ship power.
+- Ideas: naval morale +10% -> +15%.
+- Ideas: +10% trade goods size replaced with +1 colonist.
+
+### Prussia
+
+- All Prussian government forms no longer have the -50% governing capacity penalty.
+- Ideas: -10% aggressive expansion replaced with -2 unrest.
+- Ideas: +5% discipline replaced with +10% manpower recovery speed.
+
+### Switzerland
+
+- Mission for forest expansion, gained elector status, granted extra provinces.
+
+### Westphalia
+
+- Ideas: +1 diplomat replaced with +5% discipline.
+- Ideas: -10% fire damage received, instead of +1 tolerance of heretics
+
+
+## General Changes
+
+### Map
 
 - Added a strait between Trapani (4736) and Tunis (341) across the Cape Bon sea province (1302).
 - Added a strait between Nyland (28) and Estland (36) across the Gulf of Finland sea province (1254).
 
 
-## Ages
+### Ages
 
 - Replaced the age view layout with the one from the Gecko Sunday Fork mod (interface/ages_view.gui) plus its two scripted buttons.
 - Added an ages menu option to spend 500 splendor for 50 government reform progress.
 - Added the Economic Golden Age option: 100 adm/dip/mil power and 200 splendor for the `urbanisation` modifier (50 years, -10% all power cost, +10% goods produced). Usable once per game; the regular (engine) Golden Age button is still there.
 
 
-## Government Reforms
+### Government Reforms
 
-- Prussia: all Prussian government forms no longer have the -50% governing capacity penalty.
 - Swapping an already chosen government reform costs 10 reform progress (vanilla 50).
 
 
-## HRE Mechanic Changes
+### HRE Mechanics
 
-- No free cities exist
+- No free cities exist.
 - HRE Reforms rebalanced.
 - Increased IA growth, requires 60 IA per reform.
 - Emp gets manpower through reforms not per memberstate in hre.
 - All italy added to hre.
-- Elector bonuses of the decentralisation reforms (Reichstag Collegia: -5% advisor cost; Expanded Gemeiner Pfennig: +5 manpower, +72 tax; Rechenschaft: +5 force limit) are listed on the reform tooltips and handed to every elector when the reform is passed. An imperial reform cannot apply a flat elector bonus itself in 1.37, so the elector entry on the reform is display only and the real bonus is a hidden country modifier. A yearly check gives it to newly created electors and takes it away from countries that stop being electors.
 
 
-## Holy Roman Empire
+### Ideas
 
-- All Italy-region provinces start in the HRE except the eight Venice-owned provinces (Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso, Padova) and Rome.
-- Brescia and Bergamo, the only two Venice-owned provinces that were imperial in vanilla, are removed from the HRE.
-- The Papal States starts outside the HRE. The Pope owns only Rome and is not a Shadow Kingdom prince.
-- Holstein and Ditmarschen are removed from the HRE; the Schleswig/Holstein area contains no imperial provinces.
-- Every Italian province not owned by Venice is scripted to leave the HRE on 1495.1.1, so the Shadow Kingdom removes all of Italy.
-- Per-prince HRE bonuses reduced: each prince now gives the emperor 0.1 manpower and 0.1 land force limit (was 0.5 / 0.5).
-- Per-free-city bonuses changed: each free city gives the emperor 5 tax, 1.25 manpower and 0.5 land force limit (was 2 / 1 / 0.5).
-
-## Ideas
-
-- Basic ideas: Exploration, Expansion, and Naval idea group removed.
-- Basic ideas: Mercenary idea group hidden for all nations.
+- Basic ideas: Exploration, Expansion, and Naval, Mercenary idea group removed.
 - Basic ideas: Divine added for all christan nations.
 - Basic ideas: Quantity bonus land force limit +33% -> +50%.
-- Country ideas: Westphalian traditions: +1 diplomat replaced with +5% discipline.
-- Country ideas: Dutch and Brabant given Burgandy ideas.
-- Country ideas: Portugal ideas adjusted.
-- Country ideas: Dutch ideas adjusted.
-- Country ideas: Prussian ideas adjusted.
-- Country ideas: Italy ideas adjusted.
 
-## Policies and State Edicts
+### Policies and State Edicts
 
 - Defensive-Economic policy (Public Welfare Act): development cost in primary culture reduced from -10% to -7.5%; stability cost -25% removed; +7.5% land morale added.
 - Offensive-Infrastructure now offers two policies instead of Mobile Siege Engines Act: Shock and Awe (+20% artillery shock) and Burn the Villages (+15% artillery fire). They are mutually exclusive - only one can be active at a time.
 - Religious-Divine policy (Wielders of the Flaming Sword): +10% land morale removed; -10% development cost in primary culture added.
 - Added prosperity edict added, dev edict auto applied to all provinces.
 
-## Institutions and Naval Doctrines
+### Institutions and Naval Doctrines
 
-- Mali now starts with Feudalism.
 - Woodenwall now gives naval maintenance reduction and naval force limit instead of a coastal combat bonus.
 
-## Bankruptcy
+### Bankruptcy
 
 - Bankruptcy morale penalty reduced from -50% to -25% (land and naval). Other bankruptcy penalties unchanged.
 
-## Disasters
+### Disasters
 
 - The Dutch Revolt disaster (`dutch_revolt_disaster`) is removed: it can never become possible or start, and any running instance ends on the next monthly tick. Its events, modifiers and the Dutch Revolt HRE incident are therefore unreachable.
 
-## Subjects and Trade
+### Trade and Subjects
 
-- Sweden starts under Denmark in the Kalmar Union (1444-1448); the later Danish-Swedish unions stay removed.
-- Sweden starts with 10 galleys in Stockholm.
 - Eyalet subject type now uses a diplomatic slot.
 - Trade companies removed.
 - Downstream trade power nuked.
 - Trade node changes for balance and war reasons.
 
-## On Actions
+### On Actions
 
 - Burgundian Inheritance removed.
 - Added on-actions for the Dev Cost Edict and the Development Counter.
 
-## Defines
+### Defines
 
 - Abdicating a ruler costs 25 prestige instead of 50.
 - Breaking a royal marriage no longer costs stability.
@@ -128,71 +183,26 @@
 - Free city cap set to 0 (was 12), which disables the Grant Free City Status imperial action.
 - Free cities may have up to 8 provinces (vanilla 1).
 
-## Technology
+### Technology
 
 - Diplo tech 7 colonial range increased from +115 to +215, making the cumulative total 375 instead of 275.
 
-## Decisions
+### Decisions
 
-- Austria-Hungary formation now requires administrative tech 12 instead of 18.
-- Scandinavia formation now requires administrative tech 12 instead of 18.
 - Added a decision to recruit colonists.
-- Added a second colonist decision ("Recruit Additional Colonists"): requires administrative tech 7 and 1000 ducats, grants another permanent +1 colonist (stacks with the first decision).
+- Added a second colonist decision ("Recruit Additional Colonists"): requires administrative tech 7 and 1000 ducats, grants another permanent +1 colonist.
 - Added a decision to count development clicks.
 - Added decisions to enable and disable player gift notifications.
 - Added a decision to grant parliament seats.
 - Added a decision to set global state edicts.
 
-## Starting Countries
 
-- Austria: Heir given 3-3-3, no longer an elector.
-- Milan: Granted the electorate (taken from Austria).
-- Hessen: Mission for forest expansion, gained elector status, granted extra provinces.
-- Holland: Granted extra province, no longer PU of burgandy. 
-- Mali: Modified mission gold and ivory, given feudalism.
-- Portugal: Ruler skills increased from 3/2/2 to 5/3/4, ideas modified.
-- Switzerland: Mission for forest expansion, gained elector status, granted extra provinces.
-- Brandenberg: Mission for forest expansion, granted extra provinces.
-- Milan: Granted extra provinces.
-- Naples: Free of PU.
-- Morocco starting vassals Tafilalt, Sous, and Marrakesh were integrated into Morocco.
+### Great Projects
 
-## Starting Diplomacy
+- Baku Ateshgah great project (Shirvan, 421): usable by every religion. Discipline and fire damage removed. Tier 1: -5% culture conversion cost, -5% fire damage received. Tier 2: -10% culture conversion cost, -5% fire damage received, +5% goods produced (province). Tier 3: -20% culture conversion cost, -10% fire damage received, +10% goods produced (province).
 
-- The French starting alliance with Provence was removed.
-- Lowlands no longer PUs.
-- Lowlands no longer in HRE.
-
-## Province Changes
-
-- Avignon (202): owned and controlled by Provence instead of the Papal States. The Papal core is removed; the AVI core and the 1417 Papal ownership block are gone. The 1670 French core and 1791 French annexation remain.
-- Spoleto (SPL) is released from the Papal States and owns Spoleto (4731), Ancona (119) and Terracina (4732), with Spoleto cores and no Papal cores. The 1814 restoration now returns these provinces to Spoleto instead of the Papal States.
-- The Papal States starts with only Rome (118). It has no core on Spoleto, Ancona, Terracina or Avignon, and Rome is outside the HRE.
-- Venice keeps Verona, Friuli, Venezia, Romagna, Brescia, Bergamo, Treviso and Padova, but Brescia and Bergamo are no longer imperial provinces.
-- Aragon's Italian provinces are no longer imperial provinces: Messina (124), Palermo (125), Malta (126), Sassari (127), Syracuse (2982), Cagliari (2986), Arborea (4735), Trapani (4736) and Girgenti (4737).
-- Holstein (1775) and Ditmarschen (4141) are no longer imperial provinces; Slesvig (13) was already outside the HRE.- Baku Ateshgah great project (Shirvan, 421): usable by every religion. Discipline and fire damage removed. Tier 1: -5% culture conversion cost, -5% fire damage received. Tier 2: -10% culture conversion cost, -5% fire damage received, +5% goods produced (province). Tier 3: -20% culture conversion cost, -10% fire damage received, +10% goods produced (province).
-## Events
+### Events
 
 - Hungarian always choses austrian heir.
 - Moldavian always choses poland.
 - The Rugs of Persia (`flavor_per.19`, fired by the Persia mission `per_the_persian_rug`) now only has option c (2 years of production income in the Persia region, +2 mercantilism, silk +0.2 / cloth +0.1 / dyes +0.1 for 40 years). The monopolize and flood the market options are removed.
-
-## New Files
-
-- Added mod defines.
-- Added a static modifier override file for HRE prince and free city bonuses.
-- Added country history overrides for the 12 former free cities.
-- Added province history overrides for the Italian HRE setup, Spoleto, Avignon, Rome and Schleswig.
-- Added the player gift notification action.
-- Added event modifiers.
-- Added on-actions for the Dev Cost Edict and the Development Counter.
-- Added static and triggered modifiers.
-- Added a disaster override removing the Dutch Revolt.
-- Added a Persian flavour events override reducing the Rugs of Persia event to a single option.
-- Added five decision files.
-- Added six event files.
-- Added one localisation file.
-
-## Detailed Audit
-
-- The full line-by-line comparison is available in changes_detailed.md.

@@ -4147,7 +4147,7 @@ USA_ideas = {
 SWI_ideas = {
 	start = {
 		merc_maintenance_modifier = -0.15
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 	
 	bonus = {
@@ -4161,7 +4161,7 @@ SWI_ideas = {
 	
 	swiss_mercenaries = {
 		mercenary_discipline = 0.05
-		mercenary_manpower = 0.5
+		mercenary_manpower = 0.1
 	}
 	swiss_tolerance = {
 		tolerance_heretic = 2
@@ -4170,7 +4170,7 @@ SWI_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	alpine_defensiveness = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.25
 		defensiveness = 0.25
 	}
 	oasis_of_peace_and_prosperity = {
@@ -4180,7 +4180,7 @@ SWI_ideas = {
 		prestige = 1
 	}
 	clockwork = {
-		production_efficiency = 0.1
+		production_efficiency = 0.15
 	}
 }
 

@@ -175,6 +175,7 @@
 
 - Hungarian always choses austrian heir.
 - Moldavian always choses poland.
+- The Rugs of Persia (`flavor_per.19`, fired by the Persia mission `per_the_persian_rug`) now only has option c (2 years of production income in the Persia region, +2 mercantilism, silk +0.2 / cloth +0.1 / dyes +0.1 for 40 years). The monopolize and flood the market options are removed.
 
 ## New Files
 
@@ -187,6 +188,7 @@
 - Added on-actions for the Dev Cost Edict and the Development Counter.
 - Added static and triggered modifiers.
 - Added a disaster override removing the Dutch Revolt.
+- Added a Persian flavour events override reducing the Rugs of Persia event to a single option.
 - Added five decision files.
 - Added six event files.
 - Added one localisation file.

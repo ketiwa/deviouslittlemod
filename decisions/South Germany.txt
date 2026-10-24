@@ -1,0 +1,50 @@
+country_decisions = {
+    form_south_germany = {
+        major = yes
+        potential = {
+            NOT = { exists = SGE }
+        }
+        provinces_to_highlight = {
+            OR = {
+                AND = {
+                    OR = {
+                        province_id = 165
+                        province_id = 75
+                        province_id = 134
+                        province_id = 266
+                        province_id = 4715
+                    }
+                    OR = {
+                        NOT = { owned_by = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                }
+                AND = {
+                    region = south_german_region
+                    NOT = { owned_by = ROOT }
+                }
+            }
+        }
+        allow = {
+            is_at_war = no
+            adm_tech = 14
+            owns_core_province = 165
+            owns_core_province = 75
+            owns_core_province = 134
+            owns_core_province = 266
+            owns_core_province = 4715
+            custom_trigger_tooltip = {
+                tooltip = SGE_30_provinces_tt
+                num_of_owned_provinces_with = {
+                    value = 30
+                    region = south_german_region
+                }
+            }
+        }
+        effect = {
+            change_tag = SGE
+            add_prestige = 25
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

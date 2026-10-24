@@ -1,0 +1,30 @@
+﻿l_english:
+ SGE:0 "South Germany"
+ SGE_ADJ:0 "South German"
+ form_south_germany_title:0 "Form South Germany"
+ form_south_germany_desc:0 "..."
+ l_english:
+ SGE_ideas:0 "South German Ideas"
+ SGE_ideas_start:0 "South German Traditions"
+ SGE_ideas_bonus:0 "South German Ambition"
+
+ sge_german_confederation:0 "The Southern Confederation"
+ sge_german_confederation_desc:0 "From the Alps to the Main, the southern princes, free cities and prelates chose union over isolation. A shared homeland means a shared pool of men willing to defend it."
+
+ sge_german_universities:0 "Southern Universities"
+ sge_german_universities_desc:0 "Heidelberg, Tübingen, Ingolstadt and Freiburg have trained scholars and engineers for generations. Our best minds now serve the state, and knowledge spreads faster than ever."
+
+ sge_reichsheer:0 "The Reichsheer"
+ sge_reichsheer_desc:0 "Rather than rely on a patchwork of princely levies, we raise one army under one command. Drilled, disciplined and well paid, it answers to the realm, not to a local lord."
+
+ sge_new_hanseatics:0 "Danube and Rhine Leagues"
+ sge_new_hanseatics_desc:0 "The merchants of Augsburg, Nuremberg and Ulm built fortunes on the roads between Venice and the North Sea. With our own customs union, those same trade routes now fill the state treasury."
+
+ sge_junkers:0 "The Martial Nobility"
+ sge_junkers_desc:0 "Our landed nobility has always led from the front. Their sons fill the officer corps, and a tradition of service passes from father to son, giving the army a proud, professional backbone."
+
+ sge_reichstag:0 "The Reichstag"
+ sge_reichstag_desc:0 "A single assembly now speaks for the south. Taxes are collected fairly, laws are applied evenly, and the old quarrels between princes are settled by debate instead of by war."
+
+ sge_eisen_und_kohle:0 "Iron and Industry"
+ sge_eisen_und_kohle_desc:0 "The mines of the Alps and the forges of the south turn raw ore into tools, weapons and machines. Our workshops produce more every year, and expanding the realm gets cheaper."

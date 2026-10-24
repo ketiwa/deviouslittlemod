@@ -1,0 +1,18 @@
+# Overrides the base game file of the same name.
+# The Dutch Revolt disaster (dutch_revolt_disaster) is disabled in this mod:
+# it can never become possible or start, and any instance already running ends immediately.
+
+dutch_revolt_disaster = {
+
+	potential = {
+		always = no
+	}
+
+	can_start = {
+		always = no
+	}
+
+	can_stop = {
+		always = yes
+	}
+}

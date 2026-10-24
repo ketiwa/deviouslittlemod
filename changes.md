@@ -68,6 +68,10 @@
 
 - Bankruptcy morale penalty reduced from -50% to -25% (land and naval). Other bankruptcy penalties unchanged.
 
+## Disasters
+
+- The Dutch Revolt disaster (`dutch_revolt_disaster`) is removed: it can never become possible or start, and any running instance ends on the next monthly tick. Its events, modifiers and the Dutch Revolt HRE incident are therefore unreachable.
+
 ## Subjects and Trade
 
 - Sweden starts under Denmark in the Kalmar Union (1444-1448); the later Danish-Swedish unions stay removed.
@@ -182,6 +186,7 @@
 - Added event modifiers.
 - Added on-actions for the Dev Cost Edict and the Development Counter.
 - Added static and triggered modifiers.
+- Added a disaster override removing the Dutch Revolt.
 - Added five decision files.
 - Added six event files.
 - Added one localisation file.

@@ -120,3 +120,8 @@
  desc_shock_and_awe:0 "Our artillery is trained to hammer the enemy line with relentless bombardments, breaking their formations before the infantry closes in."
  burn_the_villages:0 "Burn the Villages"
  desc_burn_the_villages:0 "Our gunners are ordered to set the enemy's settlements and supply stores alight, burning the countryside to deny them shelter and provisions."
+
+ # ---- Austria Germany branch mission rewards ----
+ HAB_BAVARIA_PU_CLAIMS_TT:0 "Gain permanent claims on every Bavarian province we do not already own"
+ HAB_UNLOCKS_SOUTH_GERMAN_FEDERATION_TT:0 "Unlocks the decision to form the South German Federation"
+ HAB_UNLOCKS_AUSTRIA_HUNGARY_TT:0 "Unlocks the decision to form Austria-Hungary"

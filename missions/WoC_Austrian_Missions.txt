@@ -181,7 +181,7 @@ WoC_austria_1_holy_roman_empire = {
 			}
 		}
 		effect = {
-			add_imperial_influence = 25
+			add_imperial_influence = 50
 			add_country_modifier = {
 				name = improved_dip_reputation
 				duration = 7300
@@ -219,10 +219,49 @@ WoC_austria_1_germany = {
 		has_country_flag = hab_germany_branch
 	} 
 
-	hab_switzerland = {
-		icon = consolidate_switzerland
+	hab_bavaria = {
+		icon = duchy_of_bavaria
 		position = 2
 		required_missions = { hab_secure_electors } 
+		provinces_to_highlight = {  
+			OR = {
+				area = east_bavaria_area
+				area = upper_bavaria_area
+				area = lower_bavaria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			not_in_mission_preview_mode = { key = HAB }
+			OR = {
+				BOH = { junior_union_with = ROOT }
+				266 = { owned_by = ROOT }
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = HAB_BAVARIA_PU_CLAIMS_TT
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							area = east_bavaria_area
+							area = upper_bavaria_area
+							area = lower_bavaria_area
+						}
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	hab_switzerland = {
+		icon = consolidate_switzerland
+		position = 3
+		required_missions = { hab_bavaria } 
 		provinces_to_highlight = {  
 			OR = {
 				area = switzerland_area
@@ -242,92 +281,10 @@ WoC_austria_1_germany = {
 		} 
 
 		effect = {  
-			custom_tooltip = HAB_GAIN_10_MIL_POWER_PER_SWISS_PROVINCE
+			add_prestige = 50
+			custom_tooltip = HAB_UNLOCKS_SOUTH_GERMAN_FEDERATION_TT
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						culture = swiss
-					}
-					owner = {
-						add_mil_power = 10
-					}
-				}
-			}
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_BREISGAU_CONNECTED
-				first_limit = "
-					72 = {
-						is_in_capital_area = yes
-					}
-				"
-				first_effect = "
-					72 = {
-						add_or_upgrade_fort_building = yes
-						add_province_modifier = {
-							name = hab_fort_of_breisgau
-							duration = -1
-						}
-					}
-				"
-			}
-		} 
-	}
-
-	hab_develop_southern_germany = {
-		icon = mission_hanseatic_city
-		position = 3
-		required_missions = { hab_switzerland } 
-		provinces_to_highlight = {  
-			region = south_german_region
-			country_or_non_sovereign_subject_holds = ROOT
-			OR = {
-				NOT = { development = 20 }
-				NOT = { num_of_buildings_in_province = 3 }
-			}
-		} 
-
-		trigger = {  
-			not_in_mission_preview_mode = { key = HAB }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				region = south_german_region
-				development = 20
-				num_of_buildings_in_province = 3
-			}
-		} 
-
-		effect = {  
-			change_government_reform_progress = 50
-			custom_tooltip = HAB_5_RANDOM_PROVINCES_THAT_MEET_REQUIREMENT_GAIN
-			tooltip = {
-				add_province_modifier = {
-					name = hab_south_german_cities
-					duration = -1
-				}
-				1872 = { add_or_upgrade_tax_building = yes }
-			}
-			hidden_effect = {
-				for = {
-					amount = 5
-					effect = "
-						random_owned_province = {
-							limit = {
-								region = south_german_region
-								development = 20
-								num_of_buildings_in_province = 3
-								NOT = {
-									has_province_modifier = hab_south_german_cities
-								}
-							}
-							add_province_modifier = {
-								name = hab_south_german_cities
-								duration = -1
-							}
-							add_or_upgrade_tax_building = yes
-						}
-					"
-				}
+				set_country_flag = hab_south_german_federation_unlocked
 			}
 		} 
 	}
@@ -1054,7 +1011,6 @@ WoC_austria_2_holy_roman_empire = {
 		icon = switzerland_and_the_empire
 		position = 3
 		required_missions = { 
-			hab_a_holy_empire 
 			hab_imperial_ascendancy
 			hab_imperial_borders
 		} 
@@ -1140,10 +1096,7 @@ WoC_austria_2_holy_roman_empire = {
 			}
 		}
 		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 25
-			}
+			add_imperial_influence = 100
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
@@ -1202,47 +1155,61 @@ WoC_austria_2_germany = {
 		has_country_flag = hab_germany_branch
 	} 
 
-	hab_bavaria = {
-		icon = duchy_of_bavaria
+	hab_develop_southern_germany = {
+		icon = mission_hanseatic_city
 		position = 2
 		required_missions = { hab_secure_electors } 
 		provinces_to_highlight = {  
+			region = south_german_region
+			country_or_non_sovereign_subject_holds = ROOT
 			OR = {
-				area = east_bavaria_area
-				area = upper_bavaria_area
-				area = lower_bavaria_area
+				NOT = { development = 20 }
+				NOT = { num_of_buildings_in_province = 3 }
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
 		trigger = {  
 			not_in_mission_preview_mode = { key = HAB }
-			76 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 6
-				OR = {
-					area = east_bavaria_area
-					area = upper_bavaria_area
-					area = lower_bavaria_area
-				}
+				value = 5
+				region = south_german_region
+				development = 20
+				num_of_buildings_in_province = 3
 			}
 		} 
 
 		effect = {  
-			76 = {
+			change_government_reform_progress = 50
+			custom_tooltip = HAB_5_RANDOM_PROVINCES_THAT_MEET_REQUIREMENT_GAIN
+			tooltip = {
 				add_province_modifier = {
-					name = hab_salt_mines
+					name = hab_south_german_cities
 					duration = -1
 				}
+				1872 = { add_or_upgrade_tax_building = yes }
 			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			add_mil_power = 50
-
-			add_prestige_or_monarch_power = { amount = 10 }
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "
+						random_owned_province = {
+							limit = {
+								region = south_german_region
+								development = 20
+								num_of_buildings_in_province = 3
+								NOT = {
+									has_province_modifier = hab_south_german_cities
+								}
+							}
+							add_province_modifier = {
+								name = hab_south_german_cities
+								duration = -1
+							}
+							add_or_upgrade_tax_building = yes
+						}
+					"
+				}
+			}
 		} 
 	}
 
@@ -1252,7 +1219,6 @@ WoC_austria_2_germany = {
 		required_missions = { 
 			hab_bavaria 
 			hab_brandenburg
-			hab_switzerland
 		} 
 		provinces_to_highlight = {  
 			OR = {
@@ -2124,6 +2090,10 @@ WoC_austria_3_holy_roman_empire = {
 				}
 			}
 			custom_tooltip = HAB_IMPERIAL_ASCENDANCY_CLAIMS_REWARD
+			custom_tooltip = HAB_UNLOCKS_AUSTRIA_HUNGARY_TT
+			hidden_effect = {
+				set_country_flag = hab_austria_hungary_unlocked
+			}
 		}
 	}
 

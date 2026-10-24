@@ -9,6 +9,7 @@ country_decisions = {
 			}
 			normal_or_historical_nations = yes
 			NOT = { has_country_flag = formed_austria_hungary_flag }
+			has_country_flag = hab_austria_hungary_unlocked
 			NOT = {
 				has_country_flag = hab_blocked_austria_hungary
 			}

@@ -3,7 +3,7 @@
  SGE_ADJ:0 "South German"
  form_south_germany_title:0 "Form South Germany"
  form_south_germany_desc:0 "..."
- l_english:
+ SGE_30_provinces_tt:0 "Owns at least 30 provinces in the South German region"
  SGE_ideas:0 "South German Ideas"
  SGE_ideas_start:0 "South German Traditions"
  SGE_ideas_bonus:0 "South German Ambition"

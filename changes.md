@@ -69,6 +69,15 @@
 - Ideas: -10% aggressive expansion replaced with -2 unrest.
 - Ideas: +5% discipline replaced with +10% manpower recovery speed.
 
+### South Germany
+
+- New formable nation: South Germany (`SGE`).
+- Formation decision (`form_south_germany`): at peace, administrative tech 12, own and core Bern (165), Straßburg (75), Wien (134), Prague (266) and Rothenburg (4715), plus 30 owned provinces in the South German region. Swaps to the South German ideas and grants 25 prestige.
+- Traditions: +1 legitimacy, +1 devotion, +0.3 republican tradition, +1 meritocracy, +1 horde unity, +15% infantry power. Ambition: +15% land morale.
+- Ideas: +33% manpower in primary culture group provinces and +33% manpower recovery speed; -10% technology cost; +5% discipline; +10% trade efficiency; +0.5 yearly army tradition; +10% administrative efficiency; +20% goods produced and -5% development cost.
+- Starting history: monarchy with the feudal monarchy reform, kingdom rank, Austrian culture, Catholic, Western tech, capital Wien (134).
+- Added the `SGE` tag, flag, ideas, history, decision and localisation files.
+
 ### Switzerland
 
 - Mission for forest expansion, gained elector status, granted extra provinces.
@@ -139,6 +148,7 @@
 ### Trade and Subjects
 
 - Eyalet subject type now uses a diplomatic slot.
+- Eyalets now join their overlord's wars.
 - Trade companies removed.
 - Downstream trade power nuked.
 - Trade node changes for balance and war reasons.
@@ -213,3 +223,7 @@
 - Hungarian always choses austrian heir.
 - Moldavian always choses poland.
 - The Rugs of Persia (`flavor_per.19`, fired by the Persia mission `per_the_persian_rug`) now only has option c (2 years of production income in the Persia region, +2 mercantilism, silk +0.2 / cloth +0.1 / dyes +0.1 for 40 years). The monopolize and flood the market options are removed.
+
+### Mod Framework
+
+- The mod now ships full copies of the vanilla country definition files (`common/countries`, all 979 vanilla files plus South Germany) and the full country tag list (`common/country_tags/00_countries.txt`), so those files are replaced wholesale instead of merged. Framework preparation for the Gecko Sunday Fork style of editing.

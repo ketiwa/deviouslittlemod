@@ -71,3 +71,14 @@ NDefines.NDiplomacy.MAX_FREE_CITIES = 0                           -- vanilla 12;
 -- Cost in reform progress points to swap an already chosen reform.
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 10  -- vanilla 50
 
+-- ==================== AI Peace Behaviour ====================
+-- How willing the AI is to sign peace (and how it values wars in peace deals).
+NDefines.NAI.PEACE_TIME_MONTHS = 12                   -- vanilla 60; months of war before AI considers peace
+NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0           -- vanilla 2.0; AI reluctance based on relative strength
+NDefines.NAI.PEACE_WARGOAL_FACTOR = 0.5               -- AI unwillingness to peace based on holding the wargoal
+NDefines.NAI.PEACE_CAPITAL_FACTOR = 20                -- AI unwillingness to peace based on occupied capital
+NDefines.NAI.PEACE_ALLY_WARSCORE_MULT = 1
+NDefines.NAI.PEACE_ALLY_WARGOAL_MULT = 2              -- Multiplies PEACE_WARGOAL_FACTOR for allies in a war
+NDefines.NAI.PEACE_ALLY_CAPITAL_MULT = 1
+NDefines.NAI.PEACE_CALL_FOR_PEACE_FACTOR = 0          -- AI willingness to accept a call for peace
+

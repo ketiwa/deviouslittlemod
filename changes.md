@@ -17,6 +17,10 @@
 
 - Juan II starts with 3/3/3 skills instead of 1/1/2.
 
+### Spain
+
+- Traditions: +1 artillery fire replaced with +15% artillery combat ability. Land morale tradition unchanged at +15%.
+
 ### Denmark and Sweden
 
 - Sweden starts with 10 galleys in Stockholm.

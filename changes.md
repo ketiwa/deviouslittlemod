@@ -7,7 +7,7 @@
 - Heir given 3-3-3, no longer an elector.
 - The electorate is given to Milan.
 - Austria-Hungary formation now requires administrative tech 14 instead of 18.
-- Starting traditions give +15% land morale instead of +10%.
+- Ideas now use the Gecko Sunday set: ambition is +10% infantry combat ability (was +50% heir chance); Military Frontier gives +25% garrison growth and +15% defensiveness (was +15% garrison growth, -10% fort maintenance); Habsburg Dominance gives +20% manpower recovery speed (was +2 diplomatic reputation) and moves to the 3rd slot; Fugger Banking gives +10% inflation reduction only (was +5% and -50% interest) and moves to the 4th slot. Traditions, Imperial Ambition, Edict of Restitution, Austrian Court and Hofkriegsrat are unchanged.
 
 ### Brandenburg
 

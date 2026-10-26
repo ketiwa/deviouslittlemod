@@ -150,6 +150,8 @@
 ### Institutions and Naval Doctrines
 
 - Woodenwall now gives naval maintenance reduction and naval force limit instead of a coastal combat bonus.
+- Renaissance bonus gives +100 governing capacity instead of -5% development cost / -5% build cost (Gecko Sunday values).
+- Printing Press bonus gives -10% stability cost (was -5%) and +0.1 all-estate loyalty equilibrium (Gecko Sunday values).
 
 ### Bankruptcy
 

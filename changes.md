@@ -8,7 +8,6 @@
 - The electorate is given to Milan.
 - Austria-Hungary formation now requires administrative tech 14 instead of 18.
 - Starting traditions give +15% land morale instead of +10%.
-- Idea order: Hofkriegsrat and the Edict of Restitution have swapped slots (Hofkriegsrat unlocks fifth, Edict of Restitution seventh).
 
 ### Brandenburg
 

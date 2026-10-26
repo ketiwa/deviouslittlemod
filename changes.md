@@ -199,10 +199,12 @@
 - HRE: imperial reform cost 60 (was 50); imperial reform authority acceptance 3 (was 1).
 - Free city cap set to 0 (was 12), which disables the Grant Free City Status imperial action.
 - Free cities may have up to 8 provinces (vanilla 1).
+- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60), no longer weighs relative strength when deciding to peace (`PEACE_FORCE_BALANCE_FACTOR` 0), wargoal 0.5, capital 20, ally warscore/wargoal/capital multipliers 1/2/1, and ignores calls for peace.
 
 ### Technology
 
 - Diplo tech 7 colonial range increased from +115 to +215, making the cumulative total 375 instead of 275.
+- Institutions no longer increase technology cost. All `expects_institution` penalties were stripped from the admin, diplo and military technology files, which are now overridden wholesale (`common/technologies/adm.txt`, `dip.txt`, `mil.txt`).
 
 ### Decisions
 

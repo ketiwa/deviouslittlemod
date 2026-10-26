@@ -1,0 +1,23 @@
+# - Rio Contas
+
+culture = tupinamba
+discovered_by = south_american
+religion = animism
+capital = "Rio de Contas"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+1500.4.23 = { discovered_by = POR } # Pedro Álvares Cabral
+1618.1.1 = {
+	owner = POR
+	controller = POR
+	add_core = POR
+	religion = catholic
+	culture = portugese
+	capital = "Coité"
+}
+1745.11.27 = { capital = "Rio de Contas" }
+

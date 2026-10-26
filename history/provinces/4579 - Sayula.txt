@@ -1,0 +1,13 @@
+# No previous file for Sayula
+
+culture = tecos
+religion = nahuatl
+capital = "Sayula"
+trade_goods = fish
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 1
+
+discovered_by = mesoamerican
+

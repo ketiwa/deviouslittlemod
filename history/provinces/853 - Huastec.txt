@@ -1,0 +1,18 @@
+#853 - Huastec
+
+culture = aztek 
+religion = nahuatl
+capital = "Tlapacoyan"
+trade_goods = cotton 
+hre = no 
+base_tax = 3 
+base_production = 3
+base_manpower = 1 
+
+add_province_triggered_modifier = MAY_obsidian_source
+
+discovered_by = AZT
+discovered_by = MAY
+discovered_by = ZAP
+discovered_by = mesoamerican
+

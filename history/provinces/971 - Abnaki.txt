@@ -1,0 +1,13 @@
+#971 - Abnaki
+
+culture = abenaki
+religion = totemism
+capital = "Abnaki"
+trade_goods = naval_supplies
+hre = no
+base_tax = 1 
+base_production = 2
+base_manpower = 2
+
+discovered_by = north_american
+

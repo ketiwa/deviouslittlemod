@@ -1,0 +1,15 @@
+# - Chimbote
+
+culture = chimuan
+religion = inti
+capital = "Chimbote"
+trade_goods = cocoa
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = CHM
+discovered_by = south_american
+discovered_by = andean
+

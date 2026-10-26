@@ -1,0 +1,15 @@
+#813 - Cajamarca
+
+culture = inca
+religion = inti
+capital = "Cajamarca"
+trade_goods = cocoa
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+
+discovered_by = south_american
+discovered_by = andean
+discovered_by = CHM
+

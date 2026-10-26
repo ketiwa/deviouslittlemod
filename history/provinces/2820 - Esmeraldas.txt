@@ -1,0 +1,14 @@
+# - Esmeraldas
+
+culture = cara
+religion = inti
+capital = "Esmeraldas"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+discovered_by = south_american
+discovered_by = andean
+

@@ -1,0 +1,13 @@
+# No previous file for Yopitzinco
+
+culture = tlapanec
+religion = nahuatl
+capital = "Yopi"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+discovered_by = mesoamerican
+

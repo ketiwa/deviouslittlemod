@@ -1,0 +1,12 @@
+#1094 - Gubbi Gubbi
+
+culture = gamilaraay
+religion = dreamtime
+capital = "Turrbal"
+trade_goods = naval_supplies
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+discovered_by = aboriginal_tech
+

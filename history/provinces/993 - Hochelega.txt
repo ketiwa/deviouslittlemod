@@ -1,0 +1,14 @@
+#993 - Hochelega
+
+culture = laurentian
+religion = totemism
+capital = "Hochelega"
+trade_goods = fur
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+extra_cost = 8
+center_of_trade = 1
+

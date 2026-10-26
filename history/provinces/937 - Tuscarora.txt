@@ -1,0 +1,13 @@
+#937 - Tuscarora
+
+culture = iroquois
+religion = totemism
+capital = "Tuscarora"
+trade_goods = tobacco
+hre = no
+base_tax = 1 
+base_production = 2
+base_manpower = 2
+
+discovered_by = north_american
+

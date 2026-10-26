@@ -1,0 +1,13 @@
+# 2022 - Haida
+
+culture = haida
+religion = totemism 
+capital = "Haida"
+trade_goods = fish
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+
+discovered_by = north_american
+

@@ -1,0 +1,12 @@
+# No previous file for Pitahawirata
+
+culture = pawnee
+religion = totemism
+capital = "Pitahawirata"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+

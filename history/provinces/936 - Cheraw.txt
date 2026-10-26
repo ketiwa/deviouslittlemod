@@ -1,0 +1,13 @@
+#936 - Cheraw
+
+culture = catawba
+religion = totemism
+capital = "Cheraw"
+trade_goods = tobacco
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+discovered_by = north_american
+

@@ -1,0 +1,12 @@
+#4869 - Peerapper
+
+culture = palawa
+religion = dreamtime
+capital = "Peerapper"
+hre = no
+trade_goods = gems
+base_manpower = 3
+base_tax = 1
+base_production = 2
+discovered_by = aboriginal_tech
+

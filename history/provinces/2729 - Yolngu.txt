@@ -1,0 +1,16 @@
+#2729 - Yolngu
+
+culture = gunwinyguan
+religion = dreamtime
+capital = "Yolngu"
+hre = no
+trade_goods = cloth
+base_manpower = 1
+base_tax = 2 
+base_production = 2
+discovered_by = aboriginal_tech
+
+discovered_by = MKS
+discovered_by = TER
+discovered_by = TID
+

@@ -1,0 +1,13 @@
+#915 - Illinois
+
+culture = illini
+religion = totemism
+capital = "Illinois"
+trade_goods = grain
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+

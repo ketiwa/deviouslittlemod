@@ -1,0 +1,13 @@
+# No previous file for Mani
+
+culture = yucatec
+religion = mesoamerican_religion
+capital = "Ceh Pech"
+trade_goods = cocoa
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 1
+
+discovered_by = mesoamerican
+

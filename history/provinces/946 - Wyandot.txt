@@ -1,0 +1,44 @@
+#946 - Wyandot
+
+culture = miami
+religion = totemism
+capital = "Wyandot"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+
+1679.1.1 = { discovered_by = FRA discovered_by = ENG }
+1707.5.12 = { discovered_by = GBR }
+1753.8.3 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	is_city = yes
+	religion = catholic
+	trade_goods = fur
+} # French occupy northern Ohio
+1763.2.10 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = FRA
+	culture = english
+	religion = protestant
+} # Treaty of Paris - ceded to Britain, France gave up its claim
+1763.3.1 = { unrest = 6 } # Native discontent with the British rule
+1763.5.1 = { unrest = 0 revolt = { type = nationalist_rebels size = 0 } controller = REB } # Pontiac's war
+1785.1.1 = { unrest = 5 } # Northwest Indian War
+1794.1.1 = { unrest = 0 } # Anthony Wayne's victory at Fallen Timbers
+1807.11.17 = {
+	owner = USA
+	controller = USA
+	add_core = USA
+	culture = american
+	religion = protestant 
+} #Treaty of Detroit cedes much of the region
+

@@ -1,0 +1,13 @@
+# No previous file for Tel Kondaha
+
+culture = lipan
+religion = totemism
+capital = "Tel Kondaha" 
+trade_goods = unknown 
+hre = no 
+base_tax = 1
+base_production = 1 
+base_manpower = 1 
+
+discovered_by = north_american
+

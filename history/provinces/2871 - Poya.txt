@@ -1,0 +1,13 @@
+# - Poya
+
+culture = patagonian
+religion = animism
+capital = "Poya"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+1561.3.2 = { discovered_by = SPA }
+

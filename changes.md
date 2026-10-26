@@ -101,6 +101,25 @@
 - Added a strait between Nyland (28) and Estland (36) across the Gulf of Finland sea province (1254).
 
 
+### New World
+
+- Removed every New World native nation, including the Mexican native states (Aztec, Tlaxcala, Maya, etc.). All 222 provinces they owned at the 1444 start are now uncolonized, and the remaining 562 provinces that had native tribal land, native populations or later native ownership are cleared as well.
+- Native ownership, tribal ownership and native cores are also removed from later history blocks (for example Iroquois conquests and Inca expansion), so native tags cannot appear later in the game.
+- Province culture, religion, trade goods, development, centres of trade and geographic modifiers are kept, so the land is fully colonisable.
+- The Mexico colonial nation (`MEX`) can still be formed normally by colonising the Mexico region.
+- Added 784 province history overrides under `history/provinces` (all provinces on the North and South American continents).
+
+
+### Australia
+
+- Removed all Australian Aboriginal nations (`aboriginal_tech`), including Noongar, Eora, Wurundjeri, Palawa, Yolngu and the rest. All 13 provinces they owned at the 1444 start are now uncolonized, and native populations and tribal ownership are cleared from all 46 provinces in the `australia_region`.
+- Dated European history is kept in the 33 provinces that were only tribal or unowned (for example the 1803 British penal colony in Tasmania); the 13 formerly native-owned provinces have no dated history.
+- Province culture, religion, trade goods, development, centres of trade and geographic modifiers are kept.
+- The Australia colonial nation (`AUS`) can still be formed normally.
+- Added 46 province history overrides under `history/provinces`.
+- Polynesian nations (New Zealand and the Pacific) are untouched.
+
+
 ### Ages
 
 - Replaced the age view layout with the one from the Gecko Sunday Fork mod (interface/ages_view.gui) plus its two scripted buttons.

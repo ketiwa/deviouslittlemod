@@ -1,0 +1,13 @@
+#844 - Zapotec
+
+culture = zapotek
+religion = nahuatl
+capital = "Zaachila"
+trade_goods = sugar
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+discovered_by = mesoamerican
+

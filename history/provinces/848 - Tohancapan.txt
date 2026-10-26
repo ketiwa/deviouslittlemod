@@ -1,0 +1,13 @@
+#848 - Tohancapan
+
+culture = totonac
+religion = nahuatl
+capital = "Tohancapan"
+trade_goods = spices
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+discovered_by = mesoamerican
+

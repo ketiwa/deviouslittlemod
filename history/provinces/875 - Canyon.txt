@@ -1,0 +1,16 @@
+#875 - Canyon
+
+culture = navajo 
+religion = totemism
+capital = "Canyon" 
+trade_goods = salt 
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+
+ # Francisco Vásquez de Coronado
+discovered_by = north_american
+
+1540.1.1 = { discovered_by = SPA } # Francisco Vásquez de Coronado
+

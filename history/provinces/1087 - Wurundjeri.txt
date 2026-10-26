@@ -1,0 +1,13 @@
+#1087 - Wurundjeri
+
+culture = kulin
+religion = dreamtime
+capital = "Wurundjeri"
+hre = no
+trade_goods = livestock
+base_manpower = 2
+base_tax = 4
+base_production = 5
+center_of_trade = 1
+discovered_by = aboriginal_tech
+

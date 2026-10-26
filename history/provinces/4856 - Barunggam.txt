@@ -1,0 +1,12 @@
+#4656 - Barunggam
+
+culture = gamilaraay
+religion = dreamtime
+capital = "Barunggam"
+hre = no
+trade_goods = unknown
+base_manpower = 3
+base_tax = 4
+base_production = 3
+discovered_by = aboriginal_tech
+

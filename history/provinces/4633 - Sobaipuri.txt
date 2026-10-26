@@ -1,0 +1,20 @@
+# No previous file for Sobaipuri
+
+culture = piman
+religion = totemism
+capital = "Sobaipuri"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+1751.1.1 = { unrest = 5 }
+1752.1.1 = { unrest = 0 }
+1810.9.16 = {
+	owner = MEX
+	add_core = MEX
+	controller = SPA
+} # Mexican War of Independence
+

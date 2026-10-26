@@ -1,0 +1,13 @@
+#959 - Cayuga
+
+culture = iroquois
+religion = totemism
+capital = "Cayuga"
+trade_goods = fur
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+discovered_by = north_american
+

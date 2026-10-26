@@ -1,0 +1,13 @@
+#886 - Waco
+
+culture = wichita
+religion = totemism
+capital = "Waco"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+

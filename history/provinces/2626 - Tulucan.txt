@@ -1,0 +1,13 @@
+# No previous file for Tulucan
+
+culture = matlatzinca
+religion = nahuatl
+capital = "Matlatzinca"
+trade_goods = gold
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+discovered_by = mesoamerican
+

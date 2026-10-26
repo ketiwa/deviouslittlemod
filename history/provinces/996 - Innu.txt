@@ -1,0 +1,17 @@
+#996 - Innu
+
+culture = innu
+religion = totemism
+capital = "Innu"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+
+1534.1.1 = { discovered_by = FRA } # Jacques Cartier
+
+1707.5.12 = { discovered_by = GBR }
+

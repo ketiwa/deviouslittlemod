@@ -1,0 +1,15 @@
+# No previous file for Acambaro
+
+culture = otomi
+religion = nahuatl
+capital = "Acambaro"
+trade_goods = wool
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+add_province_triggered_modifier = MAY_obsidian_source
+
+discovered_by = mesoamerican
+

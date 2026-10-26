@@ -1,0 +1,24 @@
+# - Pastos Bons
+
+culture = ge
+discovered_by = south_american
+religion = animism
+capital = "Pastos Bons"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+1580.1.1 = { discovered_by = POR }
+
+1764.6.28 = {
+	owner = POR
+	controller = POR
+	add_core = POR
+	is_city = yes
+	culture = portugese
+	religion = catholic
+	trade_goods = grain
+}
+

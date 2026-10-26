@@ -1,0 +1,14 @@
+# No previous file for Ecab
+
+culture = yucatec
+religion = mesoamerican_religion
+capital = "Ecab"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+center_of_trade = 1 #Island of Cozumel
+
+discovered_by = mesoamerican
+

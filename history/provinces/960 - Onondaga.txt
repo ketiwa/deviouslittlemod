@@ -1,0 +1,13 @@
+#960 - Onondaga
+
+culture = iroquois
+religion = totemism
+capital = "Onondaga"
+trade_goods = fur
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+
+discovered_by = north_american
+

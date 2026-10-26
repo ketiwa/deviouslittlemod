@@ -1,0 +1,12 @@
+# No previous file for Malinalco
+
+culture = matlatzinca
+religion = nahuatl
+capital = "Malinalco"
+trade_goods = gold
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+discovered_by = mesoamerican
+

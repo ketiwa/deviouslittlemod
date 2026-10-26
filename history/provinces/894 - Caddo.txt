@@ -1,0 +1,13 @@
+#894 - Caddo
+
+culture = caddo
+religion = totemism
+capital = "Caddo"
+trade_goods = cotton
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+

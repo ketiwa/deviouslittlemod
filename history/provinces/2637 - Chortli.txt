@@ -1,0 +1,15 @@
+# No previous file for Chortli
+
+culture = highland_mayan
+religion = mesoamerican_religion
+capital = "Chortli"
+trade_goods = naval_supplies
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+add_province_triggered_modifier = MAY_obsidian_source
+
+discovered_by = mesoamerican
+

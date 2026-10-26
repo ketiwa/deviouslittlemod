@@ -1,0 +1,13 @@
+#966 - Nipmuc (Western Massachusetts)
+
+culture = massachusset
+religion = totemism 
+capital = "Nipmuc" 
+trade_goods = unknown 
+hre = no 
+base_tax = 2
+base_production = 2
+base_manpower = 1 
+
+discovered_by = north_american
+

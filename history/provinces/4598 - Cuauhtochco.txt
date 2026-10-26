@@ -1,0 +1,12 @@
+# No previous file for Cuauhtochco
+
+culture = totonac
+religion = nahuatl
+capital = "Cuauhtochco"
+trade_goods = sugar
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+discovered_by = mesoamerican
+

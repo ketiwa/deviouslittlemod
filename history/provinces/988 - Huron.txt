@@ -1,0 +1,13 @@
+#988 - Huron
+
+culture = huron
+religion = totemism
+capital = "Attignawantan"
+trade_goods = fur
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 4
+
+discovered_by = north_american
+

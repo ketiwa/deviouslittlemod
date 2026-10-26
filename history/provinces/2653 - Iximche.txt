@@ -1,0 +1,14 @@
+# No previous file for Iximché
+
+culture = highland_mayan
+religion = mesoamerican_religion
+capital = "Iximché"
+trade_goods = gems
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+discovered_by = mesoamerican
+
+add_province_triggered_modifier = MAY_obsidian_source
+

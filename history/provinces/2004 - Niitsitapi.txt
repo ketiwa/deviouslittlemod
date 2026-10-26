@@ -1,0 +1,17 @@
+#2004 - Niitsitapi
+
+latent_trade_goods = {
+	coal
+}
+
+culture = blackfoot
+religion = totemism
+capital = "Niitsitapi"
+trade_goods = fur
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = north_american
+

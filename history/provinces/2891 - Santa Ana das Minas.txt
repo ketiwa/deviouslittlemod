@@ -1,0 +1,24 @@
+# - Santa Ana das Minas
+
+culture = ge
+discovered_by = south_american
+religion = animism
+capital = "Santo Antonio da Manga"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+1550.1.1 = { discovered_by = POR }
+
+1668.1.1 = {
+	owner = POR
+	controller = POR
+	add_core = POR
+	is_city = yes
+	religion = catholic
+	culture = portugese
+	trade_goods = copper
+}
+

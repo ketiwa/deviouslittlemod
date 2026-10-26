@@ -1,0 +1,15 @@
+# - Charcas
+
+culture = aimara
+
+discovered_by = south_american
+discovered_by = andean
+
+religion = inti
+capital = "Charcas"
+trade_goods = wool
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+

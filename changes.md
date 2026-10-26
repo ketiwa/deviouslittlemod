@@ -233,6 +233,10 @@ bro- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60),
 - Rome (118) is now held by **Perugia (PGA)**, which keeps its capital in Perugia while the Pope sits in the Vatican. Perugia gains a core on Rome.
 - Papal cores: the Pope keeps a core **only on the Vatican (4942)**, so the Papal State can be restored if annexed. There are no Papal cores on Rome or on the provinces the mod overrides (Umbria, Urbino, Bologna) and the historical `add_core = PAP` entries were stripped.
 - The `catholic_rome` modifier is no longer applied to Rome (both the −10 papal influence and −1 diplomatic reputation are gone); `the_holy_see` province modifier removed as well. Only the vanilla `religious_center` and `non_catholic_rome` modifiers remain on the two provinces.
+- The Papal State can no longer be taken. The mod now ships its own `events/PapalState.txt`, ported from Gecko Sunday Fork with the Vatican reference updated from `6415` to `4942`:
+  - `1083` — the attacker war leader in any war involving the Papal State is forced into a white peace with `PAP` after ~1 month (single option, no way to refuse), so no war can be won against the Pope.
+  - `1082` — the Pope is automatically freed (`free_vassal = PAP`) if anyone vassalises him.
+  - `1081` — if the Papal State does not exist and someone owns the Vatican, the tile is ceded back to a restored `PAP` after ~1 month (single option, −25 prestige, −250 ducats and a truce). The Gecko version's Catholic-only and normal/historical-nation restrictions were dropped so no owner can keep the tile.
 - The mod now overrides `provinces.bmp`, `definition.csv`, `default.map` (`max_provinces = 4943`), `area.txt`, `region.txt`, `continent.txt` and `positions.txt`; `4942` was added to the Genoa trade node.
 
 ### Decisions

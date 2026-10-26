@@ -1,0 +1,164 @@
+# Papal State
+# Ported from Gecko Sunday Fork (events/PapalState.txt).
+# The Vatican was renumbered from 6415 to 4942 in this mod, so every province
+# reference is updated. The restoration trigger no longer requires the owner to
+# be Catholic or a normal/historical nation, so the Holy See always comes back.
+# Together with 1082 and 1083 this makes the Papal State impossible to conquer.
+
+country_event = {
+	id = 1081
+	title = "EVTNAME1081"
+	desc = "EVTDESC1081"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		owns = 4942		# Vatican
+		NOT = { exists = PAP }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVTOPTB1081" # Rome is rightfully theirs
+		4942 = {
+			add_core = PAP
+			cede_province = PAP
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				remove_core = ROOT
+			}
+		}
+		add_truce_with = PAP
+		add_prestige = -25
+		add_treasury = -250
+		PAP = {
+			change_religion = catholic
+		}
+	}
+}
+
+
+# The Papal State
+country_event = {
+	id = 1082
+	title = "EVTNAME1082"
+	desc = "EVTDESC1082"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		overlord_of = PAP
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVTOPTA1082"
+		free_vassal = PAP
+		PAP = {
+			change_religion = catholic
+		}
+		add_truce_with = PAP
+		add_prestige = -25
+		add_treasury = -250
+	}
+}
+
+# Lacking Support - the war leader attacking the Pope is forced to white peace
+country_event = {
+	id = 1083
+	title = "EVTNAME1083"
+	desc = "EVTDESC1083"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		NOT = { tag = PAP }
+		is_in_war = {
+			participants = PAP
+			attacker_leader = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "EVTOPTA1083"		# Hire someone to investigate the matter
+		white_peace = PAP
+	}
+
+}
+
+# Possible Infiltrator
+country_event = {
+	id = 1084
+	title = "EVTNAME1084"
+	desc = "EVTDESC1084"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = cardinal_infiltrator }
+		has_reform = papacy_reform
+		NOT = { adm = 1 }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 1.1
+			advisor = spymaster
+		}
+		modifier = {
+			factor = 1.1
+			spymaster = 2
+		}
+		modifier = {
+			factor = 1.1
+			spymaster = 3
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+	}
+
+	option = {
+		name = "EVTOPTA1084"		# Take his word for it
+		ai_chance = { factor = 55 }
+		set_country_flag = cardinal_infiltrator
+		random = {
+			chance = 40
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB1084"		# Ask for some proof
+		ai_chance = { factor = 45 }
+		set_country_flag = cardinal_infiltrator
+		add_country_modifier = {
+			name = "infiltrator_in_the_cardinal_office"
+			duration = 730
+		}
+	}
+}

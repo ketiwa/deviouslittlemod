@@ -50,6 +50,14 @@ NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50
 -- Backrow morale damage taken (vanilla 0.4; set to 0.0 to match Gecko Monday Fork).
 NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 
+-- ==================== Transports (ported from Gecko Sunday Fork) ====================
+-- Transports are unarmed, cheap, fast-to-build troop ferries.
+-- Unit stats are overridden wholesale in common/units/ (hull 5, 0 cannons, 0 blockade).
+NDefines.NMilitary.TRANSPORT_COST = 1                       -- vanilla 12
+NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 1          -- vanilla 50
+NDefines.NMilitary.TRANSPORT_TIME = 90                      -- vanilla 365
+NDefines.NAI.TRANSPORT_FRACTION = -1                        -- vanilla 0.5; -1 removes the AI transport-forcelimit cap
+
 -- ==================== Mysticism piety action ====================
 -- "Call on Religious Followers" (available at -75 piety) manpower reward.
 NDefines.NReligion.PIETY_MANPOWER = 1.5

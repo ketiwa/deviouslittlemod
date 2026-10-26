@@ -240,6 +240,12 @@
 - Free city cap set to 0 (was 12), which disables the Grant Free City Status imperial action.
 - Free cities may have up to 8 provinces (vanilla 1).
 bro- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60), no longer weighs relative strength when deciding to peace (`PEACE_FORCE_BALANCE_FACTOR` 0), wargoal 0.5, capital 20, ally warscore/wargoal/capital multipliers 1/2/1, and ignores calls for peace.
+- Transports cost 1 ducat and 1 sailor (vanilla 12 / 50) and take 90 days to build (vanilla 365).
+- AI transport forcelimit fraction uncapped (`TRANSPORT_FRACTION` -1, vanilla 0.5).
+
+### Transports
+
+- All transports (cog, flute, merchantman, brig, trabakul, eastindiaman) are reduced to hull size 5, 0 cannons, 0 blockade and 20 sailors (brig 10). Sail speed is unchanged. The unit files are overridden wholesale in `common/units/`, ported from Gecko Sunday Fork.
 
 ### Technology
 

@@ -17112,7 +17112,7 @@ MSA_ideas = {
 		trade_efficiency = 0.15
 	}
 	msa_chart_the_seas = {
-		own_coast_naval_combat_bonus = 1
+		heavy_ship_power = 0.1
 		naval_morale = 0.15
 	}
 	msa_in_every_port = {

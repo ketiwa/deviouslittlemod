@@ -160,6 +160,7 @@
 - Basic ideas: Exploration, Expansion, and Naval, Mercenary idea group removed.
 - Basic ideas: Divine added for all christan nations.
 - Basic ideas: Quantity bonus land force limit +33% -> +50%.
+- Malaya (`MSA`): `msa_chart_the_seas` now gives +10% heavy ship combat ability instead of +1 naval combat bonus off owned coast.
 
 ### Policies and State Edicts
 

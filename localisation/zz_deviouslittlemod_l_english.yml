@@ -125,6 +125,3 @@
  HAB_BAVARIA_PU_CLAIMS_TT:0 "Gain permanent claims on every Bavarian province we do not already own"
  HAB_UNLOCKS_SOUTH_GERMAN_FEDERATION_TT:0 "Unlocks the decision to form the South German Federation"
  HAB_UNLOCKS_AUSTRIA_HUNGARY_TT:0 "Unlocks the decision to form Austria-Hungary"
- # ---- Merged Americas colonial region ----
- colonial_eastern_america:0 "Colonial America"
- short_colonial_eastern_america:0 "America"

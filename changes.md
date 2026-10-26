@@ -118,6 +118,13 @@
 - The burghers' Fugger Family Privileges are disabled (never offered).
 
 
+### Prestige, Power Projection and Governing Capacity
+
+- Prestige now gives at most ±5% land morale at ±100 prestige (was ±10%).
+- Power projection uses the Gecko Sunday set: keeps +20% trade power, +0.5 prestige/legitimacy/devotion/horde unity/meritocracy and +0.2 republican tradition, but loses the +10% defensiveness, +10% land and naval morale, and the divine authority / authority power effects. The 25 PP free leader is unchanged.
+- Being under governing capacity now gives up to −10% development cost (scales with unused capacity). The over-capacity penalties are untouched.
+
+
 ### HRE Mechanics
 
 - No free cities exist.

@@ -105,6 +105,7 @@
 
 - Removed every New World native nation, including the Mexican native states (Aztec, Tlaxcala, Maya, etc.). All 222 provinces they owned at the 1444 start are now uncolonized, and the remaining 562 provinces that had native tribal land, native populations or later native ownership are cleared as well.
 - Native ownership, tribal ownership and native cores are also removed from later history blocks (for example Iroquois conquests and Inca expansion), so native tags cannot appear later in the game.
+- All 155 removed New World native country histories are disabled in `history/countries`. This stops the engine from recreating the native countries with tribal land at their old capitals, which previously kept a trade good on those provinces.
 - Province culture, religion, trade goods, development, centres of trade and geographic modifiers are kept, so the land is fully colonisable.
 - The Mexico colonial nation (`MEX`) can still be formed normally by colonising the Mexico region.
 - Added 784 province history overrides under `history/provinces` (all provinces on the North and South American continents).
@@ -114,6 +115,7 @@
 
 - Removed all Australian Aboriginal nations (`aboriginal_tech`), including Noongar, Eora, Wurundjeri, Palawa, Yolngu and the rest. All 13 provinces they owned at the 1444 start are now uncolonized, and native populations and tribal ownership are cleared from all 46 provinces in the `australia_region`.
 - Dated European history is kept in the 33 provinces that were only tribal or unowned (for example the 1803 British penal colony in Tasmania); the 13 formerly native-owned provinces have no dated history.
+- The 14 Aboriginal country histories are disabled in `history/countries` for the same reason, so no tribal land can be regenerated.
 - Province culture, religion, trade goods, development, centres of trade and geographic modifiers are kept.
 - The Australia colonial nation (`AUS`) can still be formed normally.
 - Added 46 province history overrides under `history/provinces`.
@@ -277,6 +279,10 @@ bro- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60),
 - Hungarian always choses austrian heir.
 - Moldavian always choses poland.
 - The Rugs of Persia (`flavor_per.19`, fired by the Persia mission `per_the_persian_rug`) now only has option c (2 years of production income in the Persia region, +2 mercantilism, silk +0.2 / cloth +0.1 / dyes +0.1 for 40 years). The monopolize and flood the market options are removed.
+
+### Colonial Regions
+
+- North America, South America, Central America and Cuba are merged into a single colonial region (`colonial_eastern_america`, relabelled "Colonial America"). All 778 provinces from the vanilla `colonial_alaska`, `colonial_canada`, `colonial_eastern_america`, `colonial_louisiana`, `colonial_california`, `colonial_mexico`, `colonial_the_carribean`, `colonial_colombia`, `colonial_peru`, `colonial_la_plata` and `colonial_brazil` regions are moved into it, and those ten regions are deleted. `colonial_australia` and the RNW placeholders are unchanged.
 
 ### Mod Framework
 

@@ -3,7 +3,7 @@
 culture = tionontate
 religion = totemism
 capital = "Tionontate"
-trade_goods = tobacco #were called the Tobacco indians
+trade_goods = unknown #were called the Tobacco indians
 hre = no
 base_tax = 2 
 base_production = 2

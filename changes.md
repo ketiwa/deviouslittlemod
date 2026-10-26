@@ -199,12 +199,22 @@
 - HRE: imperial reform cost 60 (was 50); imperial reform authority acceptance 3 (was 1).
 - Free city cap set to 0 (was 12), which disables the Grant Free City Status imperial action.
 - Free cities may have up to 8 provinces (vanilla 1).
-- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60), no longer weighs relative strength when deciding to peace (`PEACE_FORCE_BALANCE_FACTOR` 0), wargoal 0.5, capital 20, ally warscore/wargoal/capital multipliers 1/2/1, and ignores calls for peace.
+bro- AI peace behaviour: AI considers peace after 12 months of war (vanilla 60), no longer weighs relative strength when deciding to peace (`PEACE_FORCE_BALANCE_FACTOR` 0), wargoal 0.5, capital 20, ally warscore/wargoal/capital multipliers 1/2/1, and ignores calls for peace.
 
 ### Technology
 
 - Diplo tech 7 colonial range increased from +115 to +215, making the cumulative total 375 instead of 275.
 - Institutions no longer increase technology cost. All `expects_institution` penalties were stripped from the admin, diplo and military technology files, which are now overridden wholesale (`common/technologies/adm.txt`, `dip.txt`, `mil.txt`).
+
+### The Vatican
+
+- Added province 4942 "Vatican" (RGB 168/127/175) as a 12-pixel enclave inside Roma, ported from Gecko Sunday Fork (which uses ID 6415; renumbered to vanilla's next free ID so `max_provinces` stays contiguous). 2/2/2 development, paper, Umbrian/Catholic, outside the HRE. Tiles sits at x 2992–2994 / y 678–681, two pixels clear of the neighbouring province.
+- New area `vatican_area` ("The Holy See") in the Italy region; province is in the Genoa trade node and `europe`.
+- The Papal State owns the Vatican and its capital is moved there (`capital`/`fixed_capital` = 4942 in `history/countries/PAP - Papal.txt`).
+- Rome (118) is now held by **Perugia (PGA)**, which keeps its capital in Perugia while the Pope sits in the Vatican. Perugia gains a core on Rome.
+- Papal cores: the Pope keeps a core **only on the Vatican (4942)**, so the Papal State can be restored if annexed. There are no Papal cores on Rome or on the provinces the mod overrides (Umbria, Urbino, Bologna) and the historical `add_core = PAP` entries were stripped.
+- The `catholic_rome` modifier is no longer applied to Rome (both the −10 papal influence and −1 diplomatic reputation are gone); `the_holy_see` province modifier removed as well. Only the vanilla `religious_center` and `non_catholic_rome` modifiers remain on the two provinces.
+- The mod now overrides `provinces.bmp`, `definition.csv`, `default.map` (`max_provinces = 4943`), `area.txt`, `region.txt`, `continent.txt` and `positions.txt`; `4942` was added to the Genoa trade node.
 
 ### Decisions
 

@@ -1,4 +1,4 @@
-﻿monarch_power = MIL
+monarch_power = MIL
 
 # applied when a country is ahead of time in this technology
 # no bonus for MIL currently

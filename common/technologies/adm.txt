@@ -1,4 +1,4 @@
-﻿monarch_power = ADM
+monarch_power = ADM
 
 # applied when a country is ahead of time in this technology
 ahead_of_time = {

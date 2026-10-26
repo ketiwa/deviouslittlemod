@@ -174,6 +174,13 @@
 - Renaissance bonus gives +100 governing capacity instead of -5% development cost / -5% build cost (Gecko Sunday values).
 - Printing Press bonus gives -10% stability cost (was -5%) and +0.1 all-estate loyalty equilibrium (Gecko Sunday values).
 
+### Flagship Modifications
+
+- `trade_route_map` is disabled with `trigger = { always = no }` (Gecko Sunday Fork style), so its `trade_power_in_fleet_modifier = 1` can never be taken.
+- `portuguese_trade_route_map` (Portugal/Brazil) keeps its trigger but its `trade_power_in_fleet_modifier = 2` is removed; it only grants the flagship maintenance effect.
+- Trade Power per Ship in Fleet therefore no longer exists from any selectable flagship modification.
+- The mod now ships its own copy of `common/flagship_modifications/00_flagship_modifications.txt`.
+
 ### Bankruptcy
 
 - Bankruptcy morale penalty reduced from -50% to -25% (land and naval). Other bankruptcy penalties unchanged.

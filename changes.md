@@ -6,7 +6,9 @@
 
 - Heir given 3-3-3, no longer an elector.
 - The electorate is given to Milan.
-- Austria-Hungary formation now requires administrative tech 12 instead of 18.
+- Austria-Hungary formation now requires administrative tech 14 instead of 18.
+- Starting traditions give +15% land morale instead of +10%.
+- Idea order: Hofkriegsrat and the Edict of Restitution have swapped slots (Hofkriegsrat unlocks fifth, Edict of Restitution seventh).
 
 ### Brandenburg
 
@@ -106,6 +108,11 @@
 ### Government Reforms
 
 - Swapping an already chosen government reform costs 10 reform progress (vanilla 50).
+
+
+### Estates
+
+- The burghers' Fugger Family Privileges are disabled (never offered).
 
 
 ### HRE Mechanics

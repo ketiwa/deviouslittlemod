@@ -1,0 +1,26 @@
+####EGOSHEET SCORE
+# has_variable is not a valid EU4 trigger, so initialisation is guarded by a country flag.
+dlm_egosheet_ensure_init = {
+	if = {
+		limit = { NOT = { has_country_flag = dlm_egosheet_init } }
+		set_country_flag = dlm_egosheet_init
+		set_variable = { which = dlm_loans_total value = 0 }
+		set_variable = { which = dlm_bankruptcies_total value = 0 }
+		set_variable = { which = dlm_bankruptcies_year value = 0 }
+		set_variable = { which = dlm_wars_won value = 0 }
+		set_variable = { which = dlm_wars_lost value = 0 }
+		# Baseline, so loans already held are not counted as newly taken.
+		export_to_variable = { which = dlm_loans_seen value = trigger_value:num_of_loans }
+	}
+}
+
+# Score = wars won (+1) - wars lost (-1) - 2 per bankruptcy. Loans are not scored.
+# Variable-to-variable maths uses `which =`, never `value =`, in EU4.
+dlm_egosheet_update_score = {
+	dlm_egosheet_ensure_init = yes
+	set_variable = { which = IntScore which = dlm_wars_won }
+	subtract_variable = { which = IntScore which = dlm_wars_lost }
+	set_variable = { which = dlm_score_penalty which = dlm_bankruptcies_total }
+	multiply_variable = { which = dlm_score_penalty value = 2 }
+	subtract_variable = { which = IntScore which = dlm_score_penalty }
+}

@@ -1,0 +1,52 @@
+####EGOSHEET LIFETIME TOTALS
+# Initialisation lives in dlm_egosheet_ensure_init. has_variable is not a valid
+# EU4 trigger and previously broke this whole file at parse time.
+on_startup = {
+	dlm_egosheet_ensure_init = yes
+}
+
+# Wars won / lost. Only wars involving a human player are counted.
+# White peace does not fire this hook, so it counts as neither won nor lost.
+on_war_ended = {
+	if = {
+		limit = { was_player = yes }
+		change_variable = { which = dlm_wars_won value = 1 }
+		dlm_egosheet_update_score = yes
+	}
+	FROM = {
+		if = {
+			limit = { was_player = yes }
+			change_variable = { which = dlm_wars_lost value = 1 }
+			dlm_egosheet_update_score = yes
+		}
+	}
+	1 = { province_event = { id = intscore.1064 } }
+}
+
+# Annual counter and lifetime total.
+on_bankruptcy = {
+	dlm_egosheet_ensure_init = yes
+	change_variable = { which = dlm_bankruptcies_year value = 1 }
+	change_variable = { which = dlm_bankruptcies_total value = 1 }
+	dlm_egosheet_update_score = yes
+	1 = { province_event = { id = intscore.1064 } }
+}
+
+# There is no on_loan_taken hook, so num_of_loans is sampled monthly and the
+# increase since last month is added to the lifetime loan counter.
+on_monthly_pulse = {
+	dlm_egosheet_ensure_init = yes
+	if = {
+		limit = { ai = no }
+		export_to_variable = { which = dlm_loans_now value = trigger_value:num_of_loans }
+		# delta = seen - now, so it is negative when new loans were taken.
+		set_variable = { which = dlm_loans_delta which = dlm_loans_seen }
+		subtract_variable = { which = dlm_loans_delta which = dlm_loans_now }
+		if = {
+			limit = { NOT = { check_variable = { which = dlm_loans_delta value = -0.5 } } }
+			subtract_variable = { which = dlm_loans_total which = dlm_loans_delta }
+		}
+		set_variable = { which = dlm_loans_seen which = dlm_loans_now }
+		dlm_egosheet_update_score = yes
+	}
+}

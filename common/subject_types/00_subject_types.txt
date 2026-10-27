@@ -116,7 +116,7 @@ default = {
 	can_concentrate_development = yes
 	can_have_great_projects_moved_by_overlord = yes
 	extend_trading_range = no
-	can_gain_favors = no
+	can_gain_favors = yes
 
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
@@ -607,7 +607,7 @@ colony = {
 	diplomacy_subject_sprite = GFX_diplomacy_subjectcolony
 
 	# Properties:
-	can_release_and_play = yes
+	can_release_and_play = no
 	uses_tariffs = yes
 	eats_overlords_colonies = yes
 	has_colonial_parent = yes
@@ -653,7 +653,7 @@ colony = {
 
 	# Subject Interactions:
 	customize_subject = yes
-	replace_governor = yes
+	replace_governor = no
 	start_colonial_war = yes
 	increase_tariffs = yes
 	decrease_tariffs = yes
@@ -679,16 +679,37 @@ colony = {
 		}
 	}
 	
+	# Disabled by the Gecko colonial port
+	#modifier_subject = {
+	#	modifier = ITA_extra_goods_produced_for_colonies
+	#	trigger = {
+	#		custom_trigger_tooltip = {
+	#			tooltip = ITA_trades_to_come_flag_tt
+	#			overlord = { has_country_flag = ITA_trades_to_come_flag }
+	#		}
+	#	}
+	#}
+	
+	# Gecko: buff for AI colonial subjects when exactly one side is a player
 	modifier_subject = {
-		modifier = ITA_extra_goods_produced_for_colonies
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_trades_to_come_flag_tt
-				overlord = { has_country_flag = ITA_trades_to_come_flag }
+			OR = {
+				AND = {
+					ai = no
+					overlord = {
+						ai = yes
+					}
+				}
+				AND = {
+					ai = yes
+					overlord = {
+						ai = no
+					}
+				}
 			}
 		}
+		modifier = ai_overlord_modifier
 	}
-	
 
 	overlord_opinion_modifier = colonial_relation
 	subject_opinion_modifier = colonial_relation
@@ -706,16 +727,14 @@ crown_colony = {
 	can_send_missionary_to_subject = yes	
 	count = colony
 
-	forcelimit_to_overlord = 0.3
-	manpower_to_overlord = 0.3
+	forcelimit_to_overlord = 0.1
+	manpower_to_overlord = 0.1
 	naval_forcelimit_to_overlord = 0.01
 	sailors_to_overlord = 0.01
 
 	# Subject Interactions:
 	embargo_rivals = yes
 	support_loyalists = yes
-	subsidize_armies = yes
-	send_officers = yes
 	enforce_religion = yes
 	takeondebt = yes
 	block_settlement_growth = yes
@@ -745,10 +764,10 @@ private_enterprise = {
 	is_colony_subtype = yes
 	count = colony
 
-	forcelimit_to_overlord = 0.0
-	manpower_to_overlord = 0.0
-	naval_forcelimit_to_overlord = 0.3
-	sailors_to_overlord = 0.3
+	#forcelimit_to_overlord = 0.0
+	#manpower_to_overlord = 0.0
+	#naval_forcelimit_to_overlord = 0.3
+	#sailors_to_overlord = 0.3
 
 	# Subject Interactions:
 	replace_governor = no
@@ -779,10 +798,10 @@ self_governing_colony = {
 	is_colony_subtype = yes
 	count = colony
 
-	forcelimit_to_overlord = 0.002
-	manpower_to_overlord = 0.002
-	naval_forcelimit_to_overlord = 0.002
-	sailors_to_overlord = 0.002
+	#forcelimit_to_overlord = 0.002
+	#manpower_to_overlord = 0.002
+	#naval_forcelimit_to_overlord = 0.002
+	#sailors_to_overlord = 0.002
 
 	# Subject Interactions:
 	replace_governor = no

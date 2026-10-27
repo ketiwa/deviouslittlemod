@@ -1463,10 +1463,11 @@ trade_company_strong = {
 }
 
 large_colonial_nation = {
-	merchants = 1
-	global_trade_power = 0.05
-	naval_forcelimit = 10
-	land_forcelimit = 5
+	#Gecko: all bonuses removed
+	#merchants = 1
+	#global_trade_power = 0.05
+	#naval_forcelimit = 10
+	#land_forcelimit = 5
 }
 
 new_world_exploitation_modifier = {
@@ -1480,19 +1481,19 @@ gbr_colonial_investment = {
 
 crown_colony_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
+	#global_trade_power = 0.05
 }
 
 private_enterprise_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
+	#global_trade_power = 0.05
 	global_tariffs = -0.05
 }
 
 self_governing_colony_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
-	global_tariffs = -0.10
+	#global_trade_power = 0.05
+	global_tariffs = -0.20
 }
 
 crown_colony_subject = {
@@ -1509,7 +1510,7 @@ private_enterprise_subject = {
 
 self_governing_colony_subject = {
 	colonists = 1
-	development_cost = -0.15
+	#development_cost = -0.15
 	liberty_desire = 25
 }
 
@@ -1541,9 +1542,17 @@ all_nations = {
 }
 
 subject_nation = {
-	global_tax_income = -6
-	land_forcelimit	= -3
-	naval_forcelimit = -6
+	#global_tax_income = -6
+	#land_forcelimit	= -3
+	#naval_forcelimit = -6
+	caravan_power = -0.9
+}
+
+ai_overlord_modifier = {
+	defensiveness = 0.5
+	global_autonomy = -0.1
+	yearly_corruption = -0.1
+	diplomatic_upkeep = 2
 }
 
 vassal_nation = {
@@ -1774,16 +1783,16 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	native_uprising_chance = -1.0
 }
 
 native_policy_trade = {
-	native_assimilation = 0.5
-	native_uprising_chance = -0.5
+	native_assimilation = 1
+	native_uprising_chance = -1.0
 }
 
 native_policy_hostile = {
-	global_colonial_growth = 20
+	global_colonial_growth = 15
+	native_uprising_chance = -1.0
 }
 
 ########################################
@@ -2211,6 +2220,8 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 	monthly_ottoman_decadence = 2
 	monthly_authority_power = 0.5
+	colony_cost_modifier = 1
+	global_colonial_growth = -100
 }
 
 #Scales with used capacity, being at full capacity means 100% of the modifier

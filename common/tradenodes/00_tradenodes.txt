@@ -1589,7 +1589,6 @@ pest={
 }
 krakow={
 	location=262
-	inland=yes
 	outgoing={
 		name="wien"
 		path={
@@ -1929,7 +1928,6 @@ champagne={
 	color={
 		193 26 14 
 	}
-	inland=yes
 	outgoing={
 		name="genua"
 		path={

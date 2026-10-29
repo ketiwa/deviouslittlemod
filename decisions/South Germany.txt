@@ -33,7 +33,7 @@ country_decisions = {
         allow = {
             is_free_or_tributary_trigger = yes
             is_at_war = no
-            adm_tech = 12
+            adm_tech = 14
             owns_core_province = 165
             owns_core_province = 75
             owns_core_province = 134
@@ -49,13 +49,12 @@ country_decisions = {
         }
         effect = {
             change_tag = SGE
+            restore_country_name_effect = yes
+            set_government_rank = 3
             add_prestige = 25
             set_country_flag = formed_south_germany_flag
-            if = {
-                limit = { has_custom_ideas = no }
-                country_event = { id = ideagroups.1 } #Swap Ideas
-            }
             on_change_tag_effect = yes
+            country_event = { id = ideagroups.1 } #Swap Ideas
         }
         ai_will_do = { factor = 1 }
     }

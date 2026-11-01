@@ -21,6 +21,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 14
 			owns = 141
 			owns = 670
 			owns = 176

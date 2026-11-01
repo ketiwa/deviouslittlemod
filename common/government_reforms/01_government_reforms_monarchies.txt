@@ -2266,7 +2266,7 @@ al_andalusia_government = {
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		custom_attributes = {
-			allow_piety_switch_decision = yes	#Enables a decision which gives 1 stabhit, but turns your piety 180°
+			allow_piety_switch_decision = yes	#Enables a decision which gives 1 stabhit, but turns your piety 180ï¿½
 		}
 	}
 }
@@ -2307,8 +2307,9 @@ prussian_monarchy = {
 		global_unrest = -2
 		global_autonomy = -0.075
 		max_absolutism = 10
-		monarch_military_power = 3
+		monarch_military_power = 1
 		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.15
 	}
 
 	conditional = {

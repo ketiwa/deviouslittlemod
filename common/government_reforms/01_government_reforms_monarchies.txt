@@ -992,15 +992,20 @@ ottoman_government = {
 	allow_normal_conversion = yes
 	icon = "ottoman_government"
 	potential = {
-		religion_group = muslim
 		OR = {
+			has_reform = ottoman_government
 			AND = {
-				tag = TUR
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = ottoman_government
+				religion_group = muslim
+				OR = {
+					AND = {
+						tag = TUR
+						NOT = { map_setup = map_setup_random }
+					}
+					AND = {
+						is_playing_custom_nation = yes
+						have_had_reform = ottoman_government
+					}
+				}
 			}
 		}
 	}

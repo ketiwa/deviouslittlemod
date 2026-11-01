@@ -2,11 +2,11 @@ country_decisions = {
     form_south_germany = {
         major = yes
         potential = {
-            NOT = { exists = SGE }
-            NOT = { has_country_flag = formed_south_germany_flag }
             OR = {
-                primary_culture = swiss
-                has_country_flag = hab_south_german_federation_unlocked
+                tag = SWI
+                tag = HAB
+                tag = HES
+                tag = WES
             }
         }
         provinces_to_highlight = {

@@ -1,0 +1,31 @@
+﻿l_english:
+ # Decision
+ proclaim_ottoman_empire_title: "Proclaim the Ottoman Empire"
+ proclaim_ottoman_empire_desc: "Our realm spans three continents. It is time to proclaim the Ottoman Empire."
+
+ # Name (only add if it doesn't already exist in the base game)
+ OTTOMAN_EMPIRE: "Ottoman Empire"
+
+ # Tooltip (only add if it doesn't already exist)
+ gecko_ottoman_empire_idea_improvements_tt: "Our national ideas will be replaced with the Ottoman Empire ideas."
+
+ # Idea group
+ OTR_ideas: "Ottoman Ideas"
+ OTR_ideas_start: "Ottoman Traditions"
+ OTR_ideas_bonus: "Ottoman Ambition"
+
+ # Individual ideas
+ lawcode_of_suleiman_02: "Law Code of Suleiman"
+ lawcode_of_suleiman_02_desc: "Suleiman's codified laws brought order and steady revenue to the realm."
+ ghazi2: "Ghazi"
+ ghazi2_desc: "The warrior tradition of the frontier keeps our armies fresh and fierce."
+ timariot_system2: "Timariot System"
+ timariot_system2_desc: "Land grants to cavalrymen keep the sipahis loyal and ready."
+ autonmous_pashas2: "Autonomous Pashas"
+ autonmous_pashas2_desc: "Provincial governors keep the peace far from the capital."
+ tulip_period2: "Tulip Period"
+ tulip_period2_desc: "An age of peace and commerce enriches our markets."
+ imperial_school_of_naval_engineering2: "Imperial School of Naval Engineering"
+ imperial_school_of_naval_engineering2_desc: "Modern shipbuilding restores our standing at sea."
+ millets2: "Millets"
+ millets2_desc: "Self-governing religious communities keep the empire diverse and stable."

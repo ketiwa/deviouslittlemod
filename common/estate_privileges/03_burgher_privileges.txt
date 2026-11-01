@@ -3373,18 +3373,28 @@ estate_burghers_ARB_oasis_development = {
 				}
 			}
 		}
-		
+
 		custom_tooltip = ARB_estate_burghers_desert_development_gt
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					OR = {
-						has_terrain = desert
-						has_terrain = coastal_desert
-					}
+					has_terrain = desert
 				}
 				add_province_modifier = {
 					name = ARB_estate_burghers_desert
+					duration = -1
+				}
+			}
+		}
+
+		custom_tooltip = ARB_estate_burghers_coastal_desert_development_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = coastal_desert
+				}
+				add_province_modifier = {
+					name = ARB_estate_burghers_coastal_desert
 					duration = -1
 				}
 			}
@@ -3400,6 +3410,7 @@ estate_burghers_ARB_oasis_development = {
 				remove_province_modifier = ARB_estate_burghers_arid_climate_development
 			}
 		}
+
 		custom_tooltip = ARB_estate_burghers_desert_development_rt
 		hidden_effect = {
 			every_owned_province = {
@@ -3407,6 +3418,16 @@ estate_burghers_ARB_oasis_development = {
 					has_province_modifier = ARB_estate_burghers_desert
 				}
 				remove_province_modifier = ARB_estate_burghers_desert
+			}
+		}
+
+		custom_tooltip = ARB_estate_burghers_coastal_desert_development_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = ARB_estate_burghers_coastal_desert
+				}
+				remove_province_modifier = ARB_estate_burghers_coastal_desert
 			}
 		}
 	}

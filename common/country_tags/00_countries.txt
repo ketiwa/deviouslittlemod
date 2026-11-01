@@ -144,6 +144,7 @@ TOU	= "countries/Toulouse.txt"
 BER	= "countries/Berry.txt"
 	
 #HRE
+NGF = "countries/NorthGermanFederation.txt"
 SGE = "countries/SouthGermany.txt"
 AAC = "countries/Aachen.txt" 
 ANH	= "countries/Anhalt.txt"

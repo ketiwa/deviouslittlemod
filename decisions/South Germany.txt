@@ -48,6 +48,13 @@ country_decisions = {
             }
         }
         effect = {
+            if = {
+                limit = { is_part_of_hre = yes }
+                emperor = {
+                    country_event = { id = hre_event.5 }
+                }
+                set_in_empire = no
+            }
             change_tag = SGE
             restore_country_name_effect = yes
             set_government_rank = 3
@@ -55,6 +62,12 @@ country_decisions = {
             set_country_flag = formed_south_germany_flag
             on_change_tag_effect = yes
             country_event = { id = ideagroups.1 } #Swap Ideas
+            north_german_region = {
+                limit = {
+                    NOT = { owned_by = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
         }
         ai_will_do = { factor = 1 }
     }

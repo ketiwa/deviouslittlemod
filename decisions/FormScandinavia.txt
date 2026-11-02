@@ -131,7 +131,7 @@ country_decisions = {
 					}
 					if = {
 						limit = { mission_completed = dan_colonize_the_caribbean }
-						colonial_louisiana = {
+						colonial_eastern_america = {
 							limit = {
 								NOT = { is_core = ROOT }
 								NOT = { is_permanent_claim = ROOT }
@@ -139,7 +139,7 @@ country_decisions = {
 							}
 							add_permanent_claim = ROOT
 						}
-						colonial_mexico = {
+						colonial_eastern_america = {
 							limit = {
 								NOT = { is_core = ROOT }
 								NOT = { is_permanent_claim = ROOT }
@@ -150,7 +150,7 @@ country_decisions = {
 					}
 					if = {
 						limit = { mission_completed = dan_colonize_north_america }
-						colonial_canada = {
+						colonial_eastern_america = {
 							limit = {
 								NOT = { is_core = ROOT }
 								NOT = { is_permanent_claim = ROOT }

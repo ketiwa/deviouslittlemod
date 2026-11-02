@@ -297,19 +297,19 @@ french_missions_colonial = {
 			has_country_modifier = bought_colonist
 			custom_trigger_tooltip = {
 				tooltip = fra_canada_discovery.tooltip
-				colonial_canada = {
+				colonial_eastern_america = {
 					has_discovered = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = fra_carib_discovery.tooltip
-				colonial_the_carribean = {
+				colonial_eastern_america = {
 					has_discovered = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = fra_louis_discovery.tooltip
-				colonial_louisiana = {
+				colonial_eastern_america = {
 					has_discovered = ROOT
 				}
 			}
@@ -327,9 +327,9 @@ french_missions_colonial = {
 		completed_by = 1608.7.3
 		provinces_to_highlight = {
 			OR = {
-				colonial_region = colonial_canada
-				colonial_region = colonial_louisiana
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_eastern_america
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -338,16 +338,16 @@ french_missions_colonial = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_eastern_america
 			}
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					colonial_region = colonial_canada
+					colonial_region = colonial_eastern_america
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					colonial_region = colonial_louisiana
+					colonial_region = colonial_eastern_america
 				}
 			}
 		}

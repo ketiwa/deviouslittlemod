@@ -451,12 +451,12 @@ NED_1_1 = {
 		position = 17
 		required_missions = { NED_west_indies_company }
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean 
+			colonial_region = colonial_eastern_america 
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {  
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_the_carribean 
+				colonial_region = colonial_eastern_america 
 				value = 5
 			}
 		} 
@@ -467,7 +467,7 @@ NED_1_1 = {
 			random_subject_country = {
 				limit = {
 					capital_scope = {
-						colonial_region = colonial_the_carribean
+						colonial_region = colonial_eastern_america
 					}
 				}
 				add_country_modifier = {

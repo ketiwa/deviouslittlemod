@@ -1047,7 +1047,7 @@ gc_morocco_5 = {
 		required_missions = { gc_mor_canaries }
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_brazil
+			colonial_region = colonial_eastern_america
 			OR = {
 				is_city = no
 				NOT = { owned_by = ROOT }
@@ -1062,7 +1062,7 @@ gc_morocco_5 = {
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 10
-					colonial_region = colonial_brazil
+					colonial_region = colonial_eastern_america
 					is_city = yes
 				}
 			}
@@ -1088,8 +1088,8 @@ gc_morocco_5 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				colonial_region = colonial_the_carribean
-				colonial_region = colonial_colombia
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_eastern_america
 			}
 			OR = {
 				is_city = no
@@ -1105,12 +1105,12 @@ gc_morocco_5 = {
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 10
-					colonial_region = colonial_the_carribean
+					colonial_region = colonial_eastern_america
 					is_city = yes
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 10
-					colonial_region = colonial_colombia
+					colonial_region = colonial_eastern_america
 					is_city = yes
 				}
 				custom_trigger_tooltip = {

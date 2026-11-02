@@ -2338,7 +2338,7 @@ venice_missions_slot_4 = {
 				limit = { is_random_new_world = no }
 				OR = {
 					colonial_region = colonial_eastern_america
-					colonial_region = colonial_the_carribean
+					colonial_region = colonial_eastern_america
 				}
 			}
 			else = {
@@ -2355,7 +2355,7 @@ venice_missions_slot_4 = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_eastern_america = { has_discovered = ROOT }
 				}
 			}
 			else = {

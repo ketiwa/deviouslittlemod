@@ -778,7 +778,7 @@ liv_lva_colonize_north_america_mission_slot = {
 			}
 			custom_tooltip = swe_colonize_delaware_tt
 			hidden_effect = {
-				colonial_the_carribean = {
+				colonial_eastern_america = {
 					limit = {
 						OR = {
 							has_river_estuary_trigger = yes
@@ -808,7 +808,7 @@ liv_lva_colonize_north_america_mission_slot = {
 		position = 6
 		required_missions = { liv_lva_colonize_north_america }
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean
+			colonial_region = colonial_eastern_america
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -816,7 +816,7 @@ liv_lva_colonize_north_america_mission_slot = {
 			not_in_mission_preview_mode = { key = LIV }
 			owns_or_non_sovereign_subject_of = 502
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_eastern_america
 				value = 5
 			}
 		}
@@ -3443,7 +3443,7 @@ liv_dummy_mission_slot_1 = {
 					}
 					owns_or_non_sovereign_subject_of = 502
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						colonial_region = colonial_the_carribean
+						colonial_region = colonial_eastern_america
 						value = 5
 					}
 				}

@@ -444,7 +444,7 @@ dan_north_america_mission_slot = {
 			}
 			custom_tooltip = swe_colonize_delaware_tt
 			hidden_effect = {
-				colonial_the_carribean = {
+				colonial_eastern_america = {
 					limit = {
 						OR = {
 							has_river_estuary_trigger = yes
@@ -462,7 +462,7 @@ dan_north_america_mission_slot = {
 				limit = {
 					tag = SCA
 				}
-				colonial_canada = {
+				colonial_eastern_america = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -899,14 +899,14 @@ dan_caribbeans_mission_slot = {
 		position = 11
 		required_missions = { dan_colonize_north_america }
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean
+			colonial_region = colonial_eastern_america
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 493
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_eastern_america
 				value = 5
 			}
 		}
@@ -940,7 +940,7 @@ dan_caribbeans_mission_slot = {
 				limit = {
 					tag = SCA
 				}
-				colonial_louisiana = {
+				colonial_eastern_america = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -948,7 +948,7 @@ dan_caribbeans_mission_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-				colonial_mexico = {
+				colonial_eastern_america = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -3832,7 +3832,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		position = 11
 		required_missions = { dan_colonize_north_america }
 		provinces_to_highlight = {
-			colonial_region = colonial_canada
+			colonial_region = colonial_eastern_america
 			has_discovered = ROOT
 			OR = {
 				is_city = no
@@ -3841,7 +3841,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_canada
+				colonial_region = colonial_eastern_america
 				is_city = yes
 				value = 20
 			}
@@ -3852,7 +3852,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_canada
+						colonial_region = colonial_eastern_america
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3862,7 +3862,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_canada
+						colonial_region = colonial_eastern_america
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3872,7 +3872,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_canada
+						colonial_region = colonial_eastern_america
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3882,7 +3882,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_canada
+						colonial_region = colonial_eastern_america
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3892,7 +3892,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_canada
+						colonial_region = colonial_eastern_america
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3939,12 +3939,12 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		position = 12
 		required_missions = { dan_colonize_the_caribbean }
 		provinces_to_highlight = {
-			colonial_region = colonial_louisiana
+			colonial_region = colonial_eastern_america
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_louisiana
+				colonial_region = colonial_eastern_america
 				value = 50
 			}
 		}
@@ -3978,7 +3978,7 @@ dan_sca_colonize_north_america_mission_slot_2 = {
 		position = 12
 		required_missions = { dan_colonize_the_caribbean }
 		provinces_to_highlight = {
-			colonial_region = colonial_mexico
+			colonial_region = colonial_eastern_america
 			has_discovered = ROOT
 			OR = {
 				is_city = no
@@ -3988,7 +3988,7 @@ dan_sca_colonize_north_america_mission_slot_2 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_mexico
+				colonial_region = colonial_eastern_america
 				is_city = yes
 				trade_goods = gold
 				value = 5

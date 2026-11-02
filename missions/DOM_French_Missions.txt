@@ -520,19 +520,19 @@ french_missions_1_Continuation_a = {
 				limit = { is_random_new_world = no }
 				custom_trigger_tooltip = {
 					tooltip = fra_canada_discovery.tooltip
-					colonial_canada = {
+					colonial_eastern_america = {
 						has_discovered = ROOT
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = fra_carib_discovery.tooltip
-					colonial_the_carribean = {
+					colonial_eastern_america = {
 						has_discovered = ROOT
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = fra_louis_discovery.tooltip
-					colonial_louisiana = {
+					colonial_eastern_america = {
 						has_discovered = ROOT
 					}
 				}
@@ -1684,7 +1684,7 @@ french_missions_2_Continuation_b = {
 		required_missions = { dom_fra_france_discovers_north_america } 
 		position = 10 
 		provinces_to_highlight = { 
-			colonial_region = colonial_the_carribean 
+			colonial_region = colonial_eastern_america 
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = {
@@ -1703,7 +1703,7 @@ french_missions_2_Continuation_b = {
 						}
 					}
 					capital_scope = {
-						colonial_region = colonial_the_carribean
+						colonial_region = colonial_eastern_america
 					}
 				}
 			}
@@ -1732,7 +1732,7 @@ french_missions_2_Continuation_b = {
 							is_subject_of_type = self_governing_colony
 						}
 						capital_scope = {
-							colonial_region = colonial_the_carribean
+							colonial_region = colonial_eastern_america
 						}
 					}
 				}
@@ -1762,7 +1762,7 @@ french_missions_2_Continuation_b = {
 							is_subject_of_type = self_governing_colony
 						}
 						capital_scope = {
-							colonial_region = colonial_the_carribean
+							colonial_region = colonial_eastern_america
 						}
 					}
 					add_country_modifier = {

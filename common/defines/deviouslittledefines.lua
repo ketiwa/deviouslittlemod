@@ -56,7 +56,7 @@ NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.TRANSPORT_COST = 1                       -- vanilla 12
 NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 1          -- vanilla 50
 NDefines.NMilitary.TRANSPORT_TIME = 90                      -- vanilla 365
-NDefines.NAI.TRANSPORT_FRACTION = -1                        -- vanilla 0.5; -1 removes the AI transport-forcelimit cap
+-- NDefines.NAI.TRANSPORT_FRACTION = -1                        -- vanilla 0.5; -1 removes the AI transport-forcelimit cap
 
 -- ==================== Mysticism piety action ====================
 -- "Call on Religious Followers" (available at -75 piety) manpower reward.
